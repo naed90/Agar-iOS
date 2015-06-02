@@ -14,6 +14,8 @@
 		3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DBEEF1B1B865E002C7BC1 /* Images.xcassets */; };
 		3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DBEF11B1B865E002C7BC1 /* LaunchScreen.xib */; };
 		3D4DBEFF1B1B865E002C7BC1 /* Agar_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEFE1B1B865E002C7BC1 /* Agar_iOSTests.m */; };
+		3D4DBF091B1B8695002C7BC1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF081B1B8695002C7BC1 /* SpriteKit.framework */; };
+		3D4DBF0C1B1B8778002C7BC1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		3D4DBEF81B1B865E002C7BC1 /* Agar iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Agar iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DBEFD1B1B865E002C7BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4DBEFE1B1B865E002C7BC1 /* Agar_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Agar_iOSTests.m; sourceTree = "<group>"; };
+		3D4DBF081B1B8695002C7BC1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4DBF091B1B8695002C7BC1 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		3D4DBED61B1B865E002C7BC1 = {
 			isa = PBXGroup;
 			children = (
+				3D4DBF081B1B8695002C7BC1 /* SpriteKit.framework */,
 				3D4DBEE11B1B865E002C7BC1 /* Agar iOS */,
 				3D4DBEFB1B1B865E002C7BC1 /* Agar iOSTests */,
 				3D4DBEE01B1B865E002C7BC1 /* Products */,
@@ -83,6 +90,8 @@
 			children = (
 				3D4DBEE61B1B865E002C7BC1 /* AppDelegate.h */,
 				3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */,
+				3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */,
+				3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */,
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
 				3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */,
 				3D4DBEEC1B1B865E002C7BC1 /* Main.storyboard */,
@@ -221,6 +230,7 @@
 			files = (
 				3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */,
 				3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */,
+				3D4DBF0C1B1B8778002C7BC1 /* GameScene.m in Sources */,
 				3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +362,7 @@
 				INFOPLIST_FILE = "Agar iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -362,6 +373,7 @@
 				INFOPLIST_FILE = "Agar iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -8,15 +8,28 @@
 
 #import "ViewController.h"
 
+#import <SpriteKit/SpriteKit.h>
+
+#import "GameScene.h"
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    SKView *spriteView = (SKView *) self.view;
+    spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;
+    
+    GameScene* gs = [[GameScene alloc] initWithSize:spriteView.frame.size];
+    [spriteView presentScene:gs];
 }
 
 - (void)didReceiveMemoryWarning {
