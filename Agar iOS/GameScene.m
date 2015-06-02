@@ -17,10 +17,14 @@
 
 #define gridSize 5000
 
+#define defVeloc 500
+
+
 @interface GameScene ()
 @property BOOL contentCreated;
 
 @property (nonatomic, strong) SKNode* world;
+
 @end
 
 
@@ -43,6 +47,8 @@
     self.scaleMode = SKSceneScaleModeAspectFit;
     //self.scaleMode = SKSceneScaleModeResizeFill;
     self.anchorPoint = CGPointMake (0.5,0.5);
+    
+    self.physicsWorld.gravity = CGVectorMake(0, 0);
     [self createWorld];
     [self addChild: [self newHelloNode]];
     
@@ -85,6 +91,25 @@
 }
 
 
+//difference between points a and b returned as a vector
+static inline CGPoint rwSub(CGPoint a, CGPoint b) {
+    return CGPointMake(a.x - b.x, a.y - b.y);
+}
+
+
+// Normalizes vector
+static inline CGPoint rwNormalize(CGPoint a) {
+    float length = rwLength(a);
+    return CGPointMake(a.x / length, a.y / length);
+}
+
+//Distance formula
+static inline float rwLength(CGPoint a) {
+    return sqrtf(a.x * a.x + a.y * a.y);
+}
+
+
+
 - (void)touchesBegan:(NSSet *) touches withEvent:(UIEvent *)event
 {
     SKNode *helloNode = [self childNodeWithName:@"//helloNode"];
@@ -103,13 +128,25 @@
             [self addChild:spaceship];
         }];
     }
+    else //move spaceship thingy
+    {
+        SKNode *player = [self childNodeWithName:@"//player"];
+        if(player)
+        {
+            UITouch * touch = [touches anyObject];
+            CGPoint location = [touch locationInNode:self.world];
+            
+            CGPoint offset = rwSub(location, player.position);
+            CGPoint direction = rwNormalize(offset);
+            player.physicsBody.velocity = CGVectorMake(direction.x*defVeloc, direction.y*defVeloc);
+        }
+    }
 }
 
 - (SKSpriteNode *)newSpaceship
 {
     SKSpriteNode *hull = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(64,32)];
     hull.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:hull.size];
-    hull.physicsBody.dynamic = NO;
     hull.name = @"player";
     
     SKAction *hover = [SKAction sequence:@[
@@ -117,7 +154,7 @@
                                            [SKAction moveByX:100 y:50.0 duration:1.0],
                                            [SKAction waitForDuration:1.0],
                                            [SKAction moveByX:-100.0 y:-50 duration:1.0]]];
-    [hull runAction: [SKAction repeatActionForever:hover]];
+    //[hull runAction: [SKAction repeatActionForever:hover]];
     
     SKSpriteNode *light1 = [self newLight];
     light1.position = CGPointMake(-28.0, 6.0);
@@ -159,7 +196,6 @@ int n = 0;
     rock.position = CGPointMake(skRand(-gridSize/2, gridSize/2), skRand(-gridSize/2, gridSize/2));
     rock.name = @"rock";
     rock.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rock.size];
-    rock.physicsBody.usesPreciseCollisionDetection = YES;
     rock.physicsBody.dynamic = NO;
     [self addChild:rock];
     n++;
@@ -180,6 +216,7 @@ int n = 0;
     if(player)
     {
         [self centerOnNode:player];
+        NSLog(NSStringFromCGPoint(player.position));
     }
 
 }
