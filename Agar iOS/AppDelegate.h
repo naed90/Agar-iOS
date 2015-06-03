@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "socketDealer.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, socketDealerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
+
+//Server:
+@property (strong, nonatomic)socketDealer* socketDealer;
 
 
 @end

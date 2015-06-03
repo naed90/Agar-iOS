@@ -16,6 +16,25 @@
 		3D4DBEFF1B1B865E002C7BC1 /* Agar_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEFE1B1B865E002C7BC1 /* Agar_iOSTests.m */; };
 		3D4DBF091B1B8695002C7BC1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF081B1B8695002C7BC1 /* SpriteKit.framework */; };
 		3D4DBF0C1B1B8778002C7BC1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */; };
+		3D4DBF111B1E9272002C7BC1 /* socketDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF101B1E9272002C7BC1 /* socketDealer.m */; };
+		3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DBF131B1E9300002C7BC1 /* .gitignore */; };
+		3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DBF141B1E9300002C7BC1 /* .gitmodules */; };
+		3D4DBF4C1B1E9300002C7BC1 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF151B1E9300002C7BC1 /* CHANGELOG.md */; };
+		3D4DBF4D1B1E9300002C7BC1 /* CONTRIBUTORS.md in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF161B1E9300002C7BC1 /* CONTRIBUTORS.md */; };
+		3D4DBF4E1B1E9300002C7BC1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DBF171B1E9300002C7BC1 /* LICENSE */; };
+		3D4DBF4F1B1E9300002C7BC1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF181B1E9300002C7BC1 /* README.md */; };
+		3D4DBF501B1E9300002C7BC1 /* SocketIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF1A1B1E9300002C7BC1 /* SocketIO.m */; };
+		3D4DBF511B1E9300002C7BC1 /* SocketIOJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF1C1B1E9300002C7BC1 /* SocketIOJSONSerialization.m */; };
+		3D4DBF521B1E9300002C7BC1 /* SocketIOPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF1E1B1E9300002C7BC1 /* SocketIOPacket.m */; };
+		3D4DBF531B1E9300002C7BC1 /* SocketIOTransportWebsocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF211B1E9300002C7BC1 /* SocketIOTransportWebsocket.m */; };
+		3D4DBF541B1E9300002C7BC1 /* SocketIOTransportXHR.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF231B1E9300002C7BC1 /* SocketIOTransportXHR.m */; };
+		3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DBF361B1E9300002C7BC1 /* .gitignore */; };
+		3D4DBF561B1E9301002C7BC1 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF3F1B1E9300002C7BC1 /* SRWebSocket.m */; };
+		3D4DBF581B1E9423002C7BC1 /* urls.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBF571B1E9423002C7BC1 /* urls.m */; };
+		3D4DBF5A1B1E94CB002C7BC1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF591B1E94CB002C7BC1 /* libicucore.dylib */; };
+		3D4DBF5C1B1E94D6002C7BC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */; };
+		3D4DBF5E1B1E94DE002C7BC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */; };
+		3D4DBF601B1E94E7002C7BC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +64,34 @@
 		3D4DBF081B1B8695002C7BC1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		3D4DBF0F1B1E9272002C7BC1 /* socketDealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketDealer.h; sourceTree = "<group>"; };
+		3D4DBF101B1E9272002C7BC1 /* socketDealer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = socketDealer.m; sourceTree = "<group>"; };
+		3D4DBF131B1E9300002C7BC1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3D4DBF141B1E9300002C7BC1 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		3D4DBF151B1E9300002C7BC1 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		3D4DBF161B1E9300002C7BC1 /* CONTRIBUTORS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTORS.md; sourceTree = "<group>"; };
+		3D4DBF171B1E9300002C7BC1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3D4DBF181B1E9300002C7BC1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3D4DBF191B1E9300002C7BC1 /* SocketIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIO.h; sourceTree = "<group>"; };
+		3D4DBF1A1B1E9300002C7BC1 /* SocketIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIO.m; sourceTree = "<group>"; };
+		3D4DBF1B1B1E9300002C7BC1 /* SocketIOJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOJSONSerialization.h; sourceTree = "<group>"; };
+		3D4DBF1C1B1E9300002C7BC1 /* SocketIOJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOJSONSerialization.m; sourceTree = "<group>"; };
+		3D4DBF1D1B1E9300002C7BC1 /* SocketIOPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOPacket.h; sourceTree = "<group>"; };
+		3D4DBF1E1B1E9300002C7BC1 /* SocketIOPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOPacket.m; sourceTree = "<group>"; };
+		3D4DBF1F1B1E9300002C7BC1 /* SocketIOTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransport.h; sourceTree = "<group>"; };
+		3D4DBF201B1E9300002C7BC1 /* SocketIOTransportWebsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportWebsocket.h; sourceTree = "<group>"; };
+		3D4DBF211B1E9300002C7BC1 /* SocketIOTransportWebsocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportWebsocket.m; sourceTree = "<group>"; };
+		3D4DBF221B1E9300002C7BC1 /* SocketIOTransportXHR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportXHR.h; sourceTree = "<group>"; };
+		3D4DBF231B1E9300002C7BC1 /* SocketIOTransportXHR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportXHR.m; sourceTree = "<group>"; };
+		3D4DBF361B1E9300002C7BC1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3D4DBF3D1B1E9300002C7BC1 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		3D4DBF3E1B1E9300002C7BC1 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		3D4DBF3F1B1E9300002C7BC1 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		3D4DBF571B1E9423002C7BC1 /* urls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = urls.m; sourceTree = "<group>"; };
+		3D4DBF591B1E94CB002C7BC1 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4DBF601B1E94E7002C7BC1 /* Foundation.framework in Frameworks */,
+				3D4DBF5E1B1E94DE002C7BC1 /* Security.framework in Frameworks */,
+				3D4DBF5C1B1E94D6002C7BC1 /* CFNetwork.framework in Frameworks */,
+				3D4DBF5A1B1E94CB002C7BC1 /* libicucore.dylib in Frameworks */,
 				3D4DBF091B1B8695002C7BC1 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +120,10 @@
 		3D4DBED61B1B865E002C7BC1 = {
 			isa = PBXGroup;
 			children = (
+				3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */,
+				3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */,
+				3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */,
+				3D4DBF591B1E94CB002C7BC1 /* libicucore.dylib */,
 				3D4DBF081B1B8695002C7BC1 /* SpriteKit.framework */,
 				3D4DBEE11B1B865E002C7BC1 /* Agar iOS */,
 				3D4DBEFB1B1B865E002C7BC1 /* Agar iOSTests */,
@@ -90,6 +145,8 @@
 			children = (
 				3D4DBEE61B1B865E002C7BC1 /* AppDelegate.h */,
 				3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */,
+				3D4DBF0F1B1E9272002C7BC1 /* socketDealer.h */,
+				3D4DBF101B1E9272002C7BC1 /* socketDealer.m */,
 				3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */,
 				3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */,
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
@@ -97,6 +154,7 @@
 				3D4DBEEC1B1B865E002C7BC1 /* Main.storyboard */,
 				3D4DBEEF1B1B865E002C7BC1 /* Images.xcassets */,
 				3D4DBEF11B1B865E002C7BC1 /* LaunchScreen.xib */,
+				3D4DBF571B1E9423002C7BC1 /* urls.m */,
 				3D4DBEE21B1B865E002C7BC1 /* Supporting Files */,
 			);
 			path = "Agar iOS";
@@ -105,6 +163,7 @@
 		3D4DBEE21B1B865E002C7BC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D4DBF121B1E9300002C7BC1 /* socket.IO-objc-master */,
 				3D4DBEE31B1B865E002C7BC1 /* Info.plist */,
 				3D4DBEE41B1B865E002C7BC1 /* main.m */,
 			);
@@ -126,6 +185,306 @@
 				3D4DBEFD1B1B865E002C7BC1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D4DBF121B1E9300002C7BC1 /* socket.IO-objc-master */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF131B1E9300002C7BC1 /* .gitignore */,
+				3D4DBF141B1E9300002C7BC1 /* .gitmodules */,
+				3D4DBF151B1E9300002C7BC1 /* CHANGELOG.md */,
+				3D4DBF161B1E9300002C7BC1 /* CONTRIBUTORS.md */,
+				3D4DBF171B1E9300002C7BC1 /* LICENSE */,
+				3D4DBF181B1E9300002C7BC1 /* README.md */,
+				3D4DBF191B1E9300002C7BC1 /* SocketIO.h */,
+				3D4DBF1A1B1E9300002C7BC1 /* SocketIO.m */,
+				3D4DBF1B1B1E9300002C7BC1 /* SocketIOJSONSerialization.h */,
+				3D4DBF1C1B1E9300002C7BC1 /* SocketIOJSONSerialization.m */,
+				3D4DBF1D1B1E9300002C7BC1 /* SocketIOPacket.h */,
+				3D4DBF1E1B1E9300002C7BC1 /* SocketIOPacket.m */,
+				3D4DBF1F1B1E9300002C7BC1 /* SocketIOTransport.h */,
+				3D4DBF201B1E9300002C7BC1 /* SocketIOTransportWebsocket.h */,
+				3D4DBF211B1E9300002C7BC1 /* SocketIOTransportWebsocket.m */,
+				3D4DBF221B1E9300002C7BC1 /* SocketIOTransportXHR.h */,
+				3D4DBF231B1E9300002C7BC1 /* SocketIOTransportXHR.m */,
+				3D4DBF241B1E9300002C7BC1 /* SocketTesterARC */,
+				3D4DBF351B1E9300002C7BC1 /* submodules */,
+			);
+			path = "socket.IO-objc-master";
+			sourceTree = "<group>";
+		};
+		3D4DBF241B1E9300002C7BC1 /* SocketTesterARC */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF251B1E9300002C7BC1 /* socket-rocket */,
+			);
+			path = SocketTesterARC;
+			sourceTree = "<group>";
+		};
+		3D4DBF251B1E9300002C7BC1 /* socket-rocket */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF261B1E9300002C7BC1 /* SocketRocket-master */,
+			);
+			path = "socket-rocket";
+			sourceTree = "<group>";
+		};
+		3D4DBF261B1E9300002C7BC1 /* SocketRocket-master */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF271B1E9300002C7BC1 /* extern */,
+				3D4DBF291B1E9300002C7BC1 /* pages */,
+				3D4DBF2A1B1E9300002C7BC1 /* SocketRocket */,
+				3D4DBF2B1B1E9300002C7BC1 /* SocketRocketOSX */,
+				3D4DBF2C1B1E9300002C7BC1 /* SRWebSocketTests */,
+				3D4DBF2D1B1E9300002C7BC1 /* TestChat */,
+				3D4DBF2E1B1E9300002C7BC1 /* TestChatServer */,
+				3D4DBF321B1E9300002C7BC1 /* TestSupport */,
+			);
+			path = "SocketRocket-master";
+			sourceTree = "<group>";
+		};
+		3D4DBF271B1E9300002C7BC1 /* extern */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF281B1E9300002C7BC1 /* virtualenv */,
+			);
+			path = extern;
+			sourceTree = "<group>";
+		};
+		3D4DBF281B1E9300002C7BC1 /* virtualenv */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = virtualenv;
+			sourceTree = "<group>";
+		};
+		3D4DBF291B1E9300002C7BC1 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		3D4DBF2A1B1E9300002C7BC1 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		3D4DBF2B1B1E9300002C7BC1 /* SocketRocketOSX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SocketRocketOSX;
+			sourceTree = "<group>";
+		};
+		3D4DBF2C1B1E9300002C7BC1 /* SRWebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SRWebSocketTests;
+			sourceTree = "<group>";
+		};
+		3D4DBF2D1B1E9300002C7BC1 /* TestChat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestChat;
+			sourceTree = "<group>";
+		};
+		3D4DBF2E1B1E9300002C7BC1 /* TestChatServer */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF2F1B1E9300002C7BC1 /* go */,
+				3D4DBF301B1E9300002C7BC1 /* py */,
+				3D4DBF311B1E9300002C7BC1 /* static */,
+			);
+			path = TestChatServer;
+			sourceTree = "<group>";
+		};
+		3D4DBF2F1B1E9300002C7BC1 /* go */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = go;
+			sourceTree = "<group>";
+		};
+		3D4DBF301B1E9300002C7BC1 /* py */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = py;
+			sourceTree = "<group>";
+		};
+		3D4DBF311B1E9300002C7BC1 /* static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		3D4DBF321B1E9300002C7BC1 /* TestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF331B1E9300002C7BC1 /* sr-testharness */,
+			);
+			path = TestSupport;
+			sourceTree = "<group>";
+		};
+		3D4DBF331B1E9300002C7BC1 /* sr-testharness */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF341B1E9300002C7BC1 /* srtestharness */,
+			);
+			path = "sr-testharness";
+			sourceTree = "<group>";
+		};
+		3D4DBF341B1E9300002C7BC1 /* srtestharness */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = srtestharness;
+			sourceTree = "<group>";
+		};
+		3D4DBF351B1E9300002C7BC1 /* submodules */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF361B1E9300002C7BC1 /* .gitignore */,
+				3D4DBF371B1E9300002C7BC1 /* socket-rocket */,
+			);
+			path = submodules;
+			sourceTree = "<group>";
+		};
+		3D4DBF371B1E9300002C7BC1 /* socket-rocket */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF381B1E9300002C7BC1 /* SocketRocket-master */,
+			);
+			path = "socket-rocket";
+			sourceTree = "<group>";
+		};
+		3D4DBF381B1E9300002C7BC1 /* SocketRocket-master */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF391B1E9300002C7BC1 /* extern */,
+				3D4DBF3B1B1E9300002C7BC1 /* pages */,
+				3D4DBF3C1B1E9300002C7BC1 /* SocketRocket */,
+				3D4DBF401B1E9300002C7BC1 /* SocketRocketOSX */,
+				3D4DBF411B1E9300002C7BC1 /* SRWebSocketTests */,
+				3D4DBF421B1E9300002C7BC1 /* TestChat */,
+				3D4DBF431B1E9300002C7BC1 /* TestChatServer */,
+				3D4DBF471B1E9300002C7BC1 /* TestSupport */,
+			);
+			path = "SocketRocket-master";
+			sourceTree = "<group>";
+		};
+		3D4DBF391B1E9300002C7BC1 /* extern */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF3A1B1E9300002C7BC1 /* virtualenv */,
+			);
+			path = extern;
+			sourceTree = "<group>";
+		};
+		3D4DBF3A1B1E9300002C7BC1 /* virtualenv */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = virtualenv;
+			sourceTree = "<group>";
+		};
+		3D4DBF3B1B1E9300002C7BC1 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		3D4DBF3C1B1E9300002C7BC1 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF3D1B1E9300002C7BC1 /* SocketRocket-Prefix.pch */,
+				3D4DBF3E1B1E9300002C7BC1 /* SRWebSocket.h */,
+				3D4DBF3F1B1E9300002C7BC1 /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		3D4DBF401B1E9300002C7BC1 /* SocketRocketOSX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SocketRocketOSX;
+			sourceTree = "<group>";
+		};
+		3D4DBF411B1E9300002C7BC1 /* SRWebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SRWebSocketTests;
+			sourceTree = "<group>";
+		};
+		3D4DBF421B1E9300002C7BC1 /* TestChat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestChat;
+			sourceTree = "<group>";
+		};
+		3D4DBF431B1E9300002C7BC1 /* TestChatServer */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF441B1E9300002C7BC1 /* go */,
+				3D4DBF451B1E9300002C7BC1 /* py */,
+				3D4DBF461B1E9300002C7BC1 /* static */,
+			);
+			path = TestChatServer;
+			sourceTree = "<group>";
+		};
+		3D4DBF441B1E9300002C7BC1 /* go */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = go;
+			sourceTree = "<group>";
+		};
+		3D4DBF451B1E9300002C7BC1 /* py */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = py;
+			sourceTree = "<group>";
+		};
+		3D4DBF461B1E9300002C7BC1 /* static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		3D4DBF471B1E9300002C7BC1 /* TestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF481B1E9300002C7BC1 /* sr-testharness */,
+			);
+			path = TestSupport;
+			sourceTree = "<group>";
+		};
+		3D4DBF481B1E9300002C7BC1 /* sr-testharness */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DBF491B1E9300002C7BC1 /* srtestharness */,
+			);
+			path = "sr-testharness";
+			sourceTree = "<group>";
+		};
+		3D4DBF491B1E9300002C7BC1 /* srtestharness */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = srtestharness;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +567,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4DBF4E1B1E9300002C7BC1 /* LICENSE in Resources */,
+				3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */,
+				3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */,
 				3D4DBEEE1B1B865E002C7BC1 /* Main.storyboard in Resources */,
+				3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */,
 				3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */,
 				3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */,
 			);
@@ -228,9 +591,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4DBF541B1E9300002C7BC1 /* SocketIOTransportXHR.m in Sources */,
 				3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */,
+				3D4DBF4C1B1E9300002C7BC1 /* CHANGELOG.md in Sources */,
+				3D4DBF111B1E9272002C7BC1 /* socketDealer.m in Sources */,
+				3D4DBF561B1E9301002C7BC1 /* SRWebSocket.m in Sources */,
+				3D4DBF581B1E9423002C7BC1 /* urls.m in Sources */,
+				3D4DBF501B1E9300002C7BC1 /* SocketIO.m in Sources */,
+				3D4DBF531B1E9300002C7BC1 /* SocketIOTransportWebsocket.m in Sources */,
 				3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */,
+				3D4DBF521B1E9300002C7BC1 /* SocketIOPacket.m in Sources */,
+				3D4DBF4D1B1E9300002C7BC1 /* CONTRIBUTORS.md in Sources */,
 				3D4DBF0C1B1B8778002C7BC1 /* GameScene.m in Sources */,
+				3D4DBF511B1E9300002C7BC1 /* SocketIOJSONSerialization.m in Sources */,
+				3D4DBF4F1B1E9300002C7BC1 /* README.md in Sources */,
 				3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +804,7 @@
 				3D4DBF041B1B865E002C7BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D4DBF051B1B865E002C7BC1 /* Build configuration list for PBXNativeTarget "Agar iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +813,7 @@
 				3D4DBF071B1B865E002C7BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
