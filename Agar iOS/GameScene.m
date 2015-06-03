@@ -43,7 +43,7 @@
 - (void)createSceneContents
 {
     
-    self.backgroundColor = [SKColor colorWithWhite:.3 alpha:.8];
+    self.backgroundColor = [SKColor whiteColor];
     self.scaleMode = SKSceneScaleModeAspectFit;
     //self.scaleMode = SKSceneScaleModeResizeFill;
     self.anchorPoint = CGPointMake (0.5,0.5);
@@ -72,7 +72,7 @@
 
 - (void)createWorld
 {
-    SKNode *world = [SKNode node];
+    SKNode *world = [[SKSpriteNode alloc] initWithColor:[SKColor colorWithWhite:.1 alpha:.8] size:CGSizeMake(gridSize, gridSize)];
     world.name = @"world";
     world.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
     [self addChild:world];
@@ -137,10 +137,20 @@ static inline float rwLength(CGPoint a) {
             CGPoint location = [touch locationInNode:self.world];
             
             CGPoint offset = rwSub(location, player.position);
+            float lenght = rwLength(offset);
+            float scaleVelocity = lenght > 100 ? 1 : lenght/100;//If we get our finger close to player, slow down
+            
+            NSLog([NSString stringWithFormat:@"scaleVeloc:%f", scaleVelocity]);
+            
             CGPoint direction = rwNormalize(offset);
-            player.physicsBody.velocity = CGVectorMake(direction.x*defVeloc, direction.y*defVeloc);
+            player.physicsBody.velocity = CGVectorMake(direction.x*defVeloc*scaleVelocity, direction.y*defVeloc*scaleVelocity);
         }
     }
+}
+
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self touchesBegan:touches withEvent:event];
 }
 
 - (SKSpriteNode *)newSpaceship
@@ -216,7 +226,7 @@ int n = 0;
     if(player)
     {
         [self centerOnNode:player];
-        NSLog(NSStringFromCGPoint(player.position));
+       // NSLog(NSStringFromCGPoint(player.position));
     }
 
 }
