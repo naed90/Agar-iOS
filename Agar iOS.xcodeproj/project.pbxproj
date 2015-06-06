@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D30F35C1B22B20100B06776 /* SKcircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35B1B22B20100B06776 /* SKcircle.m */; };
 		3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE41B1B865E002C7BC1 /* main.m */; };
 		3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */; };
 		3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */; };
@@ -35,6 +36,11 @@
 		3D4DBF5C1B1E94D6002C7BC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */; };
 		3D4DBF5E1B1E94DE002C7BC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */; };
 		3D4DBF601B1E94E7002C7BC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */; };
+		3DFEEE7B1B21306B00C68E9B /* login.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFEEE791B21306B00C68E9B /* login.m */; };
+		3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFEEE7A1B21306B00C68E9B /* login.xib */; };
+		3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFEEE7D1B2130A400C68E9B /* Advance-50.png */; };
+		3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFEEE7F1B2130B200C68E9B /* Administrator2-50.png */; };
+		3DFEEE831B213B8100C68E9B /* SKplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFEEE821B213B8100C68E9B /* SKplayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D30F35A1B22B20100B06776 /* SKcircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKcircle.h; sourceTree = "<group>"; };
+		3D30F35B1B22B20100B06776 /* SKcircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKcircle.m; sourceTree = "<group>"; };
 		3D4DBEDF1B1B865E002C7BC1 /* Agar iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agar iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DBEE31B1B865E002C7BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4DBEE41B1B865E002C7BC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +100,13 @@
 		3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DFEEE781B21306B00C68E9B /* login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login.h; sourceTree = "<group>"; };
+		3DFEEE791B21306B00C68E9B /* login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login.m; sourceTree = "<group>"; };
+		3DFEEE7A1B21306B00C68E9B /* login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = login.xib; sourceTree = "<group>"; };
+		3DFEEE7D1B2130A400C68E9B /* Advance-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Advance-50.png"; sourceTree = "<group>"; };
+		3DFEEE7F1B2130B200C68E9B /* Administrator2-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Administrator2-50.png"; sourceTree = "<group>"; };
+		3DFEEE811B213B8100C68E9B /* SKplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKplayer.h; sourceTree = "<group>"; };
+		3DFEEE821B213B8100C68E9B /* SKplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKplayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +158,21 @@
 		3D4DBEE11B1B865E002C7BC1 /* Agar iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3D30F35A1B22B20100B06776 /* SKcircle.h */,
+				3D30F35B1B22B20100B06776 /* SKcircle.m */,
+				3DFEEE811B213B8100C68E9B /* SKplayer.h */,
+				3DFEEE821B213B8100C68E9B /* SKplayer.m */,
 				3D4DBEE61B1B865E002C7BC1 /* AppDelegate.h */,
 				3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */,
 				3D4DBF0F1B1E9272002C7BC1 /* socketDealer.h */,
 				3D4DBF101B1E9272002C7BC1 /* socketDealer.m */,
 				3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */,
 				3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */,
+				3DFEEE7D1B2130A400C68E9B /* Advance-50.png */,
+				3DFEEE7F1B2130B200C68E9B /* Administrator2-50.png */,
+				3DFEEE7A1B21306B00C68E9B /* login.xib */,
+				3DFEEE781B21306B00C68E9B /* login.h */,
+				3DFEEE791B21306B00C68E9B /* login.m */,
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
 				3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */,
 				3D4DBEEC1B1B865E002C7BC1 /* Main.storyboard */,
@@ -570,10 +594,13 @@
 				3D4DBF4E1B1E9300002C7BC1 /* LICENSE in Resources */,
 				3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */,
 				3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */,
+				3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */,
+				3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */,
 				3D4DBEEE1B1B865E002C7BC1 /* Main.storyboard in Resources */,
 				3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */,
 				3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */,
 				3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */,
+				3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,11 +628,14 @@
 				3D4DBF531B1E9300002C7BC1 /* SocketIOTransportWebsocket.m in Sources */,
 				3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */,
 				3D4DBF521B1E9300002C7BC1 /* SocketIOPacket.m in Sources */,
+				3DFEEE831B213B8100C68E9B /* SKplayer.m in Sources */,
 				3D4DBF4D1B1E9300002C7BC1 /* CONTRIBUTORS.md in Sources */,
+				3DFEEE7B1B21306B00C68E9B /* login.m in Sources */,
 				3D4DBF0C1B1B8778002C7BC1 /* GameScene.m in Sources */,
 				3D4DBF511B1E9300002C7BC1 /* SocketIOJSONSerialization.m in Sources */,
 				3D4DBF4F1B1E9300002C7BC1 /* README.md in Sources */,
 				3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */,
+				3D30F35C1B22B20100B06776 /* SKcircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSMutableDictionary* actuallyTracking;//used to list trackers which server registered
 
 @property (strong, nonatomic) NSTimer* reconnectTimer;
+
 @end
 
 
@@ -196,9 +197,10 @@ typedef void (^Block)(void);
     
 #define eventRecieved @"eventRecieved"
     
-    NSLog(@"didReceiveMessage()");
     NSString* string = [packet data];
-    NSLog(string);
+    if(!self.loggingOff){
+    NSLog(@"didReceiveMessage()");
+        NSLog(string);}
     
     
     if ([string rangeOfString:updated].location != NSNotFound)

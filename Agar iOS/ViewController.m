@@ -30,11 +30,22 @@
     
     GameScene* gs = [[GameScene alloc] initWithSize:spriteView.frame.size];
     [spriteView presentScene:gs];
+    
+    UITapGestureRecognizer* closeKeyboardsTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)] ;
+    closeKeyboardsTap.cancelsTouchesInView = NO;
+    closeKeyboardsTap.numberOfTouchesRequired=1;
+    [self.view addGestureRecognizer:closeKeyboardsTap];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) closeKeyboard
+{
+    
+    [self.view endEditing:YES];
 }
 
 @end

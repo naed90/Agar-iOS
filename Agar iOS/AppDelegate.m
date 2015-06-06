@@ -61,6 +61,7 @@
     {
         _socketDealer = [[socketDealer alloc] init];
         _socketDealer.delegate = self;
+        _socketDealer.loggingOff = YES;
         
     }
     return _socketDealer;

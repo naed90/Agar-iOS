@@ -33,5 +33,7 @@
 
 - (void) sendEvent:(NSString*)event withData:(id)data;
 
+@property (nonatomic) BOOL loggingOff;
+
 @property (nonatomic) id<socketDealerDelegate> delegate;
 @end
