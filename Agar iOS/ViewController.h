@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameScene.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AVAudioSessionDelegate>
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedView;
+- (IBAction)changeBg:(id)sender;
+
+- (IBAction)changeSource:(UISegmentedControl *)sender;
+
+@property (strong, nonatomic) GameScene* gs;
+@property (weak, nonatomic) IBOutlet UIScrollView *sv;
 
 
 @end

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>52C3A1A1-0CAA-4B7B-ADD7-451C947326B8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Agar iOS</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>ADFD36A2599CF78DB388A009EDA993020EC36016</key>
 		<string>github.com:dean13-meet/Agar-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Agar iOS.xcodeproj</string>
+	<string>Agar iOS.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>ADFD36A2599CF78DB388A009EDA993020EC36016</key>

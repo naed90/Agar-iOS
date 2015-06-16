@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GSTouchesShowingWindow.h"
 
 #define defaultBarHeight 20
 
@@ -22,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 
@@ -85,4 +87,16 @@
     self.bar.alpha = value==1;
 }
 
+
+#pragma mark GSTouchesShowingWindow
+
+/*
+ static GSTouchesShowingWindow *window = nil;
+ - (GSTouchesShowingWindow *)window {
+
+ if (!window) {
+ window = [[GSTouchesShowingWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+ }
+ return window;
+ }*/
 @end

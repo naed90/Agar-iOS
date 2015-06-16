@@ -46,8 +46,10 @@
 typedef void (^Block)(void);
 -(void)connectSocketIOWithCompletion:(Block)block
 {
-    self.socketIO.useSecure = YES;//https -- avoid wireshark
-    [self.socketIO connectToHost:@"dean-leitersdorf.herokuapp.com" onPort:443];
+    
+    BOOL localTesting = YES;
+    self.socketIO.useSecure = !localTesting;//https -- avoid wireshark
+    [self.socketIO connectToHost:localTesting ? @"67.180.17.151" : @"dean-leitersdorf.herokuapp.com" onPort:localTesting?5000:443];
    if(block)
        block();
 }
@@ -188,6 +190,8 @@ typedef void (^Block)(void);
     
 }
 
+
+
 -(void)socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet
 {
     
@@ -199,9 +203,9 @@ typedef void (^Block)(void);
     
     NSString* string = [packet data];
     if(!self.loggingOff){
-    NSLog(@"didReceiveMessage()");
-        NSLog(string);}
-    
+    //NSLog(@"didReceiveMessage()");
+      //  NSLog(string);
+    }
     
     if ([string rangeOfString:updated].location != NSNotFound)
     {

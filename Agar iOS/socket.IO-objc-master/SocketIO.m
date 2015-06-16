@@ -144,7 +144,7 @@ NSString* const SocketIOException = @"SocketIOException";
         
         // do handshake via HTTP request
         NSString *protocol = _useSecure ? @"https" : @"http";
-        NSString *port = _port ? [NSString stringWithFormat:@":%d", _port] : @"";
+        NSString *port = _port ? [NSString stringWithFormat:@":%ld", (long)_port] : @"";
         NSTimeInterval time = [[NSDate date] timeIntervalSince1970] * 1000;
         NSString *handshakeUrl = [NSString stringWithFormat:kHandshakeURL, protocol, _host, port, kResourceName, time, query];
         
@@ -302,7 +302,7 @@ NSString* const SocketIOException = @"SocketIOException";
         DEBUGLOG(@"Already disconnected!");
         return;
     }
-    DEBUGLOG(@"send()");
+    //DEBUGLOG(@"send()");
     NSNumber *type = [packet typeAsNumber];
     NSMutableArray *encoded = [NSMutableArray arrayWithObject:type];
     
@@ -336,11 +336,11 @@ NSString* const SocketIOException = @"SocketIOException";
     
     NSString *req = [encoded componentsJoinedByString:@":"];
     if (![_transport isReady]) {
-        DEBUGLOG(@"queue >>> %@", req);
+        //DEBUGLOG(@"queue >>> %@", req);
         [_queue addObject:packet];
     } 
     else {
-        DEBUGLOG(@"send() >>> %@", req);
+        //DEBUGLOG(@"send() >>> %@", req);
         [_transport send:req];
         
         if ([_delegate respondsToSelector:@selector(socketIO:didSendMessage:)]) {
@@ -427,7 +427,7 @@ NSString* const SocketIOException = @"SocketIOException";
 
 - (void) setTimeout 
 {
-    DEBUGLOG(@"start/reset timeout");
+    //DEBUGLOG(@"start/reset timeout");
     if (_timeout) {
         dispatch_source_cancel(_timeout);
         _timeout = NULL;
@@ -487,7 +487,7 @@ NSString* const SocketIOException = @"SocketIOException";
 
 - (void) onData:(NSString *)data
 {
-    DEBUGLOG(@"onData %@", data);
+    //DEBUGLOG(@"onData %@", data);
     
     // data arrived -> reset timeout
     [self setTimeout];
@@ -515,26 +515,26 @@ NSString* const SocketIOException = @"SocketIOException";
         //
         switch (idx) {
             case 0: {
-                DEBUGLOG(@"disconnect");
+                //DEBUGLOG(@"disconnect");
                 [self onDisconnect:[NSError errorWithDomain:SocketIOError
                                                        code:SocketIOServerRespondedWithDisconnect
                                                    userInfo:nil]];
                 break;
             }
             case 1: {
-                DEBUGLOG(@"connected");
+                //DEBUGLOG(@"connected");
                 // from socket.io.js ... not sure when data will contain sth?!
                 // packet.qs = data || '';
                 [self onConnect:packet];
                 break;
             }
             case 2: {
-                DEBUGLOG(@"heartbeat");
+                //DEBUGLOG(@"heartbeat");
                 [self sendHeartbeat];
                 break;
             }
             case 3: {
-                DEBUGLOG(@"message");
+                //DEBUGLOG(@"message");
                 if (packet.data && ![packet.data isEqualToString:@""]) {
                     if ([_delegate respondsToSelector:@selector(socketIO:didReceiveMessage:)]) {
                         [_delegate socketIO:self didReceiveMessage:packet];
@@ -543,7 +543,7 @@ NSString* const SocketIOException = @"SocketIOException";
                 break;
             }
             case 4: {
-                DEBUGLOG(@"json");
+                //DEBUGLOG(@"json");
                 if (packet.data && ![packet.data isEqualToString:@""]) {
                     if ([_delegate respondsToSelector:@selector(socketIO:didReceiveJSON:)]) {
                         [_delegate socketIO:self didReceiveJSON:packet];
@@ -552,7 +552,7 @@ NSString* const SocketIOException = @"SocketIOException";
                 break;
             }
             case 5: {
-                DEBUGLOG(@"event");
+                //DEBUGLOG(@"event");
                 if (packet.data && ![packet.data isEqualToString:@""]) {
                     NSDictionary *json = [packet dataAsJSON];
                     packet.name = [json objectForKey:@"name"];
@@ -564,7 +564,7 @@ NSString* const SocketIOException = @"SocketIOException";
                 break;
             }
             case 6: {
-                DEBUGLOG(@"ack");
+                //DEBUGLOG(@"ack");
                 
                 // create regex result
                 NSMutableArray *pieces = [self getMatchesFrom:packet.data with:regexPieces];
@@ -572,7 +572,7 @@ NSString* const SocketIOException = @"SocketIOException";
                 if ([pieces count] > 0) {
                     NSArray *piece = [pieces objectAtIndex:0];
                     int ackId = [[piece objectAtIndex:1] intValue];
-                    DEBUGLOG(@"ack id found: %d", ackId);
+                    //DEBUGLOG(@"ack id found: %d", ackId);
                     
                     NSString *argsStr = [piece objectAtIndex:3];
                     id argsData = nil;
@@ -596,15 +596,15 @@ NSString* const SocketIOException = @"SocketIOException";
                 break;
             }
             case 7: {
-                DEBUGLOG(@"error");
+                //DEBUGLOG(@"error");
                 break;
             }
             case 8: {
-                DEBUGLOG(@"noop");
+                //DEBUGLOG(@"noop");
                 break;
             }
             default: {
-                DEBUGLOG(@"command not found or not yet supported");
+                //DEBUGLOG(@"command not found or not yet supported");
                 break;
             }
         }

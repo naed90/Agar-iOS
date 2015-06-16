@@ -7,9 +7,35 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+//#import "urls.m"
+#include <mach/mach.h>
+#include <mach/mach_time.h>
 
-@interface GameScene : SKScene
+#import "SuperSpeedButton.h"
+#import "urls.m"
+
+#import "SKplayerBall.h"
+
+
+
+@interface GameScene : SKScene <speedDelegate>
 
 - (void) useCreationResponse: (NSDictionary*)response;
+
+- (CGVector)velocityFromDirection:(CGPoint)direction player:(SKplayerBall*)player;
+
+
+@property (nonatomic, strong) SKVideoNode* background;
+@property (strong, nonatomic) NSMutableArray* sand;//of SKSpriteNode
+
+@property (nonatomic, strong) UIScrollView* sv;
+
+@property (nonatomic) BOOL dataSourceIsAccelerometer;
+
+- (void) adjustScale;
+
+- (void) sendSplitEventToServer;
+
+@property (nonatomic) BOOL loginIsUp;
 
 @end

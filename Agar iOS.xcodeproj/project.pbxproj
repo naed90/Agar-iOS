@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3D30F35C1B22B20100B06776 /* SKcircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35B1B22B20100B06776 /* SKcircle.m */; };
+		3D30F35F1B251D1F00B06776 /* GSTouchesShowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35E1B251D1F00B06776 /* GSTouchesShowingWindow.m */; };
+		3D30F3621B251D8800B06776 /* GSTouchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F3601B251D8800B06776 /* GSTouchImage.png */; };
+		3D30F3631B251D8800B06776 /* GSTouchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F3611B251D8800B06776 /* GSTouchImage@2x.png */; };
+		3D30F3661B252EF600B06776 /* UIColor+inverseColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F3651B252EF600B06776 /* UIColor+inverseColor.m */; };
+		3D30F3691B25492C00B06776 /* dataSentToServerCacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F3681B25492C00B06776 /* dataSentToServerCacher.m */; };
+		3D30F36B1B25562900B06776 /* dataSentToServerCacher.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */; };
+		3D30F36E1B25564100B06776 /* entryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F36D1B25564100B06776 /* entryObj.m */; };
 		3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE41B1B865E002C7BC1 /* main.m */; };
 		3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */; };
 		3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */; };
@@ -36,11 +43,32 @@
 		3D4DBF5C1B1E94D6002C7BC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */; };
 		3D4DBF5E1B1E94DE002C7BC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */; };
 		3D4DBF601B1E94E7002C7BC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */; };
+		3D8062941B268AD30038C7EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8062931B268AD30038C7EA /* MediaPlayer.framework */; };
+		3D8062981B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062971B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 */; };
+		3D80629A1B277D040038C7EA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8062991B277D030038C7EA /* MobileCoreServices.framework */; };
+		3D80629D1B27E9D70038C7EA /* SKcircleTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D80629C1B27E9D70038C7EA /* SKcircleTextureManager.m */; };
+		3D8062A31B2920570038C7EA /* coveredRect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062A21B2920570038C7EA /* coveredRect.xib */; };
+		3D8062A61B2920AF0038C7EA /* coveredRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8062A51B2920AF0038C7EA /* coveredRect.m */; };
+		3D8062A81B2941E60038C7EA /* SuperSpeedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062A71B2941E60038C7EA /* SuperSpeedButton.xib */; };
+		3D8062B01B29FCE10038C7EA /* SuperSpeedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8062AF1B29FCE10038C7EA /* SuperSpeedButton.m */; };
+		3D8062B21B2A673A0038C7EA /* StartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062B11B2A673A0038C7EA /* StartButton.png */; };
+		3D8062B41B2A68020038C7EA /* ShineMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062B31B2A68020038C7EA /* ShineMask.png */; };
+		3D8062B71B2CB4920038C7EA /* SKvirus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8062B61B2CB4920038C7EA /* SKvirus.m */; };
+		3D8062BA1B2CB4B90038C7EA /* SKvirusTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8062B91B2CB4B90038C7EA /* SKvirusTextureManager.m */; };
+		3D8062C41B2CB5710038C7EA /* virus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062BC1B2CB5710038C7EA /* virus1.png */; };
+		3D8062C51B2CB5710038C7EA /* virus2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062BD1B2CB5710038C7EA /* virus2.png */; };
+		3D8062C61B2CB5710038C7EA /* virus3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062BE1B2CB5710038C7EA /* virus3.png */; };
+		3D8062C71B2CB5710038C7EA /* virus4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062BF1B2CB5710038C7EA /* virus4.png */; };
+		3D8062C91B2CB5710038C7EA /* virus6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062C11B2CB5710038C7EA /* virus6.png */; };
+		3D8062CA1B2CB5710038C7EA /* virus7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062C21B2CB5710038C7EA /* virus7.png */; };
+		3D8062CB1B2CB5710038C7EA /* virus8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062C31B2CB5710038C7EA /* virus8.png */; };
+		3D8062CE1B2D50AC0038C7EA /* SKplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8062CD1B2D50AC0038C7EA /* SKplayer.m */; };
+		3D8062D21B2EA9C70038C7EA /* splitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8062D11B2EA9C70038C7EA /* splitButton.png */; };
 		3DFEEE7B1B21306B00C68E9B /* login.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFEEE791B21306B00C68E9B /* login.m */; };
 		3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFEEE7A1B21306B00C68E9B /* login.xib */; };
 		3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFEEE7D1B2130A400C68E9B /* Advance-50.png */; };
 		3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFEEE7F1B2130B200C68E9B /* Administrator2-50.png */; };
-		3DFEEE831B213B8100C68E9B /* SKplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFEEE821B213B8100C68E9B /* SKplayer.m */; };
+		3DFEEE831B213B8100C68E9B /* SKplayerBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFEEE821B213B8100C68E9B /* SKplayerBall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +84,16 @@
 /* Begin PBXFileReference section */
 		3D30F35A1B22B20100B06776 /* SKcircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKcircle.h; sourceTree = "<group>"; };
 		3D30F35B1B22B20100B06776 /* SKcircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKcircle.m; sourceTree = "<group>"; };
+		3D30F35D1B251D1F00B06776 /* GSTouchesShowingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTouchesShowingWindow.h; sourceTree = "<group>"; };
+		3D30F35E1B251D1F00B06776 /* GSTouchesShowingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTouchesShowingWindow.m; sourceTree = "<group>"; };
+		3D30F3601B251D8800B06776 /* GSTouchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GSTouchImage.png; sourceTree = "<group>"; };
+		3D30F3611B251D8800B06776 /* GSTouchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GSTouchImage@2x.png"; sourceTree = "<group>"; };
+		3D30F3641B252EF600B06776 /* UIColor+inverseColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+inverseColor.h"; sourceTree = "<group>"; };
+		3D30F3651B252EF600B06776 /* UIColor+inverseColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+inverseColor.m"; sourceTree = "<group>"; };
+		3D30F3681B25492C00B06776 /* dataSentToServerCacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataSentToServerCacher.m; sourceTree = "<group>"; };
+		3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataSentToServerCacher.h; sourceTree = "<group>"; };
+		3D30F36C1B25564100B06776 /* entryObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entryObj.h; sourceTree = "<group>"; };
+		3D30F36D1B25564100B06776 /* entryObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = entryObj.m; sourceTree = "<group>"; };
 		3D4DBEDF1B1B865E002C7BC1 /* Agar iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agar iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DBEE31B1B865E002C7BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4DBEE41B1B865E002C7BC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,13 +138,40 @@
 		3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D8062931B268AD30038C7EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3D8062971B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IMG_1182 (online-video-cutter.com).mp4"; sourceTree = "<group>"; };
+		3D8062991B277D030038C7EA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3D80629B1B27E9D70038C7EA /* SKcircleTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKcircleTextureManager.h; sourceTree = "<group>"; };
+		3D80629C1B27E9D70038C7EA /* SKcircleTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKcircleTextureManager.m; sourceTree = "<group>"; };
+		3D8062A21B2920570038C7EA /* coveredRect.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = coveredRect.xib; sourceTree = "<group>"; };
+		3D8062A41B2920AF0038C7EA /* coveredRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coveredRect.h; sourceTree = "<group>"; };
+		3D8062A51B2920AF0038C7EA /* coveredRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coveredRect.m; sourceTree = "<group>"; };
+		3D8062A71B2941E60038C7EA /* SuperSpeedButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperSpeedButton.xib; sourceTree = "<group>"; };
+		3D8062AE1B29FCE10038C7EA /* SuperSpeedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperSpeedButton.h; sourceTree = "<group>"; };
+		3D8062AF1B29FCE10038C7EA /* SuperSpeedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperSpeedButton.m; sourceTree = "<group>"; };
+		3D8062B11B2A673A0038C7EA /* StartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartButton.png; sourceTree = "<group>"; };
+		3D8062B31B2A68020038C7EA /* ShineMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShineMask.png; sourceTree = "<group>"; };
+		3D8062B51B2CB4920038C7EA /* SKvirus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKvirus.h; sourceTree = "<group>"; };
+		3D8062B61B2CB4920038C7EA /* SKvirus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKvirus.m; sourceTree = "<group>"; };
+		3D8062B81B2CB4B90038C7EA /* SKvirusTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKvirusTextureManager.h; sourceTree = "<group>"; };
+		3D8062B91B2CB4B90038C7EA /* SKvirusTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKvirusTextureManager.m; sourceTree = "<group>"; };
+		3D8062BC1B2CB5710038C7EA /* virus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus1.png; sourceTree = "<group>"; };
+		3D8062BD1B2CB5710038C7EA /* virus2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus2.png; sourceTree = "<group>"; };
+		3D8062BE1B2CB5710038C7EA /* virus3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus3.png; sourceTree = "<group>"; };
+		3D8062BF1B2CB5710038C7EA /* virus4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus4.png; sourceTree = "<group>"; };
+		3D8062C11B2CB5710038C7EA /* virus6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus6.png; sourceTree = "<group>"; };
+		3D8062C21B2CB5710038C7EA /* virus7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus7.png; sourceTree = "<group>"; };
+		3D8062C31B2CB5710038C7EA /* virus8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus8.png; sourceTree = "<group>"; };
+		3D8062CC1B2D50AC0038C7EA /* SKplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKplayer.h; sourceTree = "<group>"; };
+		3D8062CD1B2D50AC0038C7EA /* SKplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKplayer.m; sourceTree = "<group>"; };
+		3D8062D11B2EA9C70038C7EA /* splitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splitButton.png; sourceTree = "<group>"; };
 		3DFEEE781B21306B00C68E9B /* login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login.h; sourceTree = "<group>"; };
 		3DFEEE791B21306B00C68E9B /* login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login.m; sourceTree = "<group>"; };
 		3DFEEE7A1B21306B00C68E9B /* login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = login.xib; sourceTree = "<group>"; };
 		3DFEEE7D1B2130A400C68E9B /* Advance-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Advance-50.png"; sourceTree = "<group>"; };
 		3DFEEE7F1B2130B200C68E9B /* Administrator2-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Administrator2-50.png"; sourceTree = "<group>"; };
-		3DFEEE811B213B8100C68E9B /* SKplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKplayer.h; sourceTree = "<group>"; };
-		3DFEEE821B213B8100C68E9B /* SKplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKplayer.m; sourceTree = "<group>"; };
+		3DFEEE811B213B8100C68E9B /* SKplayerBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKplayerBall.h; sourceTree = "<group>"; };
+		3DFEEE821B213B8100C68E9B /* SKplayerBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKplayerBall.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +179,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D80629A1B277D040038C7EA /* MobileCoreServices.framework in Frameworks */,
+				3D8062941B268AD30038C7EA /* MediaPlayer.framework in Frameworks */,
 				3D4DBF601B1E94E7002C7BC1 /* Foundation.framework in Frameworks */,
 				3D4DBF5E1B1E94DE002C7BC1 /* Security.framework in Frameworks */,
 				3D4DBF5C1B1E94D6002C7BC1 /* CFNetwork.framework in Frameworks */,
@@ -135,6 +202,8 @@
 		3D4DBED61B1B865E002C7BC1 = {
 			isa = PBXGroup;
 			children = (
+				3D8062991B277D030038C7EA /* MobileCoreServices.framework */,
+				3D8062931B268AD30038C7EA /* MediaPlayer.framework */,
 				3D4DBF5F1B1E94E7002C7BC1 /* Foundation.framework */,
 				3D4DBF5D1B1E94DE002C7BC1 /* Security.framework */,
 				3D4DBF5B1B1E94D6002C7BC1 /* CFNetwork.framework */,
@@ -158,16 +227,42 @@
 		3D4DBEE11B1B865E002C7BC1 /* Agar iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3D80629B1B27E9D70038C7EA /* SKcircleTextureManager.h */,
+				3D80629C1B27E9D70038C7EA /* SKcircleTextureManager.m */,
 				3D30F35A1B22B20100B06776 /* SKcircle.h */,
 				3D30F35B1B22B20100B06776 /* SKcircle.m */,
-				3DFEEE811B213B8100C68E9B /* SKplayer.h */,
-				3DFEEE821B213B8100C68E9B /* SKplayer.m */,
+				3DFEEE811B213B8100C68E9B /* SKplayerBall.h */,
+				3DFEEE821B213B8100C68E9B /* SKplayerBall.m */,
+				3D8062CC1B2D50AC0038C7EA /* SKplayer.h */,
+				3D8062CD1B2D50AC0038C7EA /* SKplayer.m */,
+				3D8062B81B2CB4B90038C7EA /* SKvirusTextureManager.h */,
+				3D8062B91B2CB4B90038C7EA /* SKvirusTextureManager.m */,
+				3D8062B51B2CB4920038C7EA /* SKvirus.h */,
+				3D8062B61B2CB4920038C7EA /* SKvirus.m */,
+				3D30F3641B252EF600B06776 /* UIColor+inverseColor.h */,
+				3D30F3651B252EF600B06776 /* UIColor+inverseColor.m */,
 				3D4DBEE61B1B865E002C7BC1 /* AppDelegate.h */,
 				3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */,
+				3D30F35D1B251D1F00B06776 /* GSTouchesShowingWindow.h */,
+				3D30F35E1B251D1F00B06776 /* GSTouchesShowingWindow.m */,
+				3D30F3601B251D8800B06776 /* GSTouchImage.png */,
+				3D30F3611B251D8800B06776 /* GSTouchImage@2x.png */,
 				3D4DBF0F1B1E9272002C7BC1 /* socketDealer.h */,
 				3D4DBF101B1E9272002C7BC1 /* socketDealer.m */,
 				3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */,
 				3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */,
+				3D8062AE1B29FCE10038C7EA /* SuperSpeedButton.h */,
+				3D8062AF1B29FCE10038C7EA /* SuperSpeedButton.m */,
+				3D8062B31B2A68020038C7EA /* ShineMask.png */,
+				3D8062A71B2941E60038C7EA /* SuperSpeedButton.xib */,
+				3D8062B11B2A673A0038C7EA /* StartButton.png */,
+				3D8062A21B2920570038C7EA /* coveredRect.xib */,
+				3D8062A41B2920AF0038C7EA /* coveredRect.h */,
+				3D8062A51B2920AF0038C7EA /* coveredRect.m */,
+				3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */,
+				3D30F3681B25492C00B06776 /* dataSentToServerCacher.m */,
+				3D30F36C1B25564100B06776 /* entryObj.h */,
+				3D30F36D1B25564100B06776 /* entryObj.m */,
 				3DFEEE7D1B2130A400C68E9B /* Advance-50.png */,
 				3DFEEE7F1B2130B200C68E9B /* Administrator2-50.png */,
 				3DFEEE7A1B21306B00C68E9B /* login.xib */,
@@ -176,6 +271,7 @@
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
 				3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */,
 				3D4DBEEC1B1B865E002C7BC1 /* Main.storyboard */,
+				3D8062D11B2EA9C70038C7EA /* splitButton.png */,
 				3D4DBEEF1B1B865E002C7BC1 /* Images.xcassets */,
 				3D4DBEF11B1B865E002C7BC1 /* LaunchScreen.xib */,
 				3D4DBF571B1E9423002C7BC1 /* urls.m */,
@@ -187,6 +283,8 @@
 		3D4DBEE21B1B865E002C7BC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D8062971B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 */,
+				3D8062BB1B2CB5710038C7EA /* virus photos */,
 				3D4DBF121B1E9300002C7BC1 /* socket.IO-objc-master */,
 				3D4DBEE31B1B865E002C7BC1 /* Info.plist */,
 				3D4DBEE41B1B865E002C7BC1 /* main.m */,
@@ -511,6 +609,20 @@
 			path = srtestharness;
 			sourceTree = "<group>";
 		};
+		3D8062BB1B2CB5710038C7EA /* virus photos */ = {
+			isa = PBXGroup;
+			children = (
+				3D8062BC1B2CB5710038C7EA /* virus1.png */,
+				3D8062BD1B2CB5710038C7EA /* virus2.png */,
+				3D8062BE1B2CB5710038C7EA /* virus3.png */,
+				3D8062BF1B2CB5710038C7EA /* virus4.png */,
+				3D8062C11B2CB5710038C7EA /* virus6.png */,
+				3D8062C21B2CB5710038C7EA /* virus7.png */,
+				3D8062C31B2CB5710038C7EA /* virus8.png */,
+			);
+			path = "virus photos";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -592,15 +704,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4DBF4E1B1E9300002C7BC1 /* LICENSE in Resources */,
+				3D8062981B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 in Resources */,
+				3D8062CB1B2CB5710038C7EA /* virus8.png in Resources */,
 				3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */,
+				3D8062D21B2EA9C70038C7EA /* splitButton.png in Resources */,
+				3D8062C91B2CB5710038C7EA /* virus6.png in Resources */,
 				3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */,
 				3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */,
+				3D30F3631B251D8800B06776 /* GSTouchImage@2x.png in Resources */,
 				3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */,
 				3D4DBEEE1B1B865E002C7BC1 /* Main.storyboard in Resources */,
+				3D8062A31B2920570038C7EA /* coveredRect.xib in Resources */,
 				3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */,
+				3D8062C71B2CB5710038C7EA /* virus4.png in Resources */,
+				3D8062CA1B2CB5710038C7EA /* virus7.png in Resources */,
 				3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */,
+				3D8062B41B2A68020038C7EA /* ShineMask.png in Resources */,
+				3D30F3621B251D8800B06776 /* GSTouchImage.png in Resources */,
+				3D8062C41B2CB5710038C7EA /* virus1.png in Resources */,
+				3D8062B21B2A673A0038C7EA /* StartButton.png in Resources */,
+				3D8062A81B2941E60038C7EA /* SuperSpeedButton.xib in Resources */,
 				3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */,
+				3D8062C61B2CB5710038C7EA /* virus3.png in Resources */,
 				3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */,
+				3D8062C51B2CB5710038C7EA /* virus2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,23 +745,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D30F36B1B25562900B06776 /* dataSentToServerCacher.h in Sources */,
 				3D4DBF541B1E9300002C7BC1 /* SocketIOTransportXHR.m in Sources */,
 				3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */,
 				3D4DBF4C1B1E9300002C7BC1 /* CHANGELOG.md in Sources */,
+				3D30F35F1B251D1F00B06776 /* GSTouchesShowingWindow.m in Sources */,
+				3D30F3661B252EF600B06776 /* UIColor+inverseColor.m in Sources */,
+				3D8062B71B2CB4920038C7EA /* SKvirus.m in Sources */,
 				3D4DBF111B1E9272002C7BC1 /* socketDealer.m in Sources */,
 				3D4DBF561B1E9301002C7BC1 /* SRWebSocket.m in Sources */,
+				3D8062BA1B2CB4B90038C7EA /* SKvirusTextureManager.m in Sources */,
+				3D30F36E1B25564100B06776 /* entryObj.m in Sources */,
+				3D8062B01B29FCE10038C7EA /* SuperSpeedButton.m in Sources */,
 				3D4DBF581B1E9423002C7BC1 /* urls.m in Sources */,
 				3D4DBF501B1E9300002C7BC1 /* SocketIO.m in Sources */,
+				3D8062A61B2920AF0038C7EA /* coveredRect.m in Sources */,
 				3D4DBF531B1E9300002C7BC1 /* SocketIOTransportWebsocket.m in Sources */,
 				3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */,
 				3D4DBF521B1E9300002C7BC1 /* SocketIOPacket.m in Sources */,
-				3DFEEE831B213B8100C68E9B /* SKplayer.m in Sources */,
+				3DFEEE831B213B8100C68E9B /* SKplayerBall.m in Sources */,
+				3D80629D1B27E9D70038C7EA /* SKcircleTextureManager.m in Sources */,
 				3D4DBF4D1B1E9300002C7BC1 /* CONTRIBUTORS.md in Sources */,
 				3DFEEE7B1B21306B00C68E9B /* login.m in Sources */,
 				3D4DBF0C1B1B8778002C7BC1 /* GameScene.m in Sources */,
 				3D4DBF511B1E9300002C7BC1 /* SocketIOJSONSerialization.m in Sources */,
 				3D4DBF4F1B1E9300002C7BC1 /* README.md in Sources */,
+				3D30F3691B25492C00B06776 /* dataSentToServerCacher.m in Sources */,
 				3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */,
+				3D8062CE1B2D50AC0038C7EA /* SKplayer.m in Sources */,
 				3D30F35C1B22B20100B06776 /* SKcircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

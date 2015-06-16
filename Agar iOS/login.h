@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (strong, nonatomic) GameScene* delegate;
+
 @end

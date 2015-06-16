@@ -39,6 +39,11 @@
         [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer signUpForEvent:@"playerRegistered" sender:self withSelector:@selector(gotResponse:)];
 		
         self.activityIndicator.alpha = 0;
+        self.proceedDisabled = YES;
+        self.proceedView.alpha = .5;
+        
+        
+        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];//if login is up, the app can sleep if user doesn't touch it
 		
 	}
 	return self;
@@ -78,7 +83,7 @@
 	
 }
 
-#define AUTHLENGTH 25 // this is max username length
+#define AUTHLENGTH 18 // this is max username length
 - (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
 	
 	NSUInteger oldLength = [textField.text length];
@@ -89,8 +94,17 @@
 	
 	BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
 	
+    BOOL retval = newLength <= AUTHLENGTH || returnKey;
+    if(retval)
+    {
+        if(newLength>0)
+            {self.proceedDisabled = NO; self.proceedView.alpha = 1;}
+        else
+            {self.proceedDisabled = YES; self.proceedView.alpha = .5;}
+    }
+    
 	
-	return newLength <= AUTHLENGTH || returnKey;
+    return retval;
 }
 
 - (void) proceedTapped
@@ -118,11 +132,12 @@
     [UIView animateWithDuration:.1
                      animations:^{
                          //self.frame = CGRectMake(self.center.x - 350, self.center.y - 350, 700,700);
-                         self.transform = CGAffineTransformMakeScale(.1, .1);
-                     } completion:^(BOOL finished) {
-                         self.transform = CGAffineTransformMakeScale(1, 1);//so that next time the view is loaded, its back to normal
-                         [self removeFromSuperview];
-                     }];
+                         self.alpha = 0;
+                     } ];
+    [self unregisterUsernameEntered];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];//make app not sleep when user is playing
+    self.delegate.loginIsUp = NO;
     
 }
 

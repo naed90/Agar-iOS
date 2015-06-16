@@ -110,7 +110,7 @@ To process an incoming `message` or `event` just
 // event delegate
 - (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet
 {
-    NSLog(@"didReceiveEvent >>> data: %@", packet.data);
+   NSLog(@"didReceiveEvent >>> data: %@", packet.data);
 }
 ```
 

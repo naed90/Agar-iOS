@@ -20,47 +20,50 @@
         SKShapeNode *shapeNode = [[SKShapeNode alloc] init];
         shapeNode.path = [UIBezierPath bezierPathWithOvalInRect:circle].CGPath;
         
-        shapeNode.fillColor = [self randomColor];
+        self.colorKey = arc4random()%10;
+        shapeNode.fillColor = [self color:self.colorKey];
         shapeNode.lineWidth = 1;
         [self addChild:shapeNode];
         self.circle = shapeNode;
+        
+        self.zPosition = 1;
         
        
     }
     return self;
 }
 
-- (UIColor*)randomColor
+- (UIColor*)color:(colorKey)color
 {
-    switch (arc4random()%10) {
-        case 0:
+    switch (color) {
+        case red:
             return [SKColor redColor];
             break;
-        case 1:
+        case green:
             return [SKColor greenColor];
             break;
-        case 2:
+        case blue:
             return [SKColor blueColor];
             break;
-        case 3:
+        case cyan:
             return [SKColor cyanColor];
             break;
-        case 4:
+        case yellow:
             return [SKColor yellowColor];
             break;
-        case 5:
+        case magenta:
             return [SKColor magentaColor];
             break;
-        case 6:
+        case red2:
             return [SKColor redColor];
             break;
-        case 7:
+        case purple:
             return [SKColor purpleColor];
             break;
-        case 8:
+        case orange:
             return [SKColor orangeColor];
             break;
-        case 9:
+        case red3:
             return [SKColor redColor];
             break;
             
@@ -74,7 +77,7 @@
 
 - (void) createTexture
 {
-    SKTexture* texture = [self.scene.view textureFromNode:self];
+    SKTexture* texture = [self.textureManager textureForColor:self.colorKey withNode:self];// [self.scene.view textureFromNode:self];
     self.texture = texture;
     [self.circle removeFromParent];
 }

@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "SKcircleTextureManager.h"
 
 @interface SKcircle : SKSpriteNode
 
@@ -14,6 +15,12 @@
 @property (strong, nonatomic) NSString* trackingID;
 
 
+
 - (void) createTexture;
+
+
+
+@property (nonatomic) colorKey colorKey;
+@property (strong, nonatomic) SKcircleTextureManager* textureManager;
 
 @end

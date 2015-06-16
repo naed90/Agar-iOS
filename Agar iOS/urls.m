@@ -10,7 +10,13 @@
 #define baseURL @"https://dean-leitersdorf.herokuapp.com/agarios/"
 
 //In-App urls:
-/*None so far*/
+#define defaultSuperSpeedMult 3
+#define defVeloc 300
+#define threshHoldForSpeedBonus 600
+#define maxSplitMult 3.5
+#define timeBeforeReconnectAfterSplit 15000
 
 //NSNotificationCenter Names:
 #define socketBaseName @"socketUpdateAcquiredFor:"
+
+

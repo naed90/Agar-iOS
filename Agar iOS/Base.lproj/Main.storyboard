@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,122 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h2e-rO-UXz">
+                                <rect key="frame" x="210" y="552" width="180" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="71M-uA-H0k"/>
+                                    <constraint firstAttribute="height" constant="28" id="N8Q-mX-ESe"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Summer View"/>
+                                    <segment title="Plain View"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="changeBg:" destination="BYZ-38-t0r" eventType="valueChanged" id="saC-zN-Jgh"/>
+                                </connections>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWl-PD-0BQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HGP-We-0VU"/>
+                                    <constraint firstAttribute="width" constant="160" id="UZp-e1-OEw"/>
+                                    <constraint firstAttribute="height" constant="220" id="ZBP-DP-JI7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UZp-e1-OEw"/>
+                                        <exclude reference="ZBP-DP-JI7"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kov-F2-nJJ">
+                                <rect key="frame" x="210" y="516" width="180" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1o9-F4-e2D"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Crq-jY-oQB"/>
+                                    <constraint firstAttribute="width" constant="180" id="LbK-2A-Fef"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="fGd-WA-ls5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Tilt"/>
+                                    <segment title="Touch"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Crq-jY-oQB"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="changeSource:" destination="BYZ-38-t0r" eventType="valueChanged" id="YHk-8f-cJb"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-6d-CNr">
+                                <rect key="frame" x="514" y="265" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="XGT-AE-71l"/>
+                                    <constraint firstAttribute="width" constant="70" id="pvb-i6-xow"/>
+                                </constraints>
+                                <state key="normal" image="splitButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="splitClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mo0-4y-CeN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1uR-hM-oV6"/>
+                            <constraint firstItem="h2e-rO-UXz" firstAttribute="top" secondItem="kov-F2-nJJ" secondAttribute="bottom" constant="8" id="4SG-vZ-0PX"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="16" id="Cpb-t1-38x"/>
+                            <constraint firstAttribute="centerY" secondItem="Ynr-6d-CNr" secondAttribute="centerY" id="Ebs-HU-RYV"/>
+                            <constraint firstItem="h2e-rO-UXz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Hsb-I9-2tY"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JTp-lM-Mw0"/>
+                            <constraint firstAttribute="centerX" secondItem="kov-F2-nJJ" secondAttribute="centerX" id="NIk-7S-vrX"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Pbd-ie-QeK"/>
+                            <constraint firstAttribute="centerX" secondItem="Ynr-6d-CNr" secondAttribute="centerX" id="QVc-Ot-JAn"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RHR-Vh-VHW"/>
+                            <constraint firstAttribute="centerY" secondItem="Ynr-6d-CNr" secondAttribute="centerY" id="Te4-NF-dpJ"/>
+                            <constraint firstItem="Ynr-6d-CNr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Vz2-ZI-Lys"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="XNy-Ef-WNk"/>
+                            <constraint firstItem="Ynr-6d-CNr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jUg-Zb-gaj"/>
+                            <constraint firstItem="kov-F2-nJJ" firstAttribute="top" secondItem="Ynr-6d-CNr" secondAttribute="bottom" constant="8" id="mZH-Zg-iNB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h2e-rO-UXz" secondAttribute="bottom" constant="20" id="o1h-EK-u4x"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="s9E-eR-qll"/>
+                            <constraint firstAttribute="centerX" secondItem="h2e-rO-UXz" secondAttribute="centerX" id="suB-Am-auJ"/>
+                            <constraint firstItem="tWl-PD-0BQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uBF-au-tBH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1uR-hM-oV6"/>
+                                <exclude reference="JTp-lM-Mw0"/>
+                                <exclude reference="RHR-Vh-VHW"/>
+                                <exclude reference="XNy-Ef-WNk"/>
+                                <exclude reference="s9E-eR-qll"/>
+                                <exclude reference="mZH-Zg-iNB"/>
+                                <exclude reference="QVc-Ot-JAn"/>
+                                <exclude reference="Te4-NF-dpJ"/>
+                                <exclude reference="jUg-Zb-gaj"/>
+                                <exclude reference="Hsb-I9-2tY"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="segmentedView" destination="h2e-rO-UXz" id="yp6-Ic-GIN"/>
+                        <outlet property="sv" destination="tWl-PD-0BQ" id="WzS-VO-C5T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="splitButton.png" width="140" height="139"/>
+    </resources>
 </document>
