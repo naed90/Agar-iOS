@@ -29,7 +29,7 @@
         NSMutableArray* textures = [[NSMutableArray alloc] init];
         for(int i = lowestNumberPicture; i<= highestNumberPicture; i++)
         {
-            SKTexture* texture = [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@%d", rootWord, i]];
+            SKSpriteNode* texture = [SKSpriteNode spriteNodeWithTexture: [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@%d", rootWord, i]]];
             if(texture)
                [textures addObject:texture];
         }
@@ -40,7 +40,7 @@
     return self;
 }
 
-- (SKTexture*)getRandomTexture
+- (SKSpriteNode*)getRandomNode
 {
     return self.textures[arc4random()%self.textures.count];
 }

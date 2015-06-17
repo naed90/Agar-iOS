@@ -11,6 +11,6 @@
 
 @interface SKsandItemsTextureManager : NSObject
 
-- (SKTexture*) getRandomTexture;
+- (SKSpriteNode*)getRandomNode;
 
 @end

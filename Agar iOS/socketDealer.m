@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) NSTimer* reconnectTimer;
 
+@property (strong, nonatomic) NSMutableArray* cacheToSendToServer;//if server cannot be reached, all methods we want to send to server will be cached and sent when a connection is established. Max cache is 30 calls - after that caching will terminate.
+
 @end
 
 
@@ -81,10 +83,25 @@ typedef void (^Block)(void);
 
 # pragma mark socket.IO-objc delegate methods && socketDealer methods
 
+#define maxCache 30
+- (NSMutableArray*)cacheToSendToServer
+{
+    if(!_cacheToSendToServer)
+    {
+        _cacheToSendToServer = [[NSMutableArray alloc] init];
+    }
+    return _cacheToSendToServer;
+}
 
 - (void) sendEvent:(NSString *)event withData:(id)data
 {
-    [self.socketIO sendEvent:event withData:data];
+    if(!self.socketIO.isConnected && self.cacheToSendToServer.count<maxCache)
+    {
+        if(data && event)//don't want nils in a dictionary
+            [self.cacheToSendToServer addObject:@{@"event":event, @"data":data}];
+    }
+    else
+        [self.socketIO sendEvent:event withData:data];
 }
 
 - (void) signUpForEvent:(NSString*)event sender:(id)sender withSelector:(SEL)selector
@@ -259,6 +276,12 @@ typedef void (^Block)(void);
     [self.reconnectTimer invalidate];
     [self resumeAllTrackers];//trackers might have been lost if server killed connection (e.g. server restart/idle)
     [[NSNotificationCenter defaultCenter]postNotificationName:@"didConnectToServer" object:self];
+    
+    for(NSDictionary* message in self.cacheToSendToServer)
+    {
+        [self sendEvent:[message valueForKey:@"event"] withData:[message valueForKey:@"data"]];
+    }
+    [self.cacheToSendToServer removeAllObjects];
     
     /*
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

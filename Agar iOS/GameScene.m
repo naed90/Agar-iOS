@@ -84,6 +84,7 @@
 @property (nonatomic) int borderSize;
 
 @property (strong, nonatomic) SKTexture* sandTexture;
+@property (
 
 @end
 
@@ -173,10 +174,6 @@
     
     //[self addChild: [self newHelloNode]];
     
-    SKAction *makeRocks = [SKAction sequence: @[
-                                                [SKAction performSelector:@selector(addRock) onTarget:self],
-                                                [SKAction waitForDuration:.3 withRange:.2]
-                                                ]];
     //[self runAction: [SKAction repeatActionForever:makeRocks]];
     
     [self showLogin];
@@ -268,7 +265,7 @@
 
 - (void) spawnSandItemsWithHowManySandTilesAdded:(int)tilesAdded prevBorderSize:(int)prev currentBorderSize:(int)current
 {
-    int numToSpawn = tilesAdded * 8 * 0;
+    int numToSpawn = tilesAdded * 5 * 1;
     for(int i = 0; i < numToSpawn; i++)
     {
         //get random texture:
@@ -346,6 +343,11 @@
         
 }
 
+- (CGPoint)randomLocInRect:(CGRect)rect
+{
+    return CGPointMake([self randIntBetweenMin:rect.origin.x max:rect.origin.x+rect.size.width], [self randIntBetweenMin:rect.origin.y max:rect.origin.y+rect.size.height]);
+}
+
 - (void) addSandLayer
 {
     
@@ -385,8 +387,16 @@
     for(SKSpriteNode* node in self.sand)
     {
         if(!node.parent)
+        {
             [self.world addChild:node];
-        node.hidden = self.background.hidden;
+            node.hidden = self.background.hidden;
+            
+            
+            //spawn items in the sand:
+            
+        }
+        
+        
     }
     
     self.borderSize = borderHeight;
@@ -693,20 +703,6 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return skRandf() * (high - low) + low;
 }
 
-int n = 0;
-
-- (void)addRock
-{
-    SKSpriteNode *rock = [[SKSpriteNode alloc] initWithColor:[SKColor yellowColor] size:CGSizeMake(8,8)];
-    rock.position = CGPointMake(skRand(-gridSize/2, gridSize/2), skRand(-gridSize/2, gridSize/2));
-    rock.name = @"rock";
-    rock.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rock.size];
-    rock.physicsBody.dynamic = NO;
-    [self addChild:rock];
-    n++;
-    //NSLog([NSString stringWithFormat:@"%d",n]);
-}
-
 -(void)didSimulatePhysics
 {
     
@@ -742,6 +738,7 @@ int n = 0;
                     float seperation = radSum-dist;
                     float unVecX = offset.x / dist;
                     float unVecY = offset.y /dist;
+                    if(isnan(unVecX)||isnan(unVecY)||isnan(seperation))continue;
                     
                     ball.position = CGPointMake(ball.position.x+unVecX*seperation, ball.position.y + unVecY*seperation);
                 }
@@ -962,8 +959,14 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
                     float x = [[ball valueForKey:@"x"] floatValue];
                     float y = [[ball valueForKey:@"y"] floatValue];
                     
+                    int xD = [[ball valueForKey:@"xD"] intValue];
+                    int yD = [[ball valueForKey:@"yD"] intValue];
+                    if(isnan(x)||isnan(y))
+                    {
+                        
+                    }
                     
-                    newLocation =CGPointMake(x?x:ball2.position.x + diffSince.x - [[ball valueForKey:@"xD"] intValue]*self.world.xScale, y?y:ball2.position.y +diffSince.y - [[ball valueForKey:@"yD"] intValue]*self.world.yScale);
+                    newLocation =CGPointMake((x&&!isnan(x))?x:ball2.position.x + diffSince.x - ((xD&&!isnan(xD))?xD:0)*self.world.xScale, (y&&!isnan(y))?y:ball2.position.y +diffSince.y - ((yD&&!isnan(yD))?yD:0)*self.world.yScale);
                     //entryObj* lastEntry = self.dataCacher.lastEntry;
                     //self.ourPlayer.physicsBody.velocity = [self velocityFromDirection:CGPointMake(lastEntry.dirx, lastEntry.diry) damp:lastEntry.damp massdamp:lastEntry.massdamp superSpeed:player2.superSpeedOn];
                 }
@@ -974,7 +977,11 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
             {
                 float x = [[ball valueForKey:@"x"] floatValue];
                 float y = [[ball valueForKey:@"y"] floatValue];
-                newLocation = CGPointMake(x?x:ball2.position.x, y?y:ball2.position.y);
+                if(isnan(x)||isnan(y))
+                {
+                    NSLog(@"nan 2");
+                }
+                newLocation = CGPointMake((x&&!isnan(x))?x:ball2.position.x, (y&&!isnan(y))?y:ball2.position.y);
                 //float scaleVelocity = [[player valueForKey:@"dampening"] floatValue];
                 
                 //player2.direction = direction;
@@ -1306,6 +1313,7 @@ float getUptimeInMilliseconds2()
             UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(8, 8*(i+1) + i*20, self.sv.frame.size.width - 8*2, 20)];
             label.text = [NSString stringWithFormat:@"%d", i+1];
             label.textAlignment = NSTextAlignmentCenter;
+            label.font = [UIFont fontWithName:@"Chalkduster" size:18];
             [_labelsForRanking addObject:label];
         }
     }
@@ -1491,7 +1499,6 @@ float getUptimeInMilliseconds2()
         for(int j = i + 1; j < allPlayers.count; j++)
         {
             SKplayerBall* player2 = allPlayers[j];
-            CGVector veloc = player2.physicsBody.velocity;
             
             float r2 = player2.getRadius;
             float radSqr = r1+r2;radSqr*=radSqr;
@@ -1665,9 +1672,23 @@ float getUptimeInMilliseconds2()
     }
     self.foods = nil;
     
+    NSArray* allViruses = self.viruses.allValues;
+    for(SKvirus* virus in allViruses)
+    {
+        [virus removeFromParent];
+        [self.foods removeObjectForKey:virus.trackingID];
+    }
+    self.viruses = nil;
+    
+    self.lastTimeRequestedFoods = self.lastTimeRequestedViruses = 0;
+    
     [self.playerRankings removeAllObjects];
     
+    
+    lastUpdateSeq = 0;
+    
     [self showLogin];
+    
     
     
 }

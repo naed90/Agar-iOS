@@ -31,7 +31,7 @@
     if(self)
     {
         self.name = @"ball";
-        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:size.width/2];
+        self.physicsBody = nil;//[SKPhysicsBody bodyWithCircleOfRadius:size.width/2];
         self.physicsBody.friction = 0;
         self.initialWidth = size.width;
         self.physicsBody.collisionBitMask = 0;//prevent collisions
@@ -79,6 +79,13 @@
     [self updateMassLabel];
 }
 
+- (void) setColorKey:(colorKey)colorKey
+{
+    [super setColorKey:colorKey];
+    self.nameLabel.fontColor = [[self color:colorKey ] inverseColor];
+    self.massLabel.fontColor = [[self color:colorKey ] inverseColor];
+}
+
 - (SKLabelNode*)massLabel
 {
     if(!_massLabel)
@@ -94,7 +101,7 @@
             largestFontSize--;
         }
         _massLabel.fontSize = largestFontSize;
-        _massLabel.position = CGPointMake(self.nameLabel.position.x, self.nameLabel.position.y - self.nameLabel.frame.size.height - (8+self.massLabel.frame.size.height)/2);
+        _massLabel.position = CGPointMake(self.nameLabel.position.x, -self.frame.size.height/2+8);//self.nameLabel.position.y - self.nameLabel.frame.size.height - (8+self.massLabel.frame.size.height)/2);
         _massLabel.fontColor = [self.circle.fillColor inverseColor];
     }
     return _massLabel;

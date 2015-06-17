@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "GSTouchesShowingWindow.h"
 
-#define defaultBarHeight 20
+#define defaultBarHeight 40
 
 @interface AppDelegate ()
 
@@ -76,8 +76,16 @@
         CGRect frame = self.window.frame;
         frame.size.height = defaultBarHeight;
         _bar = [[UIView alloc] initWithFrame:frame];
-        _bar.backgroundColor = [UIColor redColor];
+        _bar.backgroundColor = [UIColor blueColor];
         _bar.layer.zPosition = MAXFLOAT;
+        
+        UILabel* label = [[UILabel alloc] initWithFrame:_bar.bounds];
+        label.font = [UIFont fontWithName:@"Chalkduster" size:16];
+        label.text = @"Connecting to Server...";
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [_bar addSubview:label];
+        
         [self.window addSubview:_bar];
     }
     return _bar;

@@ -81,4 +81,9 @@
     self.texture = texture;
     [self.circle removeFromParent];
 }
+- (void) setColorKey:(colorKey)colorKey
+{
+    _colorKey = colorKey;
+    self.circle.fillColor = [self color:colorKey];
+}
 @end

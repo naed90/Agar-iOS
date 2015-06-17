@@ -22,5 +22,6 @@
 
 @property (nonatomic) colorKey colorKey;
 @property (strong, nonatomic) SKcircleTextureManager* textureManager;
+- (UIColor*)color:(colorKey)color;
 
 @end
