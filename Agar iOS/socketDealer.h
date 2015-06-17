@@ -36,4 +36,7 @@
 @property (nonatomic) BOOL loggingOff;
 
 @property (nonatomic) id<socketDealerDelegate> delegate;
+
+- (void) signUpToKnowWhenConnectionToServerEstablishedWithSender:(id)sender selector:(SEL)selector;
+- (void) unSignUpToKnowWhenConnectionToServerEstablishedWithSender:(id)sender;
 @end

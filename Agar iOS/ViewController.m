@@ -95,6 +95,10 @@
     {
         node.hidden = selected;
     }
+    for(SKSpriteNode* node in self.gs.sandItems)
+    {
+        node.hidden = selected;
+    }
 }
 
 - (IBAction)changeSource:(UISegmentedControl *)sender

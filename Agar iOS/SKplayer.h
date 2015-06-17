@@ -40,6 +40,8 @@
 @property (nonatomic) int totalMass;
 
 @property (nonatomic) int lastServerUpdate;
+@property (nonatomic) int lastTimeSpeedUsed;
+@property (nonatomic) int lastTimeStampReceivedFromServer;
 
 @property (nonatomic) CGPoint lastTouchPoint;
 

@@ -28,6 +28,8 @@
 #import "SKvirusTextureManager.h"
 #import "SKvirus.h"
 
+#import "SKsandItemsTextureManager.h"
+
 
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
@@ -77,8 +79,11 @@
 @property (strong, nonatomic) SKvirusTextureManager* virusTextureManager;
 @property (strong, nonatomic) NSMutableDictionary* viruses;//trackingID to virus
 
+@property (strong, nonatomic) SKsandItemsTextureManager* sandItemsTextureManager;
 
+@property (nonatomic) int borderSize;
 
+@property (strong, nonatomic) SKTexture* sandTexture;
 
 @end
 
@@ -113,7 +118,7 @@
     
     
     //Draw boundaries:
-    UIBezierPath *clipPath = [UIBezierPath bezierPathWithRect:CGRectMake(-gridSize, -gridSize, gridSize*2, gridSize*2)];
+    UIBezierPath *clipPath = [UIBezierPath bezierPathWithRect:CGRectMake(-gridSize*3, -gridSize*3, gridSize*6, gridSize*6)];
     UIBezierPath* smallMaskPath = [UIBezierPath bezierPathWithRect:CGRectMake(-gridSize/2, -gridSize/2, gridSize, gridSize)];
     [clipPath appendPath:smallMaskPath];
     clipPath.usesEvenOddFillRule = YES;
@@ -147,47 +152,23 @@
     [self.world addChild:background];
     self.background = background;
     
-    UIImage* image = [UIImage imageNamed:@"sand2"];
-    SKTexture* texture = [SKTexture textureWithImage:image];
+    self.sandTexture = [SKTexture textureWithImageNamed:@"sand2Cropped"];
     
     self.sand = [[NSMutableArray alloc] init];
     
-    CGSize textureSize = texture.size;
+    self.borderSize = gridSize;
     
-    int borderHeight = gridSize + textureSize.height*2;
-    int borderWidth = gridSize + textureSize.width*2;
-    for(int i = -borderWidth/2; i < borderWidth/2 + textureSize.width; i+=textureSize.width)
-    {
-        //top:
-        SKSpriteNode* node = [[SKSpriteNode alloc]initWithTexture:texture];
-        node.position = CGPointMake(i + textureSize.width/2, borderHeight/2 - textureSize.height/2);
-        
-        //bottom:
-        SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
-        node2.position = CGPointMake(i + textureSize.width/2, -borderHeight/2 + textureSize.height/2);
-        
-        [self.sand addObject:node]; [self.sand addObject:node2];
-    }
+    [self addSandLayer];
     
-    for(int j = - borderHeight/2; j < borderHeight/2 + textureSize.height; j+=textureSize.height)
-    {
-        //top:
-        SKSpriteNode* node = [[SKSpriteNode alloc]initWithTexture:texture];
-        node.position = CGPointMake(-borderWidth/2 + textureSize.width/2, j + textureSize.height/2);
-        
-        //bottom:
-        SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
-        node2.position = CGPointMake(borderWidth/2 - textureSize.width/2, j + textureSize.height/2);
-        
-        [self.sand addObject:node]; [self.sand addObject:node2];
-    }
     
-    for(SKSpriteNode* node in self.sand)
-    {
-        [self.world addChild:node];
-    }
-
     
+    //spawn items on sand:
+    
+    self.sandItemsTextureManager = [[SKsandItemsTextureManager alloc] init];
+    self.sandItems = [[NSMutableArray alloc] init];
+    
+    
+    [self spawnSandItemsWithHowManySandTilesAdded:[[NSNumber numberWithInteger:self.sand.count] intValue] prevBorderSize:gridSize currentBorderSize:self.borderSize];
     
     
     //[self addChild: [self newHelloNode]];
@@ -200,7 +181,7 @@
     
     [self showLogin];
     
-    [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer signUpForEvent:@"gridUpdate" sender:self withSelector:@selector(gotResponse:)];
+    [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer signUpForEvent:@"gU" sender:self withSelector:@selector(gotResponse:)];
     
     [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer signUpForEvent:@"requestFoods" sender:self withSelector:@selector(gotFoods:)];
     
@@ -272,8 +253,152 @@
     }
     
     
+    [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer signUpToKnowWhenConnectionToServerEstablishedWithSender:self selector:@selector(connectedToServer)];
+    
+}
+
+- (void) connectedToServer
+{
+    NSLog(@"Requesting players!!!");
+    
+    if(self.gridID)
+        [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/fullplayerupdate" withData:@{@"gridID":self.gridID}];
+}
+
+
+- (void) spawnSandItemsWithHowManySandTilesAdded:(int)tilesAdded prevBorderSize:(int)prev currentBorderSize:(int)current
+{
+    int numToSpawn = tilesAdded * 8 * 0;
+    for(int i = 0; i < numToSpawn; i++)
+    {
+        //get random texture:
+        SKTexture* randTexture = [self.sandItemsTextureManager getRandomTexture];
+        SKSpriteNode* item = [SKSpriteNode spriteNodeWithTexture:randTexture];
+        [self.world addChild:item];//must add so that we can compare to other items' frames
+        //try to place in random loc:
+        
+        BOOL success = NO;
+        while(!success)
+        {
+            CGPoint randLoc;
+            if(i < numToSpawn/2)//spawn in 1 direction
+            {
+                randLoc = CGPointMake([self randIntBetweenMin:prev/2 + randTexture.size.width/2 max:current/2 - randTexture.size.width/2]*((arc4random()%2)==0?-1:1), [self randIntBetweenMin:0 max:current/2 - randTexture.size.height/2]*((arc4random()%2)==0?-1:1));
+            }
+            else //spawn in other direction
+            {
+                randLoc = CGPointMake([self randIntBetweenMin:0 max:current/2 - randTexture.size.width/2]*((arc4random()%2)==0?-1:1), [self randIntBetweenMin:prev/2 +randTexture.size.height/2 max:current/2 - randTexture.size.height/2]*((arc4random()%2)==0?-1:1));
+            }
+            
+            
+            item.position = randLoc;
+            for(SKSpriteNode* otherNode in self.sandItems)
+            {
+                if(CGRectContainsRect(otherNode.frame, item.frame))
+                {
+                    success = NO;
+                    break;
+                }
+            }
+            success = YES;
+        }
+        
+        item.hidden = self.background.hidden;
+        [self.sandItems addObject:item];
+        
+    }
+}
+
+- (void) extendSandToCoverWithCenterPoint:(CGPoint)center distanceFromCenter:(int)dist
+{
+    float minSizeToExtendBy = 0;
+    
+    float boundaryMax = self.borderSize/2;
+    //check top:
+    float topMin = (center.y + dist) - boundaryMax;
+    if(topMin > minSizeToExtendBy)minSizeToExtendBy = topMin;
+    
+    //check bottom:
+    float bottomMin = -(center.y - dist) -boundaryMax;
+    if(bottomMin>minSizeToExtendBy)minSizeToExtendBy = bottomMin;
+    
+    //check right:
+    float rightMin = (center.x + dist) - boundaryMax;
+    if(rightMin > minSizeToExtendBy) minSizeToExtendBy = rightMin;
+    
+    //check left:
+    float leftMin = -(center.x - dist) -boundaryMax;
+    if(leftMin > minSizeToExtendBy) minSizeToExtendBy = leftMin;
+    
+    if(minSizeToExtendBy==0)return;
+    int numberToAdd = ceilf(minSizeToExtendBy/self.sandTexture.size.height);
+    
+    int originalSandCount = [[NSNumber numberWithInteger:self.sand.count]intValue];
+    for(int i = 0; i < numberToAdd; i++)
+    {
+        [self addSandLayer];
+    }
+    int newSandCount =[[NSNumber numberWithInteger:self.sand.count]intValue];
+    
+    [self spawnSandItemsWithHowManySandTilesAdded:newSandCount - originalSandCount prevBorderSize:boundaryMax*2 currentBorderSize:self.borderSize];
     
     
+        
+}
+
+- (void) addSandLayer
+{
+    
+    SKTexture* texture = self.sandTexture;
+    
+    CGSize textureSize = texture.size;
+    
+    int borderHeight = self.borderSize + textureSize.height*2;
+    int borderWidth = self.borderSize + textureSize.width*2;
+    
+    for(int i = -borderWidth/2; i <= borderWidth/2 - 1*textureSize.width; i+=textureSize.width)
+    {
+        //top:
+        SKSpriteNode* node = [[SKSpriteNode alloc]initWithTexture:texture];
+        node.position = CGPointMake(i + textureSize.width/2, borderHeight/2 - textureSize.height/2);
+        
+        //bottom:
+        SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
+        node2.position = CGPointMake(i + textureSize.width/2, -borderHeight/2 + textureSize.height/2);
+        
+        [self.sand addObject:node]; [self.sand addObject:node2];
+    }
+    
+    for(int j = - borderHeight/2; j <= borderHeight/2 - 1*textureSize.height; j+=textureSize.height)
+    {
+        //top:
+        SKSpriteNode* node = [[SKSpriteNode alloc]initWithTexture:texture];
+        node.position = CGPointMake(-borderWidth/2 + textureSize.width/2, j + textureSize.height/2);
+        
+        //bottom:
+        SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
+        node2.position = CGPointMake(borderWidth/2 - textureSize.width/2, j + textureSize.height/2);
+        
+        [self.sand addObject:node]; [self.sand addObject:node2];
+    }
+    
+    for(SKSpriteNode* node in self.sand)
+    {
+        if(!node.parent)
+            [self.world addChild:node];
+        node.hidden = self.background.hidden;
+    }
+    
+    self.borderSize = borderHeight;
+
+}
+
+
+- (int)randIntBetweenMin:(int)min max:(int)max
+{
+    if(min>max)return [self randIntBetweenMin:max max:min];//flip
+    if(min == max)return min;//they are the same, and mod0 is undefined
+    return (arc4random()%(max-min)) + min;
 }
 
 - (void) setDataSourceIsAccelerometer:(BOOL)dataSourceIsAccelerometer
@@ -319,8 +444,8 @@
          
          
          //scale velocity now:
-         //.2656 hypo is considered 100%
-         float scaleVeloc = hypo < .2656 ? hypo/.2656 : 1;
+         //.19 hypo is considered 100%
+         float scaleVeloc = hypo < .19 ? hypo/.19 : 1;
          self.ourPlayer.dampening = scaleVeloc;
          
          
@@ -664,8 +789,10 @@ int n = 0;
     SKplayer* player = self.ourPlayer;
     if(player)
     {
+        CGPoint center = [player getCenterPoint];
         [self adjustScale];
-        [self centerOnPoint:[player getCenterPoint]];
+        [self centerOnPoint:center];
+        [self extendSandToCoverWithCenterPoint:center distanceFromCenter:(self.frame.size.height/self.world.yScale)/2];
     }
 
 }
@@ -680,6 +807,12 @@ int n = 0;
     
     self.background.size = CGSizeMake(self.view.frame.size.width/self.world.xScale, self.view.frame.size.height/self.world.yScale);
     //NSLog(NSStringFromCGPoint(node.parent.position));
+}
+
+- (void) setGridID:(NSString *)gridID
+{
+    _gridID = gridID;
+    [self connectedToServer];
 }
 
 - (void) useCreationResponse:(NSDictionary *)response
@@ -737,15 +870,25 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         SKplayer* player2 = [self.players valueForKey:trackingID];
         if(!player2)
         {
+            if(![player valueForKey:@"n"])continue;//it will be created when we get its name!
             player2 = [self newSpaceshipWithTrackingID:trackingID withPlayerName:[player valueForKey:@"n"]];
             player2.isOurPlayer = player2==self.ourPlayer;
         }
         
         player2.lastServerUpdate = [[player valueForKey:@"su"] intValue];
-        BOOL superSpeedOn =  (player2.lastServerUpdate - [[player valueForKey:@"ssu"]intValue]) <= superSpeedLastTime;
+        NSNumber* ssu = [player valueForKey:@"ssu"];
+        if(ssu)
+        {
+            player2.lastTimeSpeedUsed = [ssu intValue];
+        }
+        BOOL superSpeedOn =  (player2.lastServerUpdate - player2.lastTimeSpeedUsed) <= superSpeedLastTime;
         player2.superSpeedOn = superSpeedOn;
         
-        player2.dampening = [[player valueForKey:@"d"]floatValue];
+        NSNumber* d = [player valueForKey:@"d"];
+        if(d)
+        {
+        player2.dampening = [d floatValue];
+        }
         
         NSArray* balls = [player valueForKey:@"b"];
         for(int i = 0; i < balls.count; i++)
@@ -794,10 +937,14 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
             
             
             CGPoint newLocation;
-            //fix our player
-            if(player2==self.ourPlayer && [[player valueForKey:@"ts"] intValue])
+            int ts = [[player valueForKey:@"ts"]intValue];
             {
-                int timestamp = [[player valueForKey:@"ts"] intValue];
+                player2.lastTimeStampReceivedFromServer = ts;
+            }
+            //fix our player
+            if(player2==self.ourPlayer)
+            {
+                int timestamp = ts;
                 if(timestamp)
                 {
                     CGPoint diffSince = [ball2.dataCacher changesSince:timestamp];
@@ -812,7 +959,11 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
                     
                     //NSLog([NSString stringWithFormat:@"%d, %d", [[ball valueForKey:@"yD"] intValue], player2.lastServerUpdate]);
                     
-                    newLocation =CGPointMake([[ball valueForKey:@"x"] floatValue] + diffSince.x - [[ball valueForKey:@"xD"] intValue]*self.world.xScale, [[ball valueForKey:@"y"] floatValue]+diffSince.y - [[ball valueForKey:@"yD"] intValue]*self.world.yScale);
+                    float x = [[ball valueForKey:@"x"] floatValue];
+                    float y = [[ball valueForKey:@"y"] floatValue];
+                    
+                    
+                    newLocation =CGPointMake(x?x:ball2.position.x + diffSince.x - [[ball valueForKey:@"xD"] intValue]*self.world.xScale, y?y:ball2.position.y +diffSince.y - [[ball valueForKey:@"yD"] intValue]*self.world.yScale);
                     //entryObj* lastEntry = self.dataCacher.lastEntry;
                     //self.ourPlayer.physicsBody.velocity = [self velocityFromDirection:CGPointMake(lastEntry.dirx, lastEntry.diry) damp:lastEntry.damp massdamp:lastEntry.massdamp superSpeed:player2.superSpeedOn];
                 }
@@ -821,7 +972,9 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
             
             else
             {
-                newLocation = CGPointMake([[ball valueForKey:@"x"] floatValue], [[ball valueForKey:@"y"] floatValue]);
+                float x = [[ball valueForKey:@"x"] floatValue];
+                float y = [[ball valueForKey:@"y"] floatValue];
+                newLocation = CGPointMake(x?x:ball2.position.x, y?y:ball2.position.y);
                 //float scaleVelocity = [[player valueForKey:@"dampening"] floatValue];
                 
                 //player2.direction = direction;
@@ -852,8 +1005,18 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
             [ball2 runAction:action];
             }
             
+            float dx = [[ball valueForKey:@"dx"] floatValue];
+            float dy = [[ball valueForKey:@"dy"] floatValue];
             
-            CGPoint direction = CGPointMake([[ball valueForKey:@"dx"] floatValue], [[ball valueForKey:@"dy"] floatValue]);
+            
+            if([ball objectForKey:@"dx"]==nil || [ball objectForKey:@"dy"]==nil)
+            {
+                CGPoint dir = rwNormalize(CGPointMake(ball2.physicsBody.velocity.dx, ball2.physicsBody.velocity.dy));
+                dx = dir.x;
+                dy = dir.y;
+            }
+            
+            CGPoint direction = CGPointMake(dx, dy);
             CGVector targetVeloc = [self velocityFromDirection:direction player:ball2];
             ball2.physicsBody.velocity = targetVeloc;
             
@@ -868,9 +1031,12 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
              */
             
             
+            int newMass = [[ball valueForKey:@"m"] intValue];
+            if(newMass)
+            {
+                ball2.mass = newMass;
+            }
             
-            
-            ball2.mass = [[ball valueForKey:@"m"] intValue];
             ball2.updateSeq = updateSeq;
 
             
@@ -881,7 +1047,7 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         //Update ss bar on top
         if(player2==self.ourPlayer)
         {
-            float timeDif = [[player valueForKey:@"su"] floatValue] - [[player valueForKey:@"ssu"]floatValue] - superSpeedLastTime;//ignore last time when doing this
+            float timeDif = [[player valueForKey:@"su"] floatValue] - player2.lastTimeSpeedUsed - superSpeedLastTime;//ignore last time when doing this
             float chargePercent = MAX(MIN(1, timeDif/superSpeedCooldown),0);
             
             float halfRects = self.superSpeedRects.count/2;
@@ -970,7 +1136,9 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
     }
     
     //ensure food count correct:
+    
     NSNumber* foodsFromServer = [desc valueForKey:@"aFC"];
+    if(foodsFromServer){
     float currentTime = getUptimeInMilliseconds2();
     NSInteger dif = [foodsFromServer integerValue] - self.foods.count;
     if(currentTime - self.lastTimeRequestedFoods > 2000 && labs(dif)>5)//at least 5 foods off - we can be 1 or 2 foods off, its fine.
@@ -992,7 +1160,7 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         }
          */
     }
-    
+    }
     //viruses:
     NSArray* virusesAdded = [desc valueForKey:@"vA"];
     for(NSDictionary* virus in virusesAdded)
@@ -1016,7 +1184,8 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
     
     //ensure food count correct:
     NSNumber* virusesFromServer = [desc valueForKey:@"aVC"];
-   float currentTime2 = getUptimeInMilliseconds2();
+    if(virusesFromServer){
+    float currentTime2 = getUptimeInMilliseconds2();
     if(![virusesFromServer isEqualToNumber:[NSNumber numberWithInteger:self.viruses.count]] && currentTime2 - self.lastTimeRequestedViruses > 2000)
     {
         NSLog(@"Requesting viruses!!!");
@@ -1024,7 +1193,7 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/requestviruses" withData:@{@"gridID":self.gridID}];
         self.lastTimeRequestedViruses = currentTime2;
     }
-    
+    }
     
 }
 float getUptimeInMilliseconds2()
@@ -1136,6 +1305,7 @@ float getUptimeInMilliseconds2()
         {
             UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(8, 8*(i+1) + i*20, self.sv.frame.size.width - 8*2, 20)];
             label.text = [NSString stringWithFormat:@"%d", i+1];
+            label.textAlignment = NSTextAlignmentCenter;
             [_labelsForRanking addObject:label];
         }
     }
@@ -1271,11 +1441,11 @@ float getUptimeInMilliseconds2()
     for(i = 0; i < self.playerRankings.count && i < self.labelsForRanking.count; i++)
     {
         UILabel* label = self.labelsForRanking[i];
-        label.text = [NSString stringWithFormat:@"%d. %@: %d", i+1, ((SKplayer*)self.playerRankings[i]).playerName, ((SKplayer*)self.playerRankings[i]).totalMass];
+        label.text = [NSString stringWithFormat:@"\u200E %d. %@: %d", i+1, ((SKplayer*)self.playerRankings[i]).playerName, ((SKplayer*)self.playerRankings[i]).totalMass];
         if((SKplayer*)self.playerRankings[i]==self.ourPlayer)
         {
             label.textColor = [UIColor redColor];
-            label.text = [NSString stringWithFormat:@"%d. %@: %d   <-- You!", i+1, ((SKplayer*)self.playerRankings[i]).playerName, ((SKplayer*)self.playerRankings[i]).totalMass];
+            label.text = [NSString stringWithFormat:@"\u200E %d. %@: %d   <-- You!", i+1, ((SKplayer*)self.playerRankings[i]).playerName, ((SKplayer*)self.playerRankings[i]).totalMass];
         }
         else
         {
@@ -1504,9 +1674,11 @@ float getUptimeInMilliseconds2()
 
 - (void) dealloc
 {
-    [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer resignEvent:@"gridUpdate" sender:self];
+    [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer resignEvent:@"gU" sender:self];
     [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer resignEvent:@"requestFoods" sender:self];
     [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer resignEvent:@"youWereEaten" sender:self];
+    
+    [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer unSignUpToKnowWhenConnectionToServerEstablishedWithSender:self];
 }
 
 
@@ -1561,6 +1733,7 @@ float getUptimeInMilliseconds2()
         [self.world runAction:[SKAction scaleBy:2 duration:.2]];
         self.shouldTurnOffSpeedScale = NO;
     }
+    
 }
 
 - (void) sendSplitEventToServer

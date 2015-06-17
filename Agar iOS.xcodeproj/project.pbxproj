@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D128FBE1B30D07A004BD07A /* beach0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB01B30D079004BD07A /* beach0.png */; };
+		3D128FBF1B30D07A004BD07A /* beach1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB11B30D079004BD07A /* beach1.png */; };
+		3D128FC01B30D07A004BD07A /* beach10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB21B30D079004BD07A /* beach10.png */; };
+		3D128FC11B30D07A004BD07A /* beach11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB31B30D079004BD07A /* beach11.png */; };
+		3D128FC21B30D07A004BD07A /* beach12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB41B30D079004BD07A /* beach12.png */; };
+		3D128FC31B30D07A004BD07A /* beach13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB51B30D079004BD07A /* beach13.png */; };
+		3D128FC41B30D07A004BD07A /* beach2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB61B30D079004BD07A /* beach2.png */; };
+		3D128FC51B30D07A004BD07A /* beach3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB71B30D07A004BD07A /* beach3.png */; };
+		3D128FC61B30D07A004BD07A /* beach4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB81B30D07A004BD07A /* beach4.png */; };
+		3D128FC71B30D07A004BD07A /* beach5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB91B30D07A004BD07A /* beach5.png */; };
+		3D128FC81B30D07A004BD07A /* beach6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBA1B30D07A004BD07A /* beach6.png */; };
+		3D128FC91B30D07A004BD07A /* beach7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBB1B30D07A004BD07A /* beach7.png */; };
+		3D128FCA1B30D07A004BD07A /* beach8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBC1B30D07A004BD07A /* beach8.png */; };
+		3D128FCB1B30D07A004BD07A /* beach9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBD1B30D07A004BD07A /* beach9.png */; };
+		3D128FCE1B30D34D004BD07A /* SKsandItemsTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D128FCD1B30D34D004BD07A /* SKsandItemsTextureManager.m */; };
 		3D30F35C1B22B20100B06776 /* SKcircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35B1B22B20100B06776 /* SKcircle.m */; };
 		3D30F35F1B251D1F00B06776 /* GSTouchesShowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35E1B251D1F00B06776 /* GSTouchesShowingWindow.m */; };
 		3D30F3621B251D8800B06776 /* GSTouchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F3601B251D8800B06776 /* GSTouchImage.png */; };
@@ -82,6 +97,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D128FB01B30D079004BD07A /* beach0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach0.png; sourceTree = "<group>"; };
+		3D128FB11B30D079004BD07A /* beach1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach1.png; sourceTree = "<group>"; };
+		3D128FB21B30D079004BD07A /* beach10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach10.png; sourceTree = "<group>"; };
+		3D128FB31B30D079004BD07A /* beach11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach11.png; sourceTree = "<group>"; };
+		3D128FB41B30D079004BD07A /* beach12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach12.png; sourceTree = "<group>"; };
+		3D128FB51B30D079004BD07A /* beach13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach13.png; sourceTree = "<group>"; };
+		3D128FB61B30D079004BD07A /* beach2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach2.png; sourceTree = "<group>"; };
+		3D128FB71B30D07A004BD07A /* beach3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach3.png; sourceTree = "<group>"; };
+		3D128FB81B30D07A004BD07A /* beach4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach4.png; sourceTree = "<group>"; };
+		3D128FB91B30D07A004BD07A /* beach5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach5.png; sourceTree = "<group>"; };
+		3D128FBA1B30D07A004BD07A /* beach6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach6.png; sourceTree = "<group>"; };
+		3D128FBB1B30D07A004BD07A /* beach7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach7.png; sourceTree = "<group>"; };
+		3D128FBC1B30D07A004BD07A /* beach8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach8.png; sourceTree = "<group>"; };
+		3D128FBD1B30D07A004BD07A /* beach9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach9.png; sourceTree = "<group>"; };
+		3D128FCC1B30D34D004BD07A /* SKsandItemsTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKsandItemsTextureManager.h; sourceTree = "<group>"; };
+		3D128FCD1B30D34D004BD07A /* SKsandItemsTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKsandItemsTextureManager.m; sourceTree = "<group>"; };
 		3D30F35A1B22B20100B06776 /* SKcircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKcircle.h; sourceTree = "<group>"; };
 		3D30F35B1B22B20100B06776 /* SKcircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKcircle.m; sourceTree = "<group>"; };
 		3D30F35D1B251D1F00B06776 /* GSTouchesShowingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTouchesShowingWindow.h; sourceTree = "<group>"; };
@@ -199,6 +230,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D128FAF1B30D079004BD07A /* beach pictures */ = {
+			isa = PBXGroup;
+			children = (
+				3D128FB01B30D079004BD07A /* beach0.png */,
+				3D128FB11B30D079004BD07A /* beach1.png */,
+				3D128FB21B30D079004BD07A /* beach10.png */,
+				3D128FB31B30D079004BD07A /* beach11.png */,
+				3D128FB41B30D079004BD07A /* beach12.png */,
+				3D128FB51B30D079004BD07A /* beach13.png */,
+				3D128FB61B30D079004BD07A /* beach2.png */,
+				3D128FB71B30D07A004BD07A /* beach3.png */,
+				3D128FB81B30D07A004BD07A /* beach4.png */,
+				3D128FB91B30D07A004BD07A /* beach5.png */,
+				3D128FBA1B30D07A004BD07A /* beach6.png */,
+				3D128FBB1B30D07A004BD07A /* beach7.png */,
+				3D128FBC1B30D07A004BD07A /* beach8.png */,
+				3D128FBD1B30D07A004BD07A /* beach9.png */,
+			);
+			name = "beach pictures";
+			path = "virus photos/beach pictures";
+			sourceTree = "<group>";
+		};
 		3D4DBED61B1B865E002C7BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +304,8 @@
 				3D4DBF101B1E9272002C7BC1 /* socketDealer.m */,
 				3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */,
 				3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */,
+				3D128FCC1B30D34D004BD07A /* SKsandItemsTextureManager.h */,
+				3D128FCD1B30D34D004BD07A /* SKsandItemsTextureManager.m */,
 				3D8062AE1B29FCE10038C7EA /* SuperSpeedButton.h */,
 				3D8062AF1B29FCE10038C7EA /* SuperSpeedButton.m */,
 				3D8062B31B2A68020038C7EA /* ShineMask.png */,
@@ -284,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				3D8062971B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 */,
+				3D128FAF1B30D079004BD07A /* beach pictures */,
 				3D8062BB1B2CB5710038C7EA /* virus photos */,
 				3D4DBF121B1E9300002C7BC1 /* socket.IO-objc-master */,
 				3D4DBEE31B1B865E002C7BC1 /* Info.plist */,
@@ -705,15 +761,25 @@
 			files = (
 				3D4DBF4E1B1E9300002C7BC1 /* LICENSE in Resources */,
 				3D8062981B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 in Resources */,
+				3D128FC41B30D07A004BD07A /* beach2.png in Resources */,
+				3D128FC01B30D07A004BD07A /* beach10.png in Resources */,
+				3D128FCB1B30D07A004BD07A /* beach9.png in Resources */,
+				3D128FC51B30D07A004BD07A /* beach3.png in Resources */,
 				3D8062CB1B2CB5710038C7EA /* virus8.png in Resources */,
 				3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */,
 				3D8062D21B2EA9C70038C7EA /* splitButton.png in Resources */,
 				3D8062C91B2CB5710038C7EA /* virus6.png in Resources */,
+				3D128FC31B30D07A004BD07A /* beach13.png in Resources */,
+				3D128FBE1B30D07A004BD07A /* beach0.png in Resources */,
+				3D128FC21B30D07A004BD07A /* beach12.png in Resources */,
 				3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */,
 				3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */,
+				3D128FBF1B30D07A004BD07A /* beach1.png in Resources */,
 				3D30F3631B251D8800B06776 /* GSTouchImage@2x.png in Resources */,
 				3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */,
 				3D4DBEEE1B1B865E002C7BC1 /* Main.storyboard in Resources */,
+				3D128FC61B30D07A004BD07A /* beach4.png in Resources */,
+				3D128FC71B30D07A004BD07A /* beach5.png in Resources */,
 				3D8062A31B2920570038C7EA /* coveredRect.xib in Resources */,
 				3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */,
 				3D8062C71B2CB5710038C7EA /* virus4.png in Resources */,
@@ -724,9 +790,13 @@
 				3D8062C41B2CB5710038C7EA /* virus1.png in Resources */,
 				3D8062B21B2A673A0038C7EA /* StartButton.png in Resources */,
 				3D8062A81B2941E60038C7EA /* SuperSpeedButton.xib in Resources */,
+				3D128FCA1B30D07A004BD07A /* beach8.png in Resources */,
 				3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */,
+				3D128FC11B30D07A004BD07A /* beach11.png in Resources */,
 				3D8062C61B2CB5710038C7EA /* virus3.png in Resources */,
 				3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */,
+				3D128FC81B30D07A004BD07A /* beach6.png in Resources */,
+				3D128FC91B30D07A004BD07A /* beach7.png in Resources */,
 				3D8062C51B2CB5710038C7EA /* virus2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,6 +815,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D128FCE1B30D34D004BD07A /* SKsandItemsTextureManager.m in Sources */,
 				3D30F36B1B25562900B06776 /* dataSentToServerCacher.h in Sources */,
 				3D4DBF541B1E9300002C7BC1 /* SocketIOTransportXHR.m in Sources */,
 				3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */,

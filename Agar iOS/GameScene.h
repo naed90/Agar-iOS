@@ -27,6 +27,7 @@
 
 @property (nonatomic, strong) SKVideoNode* background;
 @property (strong, nonatomic) NSMutableArray* sand;//of SKSpriteNode
+@property (strong, nonatomic) NSMutableArray* sandItems;
 
 @property (nonatomic, strong) UIScrollView* sv;
 

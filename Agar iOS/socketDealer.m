@@ -199,12 +199,12 @@ typedef void (^Block)(void);
 #define acceptedTrack @"accepted track of: "
 #define messagesLoaded @"answerForGetMessagesFromChatObject"
     
-#define eventRecieved @"eventRecieved"
+#define eventRecieved @"eR"
     
     NSString* string = [packet data];
     if(!self.loggingOff){
-    //NSLog(@"didReceiveMessage()");
-      //  NSLog(string);
+    NSLog(@"didReceiveMessage()");
+       NSLog(string);
     }
     
     if ([string rangeOfString:updated].location != NSNotFound)
@@ -233,7 +233,7 @@ typedef void (^Block)(void);
     else if([string rangeOfString:eventRecieved].location != NSNotFound )
     {
         NSDictionary* dic = [packet dataAsJSON];
-        NSString* name = [NSString stringWithFormat:@"%@%@", socketBaseName, [dic valueForKey:@"eventRecieved"]];
+        NSString* name = [NSString stringWithFormat:@"%@%@", socketBaseName, [dic valueForKey:eventRecieved]];
         [[NSNotificationCenter defaultCenter] postNotificationName:name object:self userInfo:dic];
     }
     else{
@@ -258,6 +258,7 @@ typedef void (^Block)(void);
     NSLog(@"Socket connected.");
     [self.reconnectTimer invalidate];
     [self resumeAllTrackers];//trackers might have been lost if server killed connection (e.g. server restart/idle)
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"didConnectToServer" object:self];
     
     /*
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -294,4 +295,12 @@ typedef void (^Block)(void);
     }
 }
 
+- (void) signUpToKnowWhenConnectionToServerEstablishedWithSender:(id)sender selector:(SEL)selector
+{
+    [[NSNotificationCenter defaultCenter] addObserver:sender selector:selector name:@"didConnectToServer" object:self];
+}
+- (void) unSignUpToKnowWhenConnectionToServerEstablishedWithSender:(id)sender
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:sender name:@"didConnectToServer" object:self];
+}
 @end
