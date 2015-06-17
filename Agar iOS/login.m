@@ -110,6 +110,35 @@
 - (void) proceedTapped
 {
 	if(self.proceedDisabled || self.textView.text.length == 0)return;
+    
+    //make sure name is appropriate:
+    NSArray* words = [self.textView.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString* nospacestring = [words componentsJoinedByString:@""];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"bannedWords"
+                                                     ofType:@"txt"];
+    NSString* content = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    NSArray* bannedWords = [content componentsSeparatedByString:@"\r\n"];
+    NSString* lowerCaseNoSpace = [nospacestring lowercaseString];
+    
+    BOOL containsBannedWord = NO;
+    for(NSString* string in bannedWords)
+    {
+        if([lowerCaseNoSpace containsString:string])
+        {
+            containsBannedWord = YES;
+            break;
+        }
+    }
+    
+    if(containsBannedWord)
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Word Usage" message:@"Please refrain from using obscene words in your name." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+        return;
+    }
+    
     [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/startgamewithname" withData:@{@"name":self.textView.text}];
 	self.activityIndicator.alpha = 1;
 	[self.activityIndicator startAnimating];
@@ -154,6 +183,10 @@
 - (IBAction)creditsClicked:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://dean-leitersdorf.herokuapp.com/agarios/credits"]];
     
+}
+- (IBAction)showTutorial:(id)sender
+{
+    [self.vc showTut];
 }
 
 @end

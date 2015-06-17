@@ -125,13 +125,65 @@
                     <connections>
                         <outlet property="segmentedView" destination="h2e-rO-UXz" id="yp6-Ic-GIN"/>
                         <outlet property="sv" destination="tWl-PD-0BQ" id="WzS-VO-C5T"/>
+                        <segue destination="RKZ-5o-XEG" kind="show" identifier="showTutorial" id="SJk-bZ-b6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="Zmf-qB-ndW">
+            <objects>
+                <viewController id="RKZ-5o-XEG" customClass="tutorialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wBt-Br-Zpc"/>
+                        <viewControllerLayoutGuide type="bottom" id="fnK-bN-Ilr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G3X-cl-m22">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.png" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-5a-r6e">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUA-aO-2d8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ywW-hr-Lfy"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Tutorial" id="Ly9-Qk-TA9">
+                                        <barButtonItem key="rightBarButtonItem" title="Got it!" id="YQp-po-CyS">
+                                            <connections>
+                                                <action selector="dismiss:" destination="RKZ-5o-XEG" id="3Js-pR-rDi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h7x-5a-r6e" firstAttribute="leading" secondItem="G3X-cl-m22" secondAttribute="leading" id="7ad-Th-nXy"/>
+                            <constraint firstItem="LUA-aO-2d8" firstAttribute="leading" secondItem="G3X-cl-m22" secondAttribute="leadingMargin" constant="-16" id="G7G-ec-q7j"/>
+                            <constraint firstItem="LUA-aO-2d8" firstAttribute="top" secondItem="wBt-Br-Zpc" secondAttribute="bottom" id="UAb-Ja-Jde"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h7x-5a-r6e" secondAttribute="trailing" constant="-16" id="eYZ-v0-eBe"/>
+                            <constraint firstAttribute="bottom" secondItem="h7x-5a-r6e" secondAttribute="bottom" id="fXz-6C-HJU"/>
+                            <constraint firstItem="h7x-5a-r6e" firstAttribute="top" secondItem="wBt-Br-Zpc" secondAttribute="bottom" id="mp3-4J-Z5B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LUA-aO-2d8" secondAttribute="trailing" constant="-16" id="q17-MU-5vH"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="an4-R4-2rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="242"/>
+        </scene>
     </scenes>
     <resources>
         <image name="splitButton.png" width="140" height="139"/>
+        <image name="tutorial.png" width="640" height="1136"/>
     </resources>
 </document>

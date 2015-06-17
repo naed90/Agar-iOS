@@ -21,7 +21,32 @@
 		3D128FC91B30D07A004BD07A /* beach7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBB1B30D07A004BD07A /* beach7.png */; };
 		3D128FCA1B30D07A004BD07A /* beach8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBC1B30D07A004BD07A /* beach8.png */; };
 		3D128FCB1B30D07A004BD07A /* beach9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FBD1B30D07A004BD07A /* beach9.png */; };
-		3D128FCE1B30D34D004BD07A /* SKsandItemsTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D128FCD1B30D34D004BD07A /* SKsandItemsTextureManager.m */; };
+		3D128FFA1B320AFA004BD07A /* SKgeneralTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D128FF91B320AFA004BD07A /* SKgeneralTextureManager.m */; };
+		3D1290101B32162A004BD07A /* purpleItem1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FFC1B32162A004BD07A /* purpleItem1.png */; };
+		3D1290111B32162A004BD07A /* purpleItem10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FFD1B32162A004BD07A /* purpleItem10.png */; };
+		3D1290121B32162A004BD07A /* purpleItem11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FFE1B32162A004BD07A /* purpleItem11.png */; };
+		3D1290131B32162A004BD07A /* purpleItem12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FFF1B32162A004BD07A /* purpleItem12.png */; };
+		3D1290141B32162A004BD07A /* purpleItem13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290001B32162A004BD07A /* purpleItem13.png */; };
+		3D1290151B32162A004BD07A /* purpleItem14.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290011B32162A004BD07A /* purpleItem14.png */; };
+		3D1290161B32162A004BD07A /* purpleItem15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290021B32162A004BD07A /* purpleItem15.png */; };
+		3D1290171B32162A004BD07A /* purpleItem16.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290031B32162A004BD07A /* purpleItem16.png */; };
+		3D1290181B32162A004BD07A /* purpleItem17.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290041B32162A004BD07A /* purpleItem17.png */; };
+		3D1290191B32162A004BD07A /* purpleItem18.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290051B32162A004BD07A /* purpleItem18.png */; };
+		3D12901A1B32162A004BD07A /* purpleItem19.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290061B32162A004BD07A /* purpleItem19.png */; };
+		3D12901B1B32162A004BD07A /* purpleItem2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290071B32162A004BD07A /* purpleItem2.png */; };
+		3D12901C1B32162A004BD07A /* purpleItem20.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290081B32162A004BD07A /* purpleItem20.png */; };
+		3D12901D1B32162A004BD07A /* purpleItem3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290091B32162A004BD07A /* purpleItem3.png */; };
+		3D12901E1B32162A004BD07A /* purpleItem4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12900A1B32162A004BD07A /* purpleItem4.png */; };
+		3D12901F1B32162A004BD07A /* purpleItem5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12900B1B32162A004BD07A /* purpleItem5.png */; };
+		3D1290201B32162A004BD07A /* purpleItem6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12900C1B32162A004BD07A /* purpleItem6.png */; };
+		3D1290211B32162A004BD07A /* purpleItem7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12900D1B32162A004BD07A /* purpleItem7.png */; };
+		3D1290221B32162A004BD07A /* purpleItem8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12900E1B32162A004BD07A /* purpleItem8.png */; };
+		3D1290231B32162A004BD07A /* purpleItem9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12900F1B32162A004BD07A /* purpleItem9.png */; };
+		3D1290251B321837004BD07A /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290241B321837004BD07A /* background2.png */; };
+		3D1290271B321BFC004BD07A /* bannedWords.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D1290261B321BFC004BD07A /* bannedWords.txt */; };
+		3D12902B1B32255C004BD07A /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12902A1B32255C004BD07A /* tutorial.png */; };
+		3D12902E1B32271A004BD07A /* tutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D12902D1B32271A004BD07A /* tutorialViewController.m */; };
+		3D1290301B323030004BD07A /* launchPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D12902F1B323030004BD07A /* launchPhoto.png */; };
 		3D30F35C1B22B20100B06776 /* SKcircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35B1B22B20100B06776 /* SKcircle.m */; };
 		3D30F35F1B251D1F00B06776 /* GSTouchesShowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F35E1B251D1F00B06776 /* GSTouchesShowingWindow.m */; };
 		3D30F3621B251D8800B06776 /* GSTouchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F3601B251D8800B06776 /* GSTouchImage.png */; };
@@ -111,8 +136,34 @@
 		3D128FBB1B30D07A004BD07A /* beach7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach7.png; sourceTree = "<group>"; };
 		3D128FBC1B30D07A004BD07A /* beach8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach8.png; sourceTree = "<group>"; };
 		3D128FBD1B30D07A004BD07A /* beach9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach9.png; sourceTree = "<group>"; };
-		3D128FCC1B30D34D004BD07A /* SKsandItemsTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKsandItemsTextureManager.h; sourceTree = "<group>"; };
-		3D128FCD1B30D34D004BD07A /* SKsandItemsTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKsandItemsTextureManager.m; sourceTree = "<group>"; };
+		3D128FF81B320AFA004BD07A /* SKgeneralTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKgeneralTextureManager.h; sourceTree = "<group>"; };
+		3D128FF91B320AFA004BD07A /* SKgeneralTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKgeneralTextureManager.m; sourceTree = "<group>"; };
+		3D128FFC1B32162A004BD07A /* purpleItem1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem1.png; sourceTree = "<group>"; };
+		3D128FFD1B32162A004BD07A /* purpleItem10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem10.png; sourceTree = "<group>"; };
+		3D128FFE1B32162A004BD07A /* purpleItem11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem11.png; sourceTree = "<group>"; };
+		3D128FFF1B32162A004BD07A /* purpleItem12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem12.png; sourceTree = "<group>"; };
+		3D1290001B32162A004BD07A /* purpleItem13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem13.png; sourceTree = "<group>"; };
+		3D1290011B32162A004BD07A /* purpleItem14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem14.png; sourceTree = "<group>"; };
+		3D1290021B32162A004BD07A /* purpleItem15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem15.png; sourceTree = "<group>"; };
+		3D1290031B32162A004BD07A /* purpleItem16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem16.png; sourceTree = "<group>"; };
+		3D1290041B32162A004BD07A /* purpleItem17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem17.png; sourceTree = "<group>"; };
+		3D1290051B32162A004BD07A /* purpleItem18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem18.png; sourceTree = "<group>"; };
+		3D1290061B32162A004BD07A /* purpleItem19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem19.png; sourceTree = "<group>"; };
+		3D1290071B32162A004BD07A /* purpleItem2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem2.png; sourceTree = "<group>"; };
+		3D1290081B32162A004BD07A /* purpleItem20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem20.png; sourceTree = "<group>"; };
+		3D1290091B32162A004BD07A /* purpleItem3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem3.png; sourceTree = "<group>"; };
+		3D12900A1B32162A004BD07A /* purpleItem4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem4.png; sourceTree = "<group>"; };
+		3D12900B1B32162A004BD07A /* purpleItem5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem5.png; sourceTree = "<group>"; };
+		3D12900C1B32162A004BD07A /* purpleItem6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem6.png; sourceTree = "<group>"; };
+		3D12900D1B32162A004BD07A /* purpleItem7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem7.png; sourceTree = "<group>"; };
+		3D12900E1B32162A004BD07A /* purpleItem8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem8.png; sourceTree = "<group>"; };
+		3D12900F1B32162A004BD07A /* purpleItem9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleItem9.png; sourceTree = "<group>"; };
+		3D1290241B321837004BD07A /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		3D1290261B321BFC004BD07A /* bannedWords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bannedWords.txt; sourceTree = "<group>"; };
+		3D12902A1B32255C004BD07A /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		3D12902C1B32271A004BD07A /* tutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutorialViewController.h; sourceTree = "<group>"; };
+		3D12902D1B32271A004BD07A /* tutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutorialViewController.m; sourceTree = "<group>"; };
+		3D12902F1B323030004BD07A /* launchPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchPhoto.png; sourceTree = "<group>"; };
 		3D30F35A1B22B20100B06776 /* SKcircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKcircle.h; sourceTree = "<group>"; };
 		3D30F35B1B22B20100B06776 /* SKcircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKcircle.m; sourceTree = "<group>"; };
 		3D30F35D1B251D1F00B06776 /* GSTouchesShowingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTouchesShowingWindow.h; sourceTree = "<group>"; };
@@ -252,6 +303,33 @@
 			path = "virus photos/beach pictures";
 			sourceTree = "<group>";
 		};
+		3D128FFB1B32162A004BD07A /* purpleItems */ = {
+			isa = PBXGroup;
+			children = (
+				3D128FFC1B32162A004BD07A /* purpleItem1.png */,
+				3D128FFD1B32162A004BD07A /* purpleItem10.png */,
+				3D128FFE1B32162A004BD07A /* purpleItem11.png */,
+				3D128FFF1B32162A004BD07A /* purpleItem12.png */,
+				3D1290001B32162A004BD07A /* purpleItem13.png */,
+				3D1290011B32162A004BD07A /* purpleItem14.png */,
+				3D1290021B32162A004BD07A /* purpleItem15.png */,
+				3D1290031B32162A004BD07A /* purpleItem16.png */,
+				3D1290041B32162A004BD07A /* purpleItem17.png */,
+				3D1290051B32162A004BD07A /* purpleItem18.png */,
+				3D1290061B32162A004BD07A /* purpleItem19.png */,
+				3D1290071B32162A004BD07A /* purpleItem2.png */,
+				3D1290081B32162A004BD07A /* purpleItem20.png */,
+				3D1290091B32162A004BD07A /* purpleItem3.png */,
+				3D12900A1B32162A004BD07A /* purpleItem4.png */,
+				3D12900B1B32162A004BD07A /* purpleItem5.png */,
+				3D12900C1B32162A004BD07A /* purpleItem6.png */,
+				3D12900D1B32162A004BD07A /* purpleItem7.png */,
+				3D12900E1B32162A004BD07A /* purpleItem8.png */,
+				3D12900F1B32162A004BD07A /* purpleItem9.png */,
+			);
+			path = purpleItems;
+			sourceTree = "<group>";
+		};
 		3D4DBED61B1B865E002C7BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -304,8 +382,8 @@
 				3D4DBF101B1E9272002C7BC1 /* socketDealer.m */,
 				3D4DBF0A1B1B8778002C7BC1 /* GameScene.h */,
 				3D4DBF0B1B1B8778002C7BC1 /* GameScene.m */,
-				3D128FCC1B30D34D004BD07A /* SKsandItemsTextureManager.h */,
-				3D128FCD1B30D34D004BD07A /* SKsandItemsTextureManager.m */,
+				3D128FF81B320AFA004BD07A /* SKgeneralTextureManager.h */,
+				3D128FF91B320AFA004BD07A /* SKgeneralTextureManager.m */,
 				3D8062AE1B29FCE10038C7EA /* SuperSpeedButton.h */,
 				3D8062AF1B29FCE10038C7EA /* SuperSpeedButton.m */,
 				3D8062B31B2A68020038C7EA /* ShineMask.png */,
@@ -323,9 +401,12 @@
 				3DFEEE7A1B21306B00C68E9B /* login.xib */,
 				3DFEEE781B21306B00C68E9B /* login.h */,
 				3DFEEE791B21306B00C68E9B /* login.m */,
+				3D1290261B321BFC004BD07A /* bannedWords.txt */,
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
 				3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */,
 				3D4DBEEC1B1B865E002C7BC1 /* Main.storyboard */,
+				3D12902C1B32271A004BD07A /* tutorialViewController.h */,
+				3D12902D1B32271A004BD07A /* tutorialViewController.m */,
 				3D8062D11B2EA9C70038C7EA /* splitButton.png */,
 				3D4DBEEF1B1B865E002C7BC1 /* Images.xcassets */,
 				3D4DBEF11B1B865E002C7BC1 /* LaunchScreen.xib */,
@@ -338,6 +419,10 @@
 		3D4DBEE21B1B865E002C7BC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D12902A1B32255C004BD07A /* tutorial.png */,
+				3D12902F1B323030004BD07A /* launchPhoto.png */,
+				3D128FFB1B32162A004BD07A /* purpleItems */,
+				3D1290241B321837004BD07A /* background2.png */,
 				3D8062971B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 */,
 				3D128FAF1B30D079004BD07A /* beach pictures */,
 				3D8062BB1B2CB5710038C7EA /* virus photos */,
@@ -766,34 +851,58 @@
 				3D128FCB1B30D07A004BD07A /* beach9.png in Resources */,
 				3D128FC51B30D07A004BD07A /* beach3.png in Resources */,
 				3D8062CB1B2CB5710038C7EA /* virus8.png in Resources */,
+				3D1290131B32162A004BD07A /* purpleItem12.png in Resources */,
 				3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */,
 				3D8062D21B2EA9C70038C7EA /* splitButton.png in Resources */,
+				3D1290171B32162A004BD07A /* purpleItem16.png in Resources */,
 				3D8062C91B2CB5710038C7EA /* virus6.png in Resources */,
 				3D128FC31B30D07A004BD07A /* beach13.png in Resources */,
 				3D128FBE1B30D07A004BD07A /* beach0.png in Resources */,
 				3D128FC21B30D07A004BD07A /* beach12.png in Resources */,
 				3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */,
+				3D12901A1B32162A004BD07A /* purpleItem19.png in Resources */,
+				3D1290231B32162A004BD07A /* purpleItem9.png in Resources */,
 				3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */,
 				3D128FBF1B30D07A004BD07A /* beach1.png in Resources */,
+				3D1290181B32162A004BD07A /* purpleItem17.png in Resources */,
 				3D30F3631B251D8800B06776 /* GSTouchImage@2x.png in Resources */,
+				3D1290301B323030004BD07A /* launchPhoto.png in Resources */,
+				3D1290161B32162A004BD07A /* purpleItem15.png in Resources */,
 				3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */,
 				3D4DBEEE1B1B865E002C7BC1 /* Main.storyboard in Resources */,
+				3D1290111B32162A004BD07A /* purpleItem10.png in Resources */,
+				3D12901F1B32162A004BD07A /* purpleItem5.png in Resources */,
+				3D1290151B32162A004BD07A /* purpleItem14.png in Resources */,
 				3D128FC61B30D07A004BD07A /* beach4.png in Resources */,
+				3D12901E1B32162A004BD07A /* purpleItem4.png in Resources */,
 				3D128FC71B30D07A004BD07A /* beach5.png in Resources */,
 				3D8062A31B2920570038C7EA /* coveredRect.xib in Resources */,
+				3D1290201B32162A004BD07A /* purpleItem6.png in Resources */,
 				3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */,
+				3D1290121B32162A004BD07A /* purpleItem11.png in Resources */,
+				3D12902B1B32255C004BD07A /* tutorial.png in Resources */,
+				3D1290141B32162A004BD07A /* purpleItem13.png in Resources */,
 				3D8062C71B2CB5710038C7EA /* virus4.png in Resources */,
 				3D8062CA1B2CB5710038C7EA /* virus7.png in Resources */,
 				3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */,
 				3D8062B41B2A68020038C7EA /* ShineMask.png in Resources */,
+				3D1290211B32162A004BD07A /* purpleItem7.png in Resources */,
+				3D12901B1B32162A004BD07A /* purpleItem2.png in Resources */,
 				3D30F3621B251D8800B06776 /* GSTouchImage.png in Resources */,
+				3D1290271B321BFC004BD07A /* bannedWords.txt in Resources */,
 				3D8062C41B2CB5710038C7EA /* virus1.png in Resources */,
+				3D12901D1B32162A004BD07A /* purpleItem3.png in Resources */,
 				3D8062B21B2A673A0038C7EA /* StartButton.png in Resources */,
+				3D12901C1B32162A004BD07A /* purpleItem20.png in Resources */,
+				3D1290191B32162A004BD07A /* purpleItem18.png in Resources */,
 				3D8062A81B2941E60038C7EA /* SuperSpeedButton.xib in Resources */,
 				3D128FCA1B30D07A004BD07A /* beach8.png in Resources */,
 				3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */,
 				3D128FC11B30D07A004BD07A /* beach11.png in Resources */,
+				3D1290251B321837004BD07A /* background2.png in Resources */,
+				3D1290101B32162A004BD07A /* purpleItem1.png in Resources */,
 				3D8062C61B2CB5710038C7EA /* virus3.png in Resources */,
+				3D1290221B32162A004BD07A /* purpleItem8.png in Resources */,
 				3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */,
 				3D128FC81B30D07A004BD07A /* beach6.png in Resources */,
 				3D128FC91B30D07A004BD07A /* beach7.png in Resources */,
@@ -815,9 +924,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D128FCE1B30D34D004BD07A /* SKsandItemsTextureManager.m in Sources */,
 				3D30F36B1B25562900B06776 /* dataSentToServerCacher.h in Sources */,
 				3D4DBF541B1E9300002C7BC1 /* SocketIOTransportXHR.m in Sources */,
+				3D12902E1B32271A004BD07A /* tutorialViewController.m in Sources */,
 				3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */,
 				3D4DBF4C1B1E9300002C7BC1 /* CHANGELOG.md in Sources */,
 				3D30F35F1B251D1F00B06776 /* GSTouchesShowingWindow.m in Sources */,
@@ -827,6 +936,7 @@
 				3D4DBF561B1E9301002C7BC1 /* SRWebSocket.m in Sources */,
 				3D8062BA1B2CB4B90038C7EA /* SKvirusTextureManager.m in Sources */,
 				3D30F36E1B25564100B06776 /* entryObj.m in Sources */,
+				3D128FFA1B320AFA004BD07A /* SKgeneralTextureManager.m in Sources */,
 				3D8062B01B29FCE10038C7EA /* SuperSpeedButton.m in Sources */,
 				3D4DBF581B1E9423002C7BC1 /* urls.m in Sources */,
 				3D4DBF501B1E9300002C7BC1 /* SocketIO.m in Sources */,

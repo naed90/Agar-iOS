@@ -26,7 +26,11 @@
 
 
 @property (nonatomic, strong) SKVideoNode* background;
-@property (nonatomic, strong) SKSpriteNode* sandBackground;
+@property (nonatomic, strong) SKSpriteNode* background2;//background in plain view
+@property (strong, nonatomic) NSMutableArray* sand;//of SKSpriteNode
+@property (strong, nonatomic) NSMutableArray* sandItems;
+
+@property (strong, nonatomic) NSMutableArray* purpleItems;
 
 @property (nonatomic, strong) UIScrollView* sv;
 
@@ -37,5 +41,7 @@
 - (void) sendSplitEventToServer;
 
 @property (nonatomic) BOOL loginIsUp;
+
+@property (nonatomic, weak) id vc;
 
 @end

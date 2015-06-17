@@ -28,7 +28,7 @@
 #import "SKvirusTextureManager.h"
 #import "SKvirus.h"
 
-#import "SKsandItemsTextureManager.h"
+#import "SKgeneralTextureManager.h"
 
 
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
@@ -79,12 +79,12 @@
 @property (strong, nonatomic) SKvirusTextureManager* virusTextureManager;
 @property (strong, nonatomic) NSMutableDictionary* viruses;//trackingID to virus
 
-@property (strong, nonatomic) SKsandItemsTextureManager* sandItemsTextureManager;
+@property (strong, nonatomic) SKgeneralTextureManager* sandItemsTextureManager;
+@property (strong, nonatomic) SKgeneralTextureManager* purpleItemsTextureManager;
 
 @property (nonatomic) int borderSize;
 
 @property (strong, nonatomic) SKTexture* sandTexture;
-@property (strong, nonatomic) SKSpriteNode* sandTextureNodeHolder;
 
 @end
 
@@ -100,6 +100,8 @@
         [self createSceneContents];
         self.contentCreated = YES;
     }
+    
+    view.ignoresSiblingOrder = YES;
 }
 
 - (void)createSceneContents
@@ -125,14 +127,65 @@
     clipPath.usesEvenOddFillRule = YES;
     SKShapeNode* node = [SKShapeNode shapeNodeWithPath:clipPath.CGPath];
     [self.world addChild:node];
+    node.zPosition = 7;
     node.position = CGPointMake(CGRectGetMidX(self.world.frame), CGRectGetMidY(self.world.frame));
-    node.fillColor = [SKColor orangeColor];
+    node.fillColor = [SKColor colorWithRed:217/255.0 green:148/255.0 blue:22/255.0 alpha:1];
     //node.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:node.path];
     //node.physicsBody.dynamic = NO;
     //[[UIColor orangeColor] setFill];
     //[clipPath fill];
     
+    //spawn purple items:
     
+    self.purpleItemsTextureManager = [[SKgeneralTextureManager alloc]initWithPhotoName:@"purpleItem" lowestIndex:1 highestIndex:20];
+    self.purpleItems = [[NSMutableArray alloc]init];
+    
+    int numPurpleItemsToSpawn = 1000;//don't spawn too many
+    
+    
+    int prev = gridSize;
+    int current = gridSize*2;
+    
+    for(int i = 0; i < numPurpleItemsToSpawn; i++)
+    {
+        //get random texture:
+        SKTexture* randTexture = [self.purpleItemsTextureManager getRandomTexture];
+        SKSpriteNode* item = [SKSpriteNode spriteNodeWithTexture:randTexture];
+        [self.world addChild:item];//must add so that we can compare to other items' frames
+        //try to place in random loc:
+        
+        BOOL success = NO;
+        while(!success)
+        {
+            CGPoint randLoc;
+            if(i < numPurpleItemsToSpawn/2)//spawn in 1 direction
+            {
+                randLoc = CGPointMake([self randIntBetweenMin:prev/2 + randTexture.size.width/2 max:current/2 - randTexture.size.width/2]*((arc4random()%2)==0?-1:1), [self randIntBetweenMin:0 max:prev/2 - randTexture.size.height/2]*((arc4random()%2)==0?-1:1));
+            }
+            else //spawn in other direction
+            {
+                randLoc = CGPointMake([self randIntBetweenMin:0 max:current/2 - randTexture.size.width/2]*((arc4random()%2)==0?-1:1), [self randIntBetweenMin:prev/2 +randTexture.size.height/2 max:current/2 - randTexture.size.height/2]*((arc4random()%2)==0?-1:1));
+            }
+            
+            
+            item.position = randLoc;
+            for(SKSpriteNode* otherNode in self.purpleItems)
+            {
+                if(CGRectContainsRect(otherNode.frame, item.frame))
+                {
+                    success = NO;
+                    break;
+                }
+            }
+            success = YES;
+        }
+        
+        item.hidden = !self.background.hidden;
+        item.zPosition = 8;
+        [self.purpleItems addObject:item];
+        
+    }
+
     
     AVAsset *composition = [self makeAssetComposition];
     AVPlayer* player = [AVPlayer playerWithPlayerItem:[AVPlayerItem playerItemWithAsset:composition]];
@@ -154,23 +207,28 @@
     self.background = background;
     
     self.sandTexture = [SKTexture textureWithImageNamed:@"sand2Cropped"];
-    self.sandItemsTextureManager = [[SKsandItemsTextureManager alloc] init];
     
-    
-    
+    self.sand = [[NSMutableArray alloc] init];
     
     self.borderSize = gridSize;
     
     [self addSandLayer];
     
+    self.background2 = [SKSpriteNode spriteNodeWithImageNamed:@"background2"];
+    [self.world addChild:self.background2];
+    self.background2.hidden = YES;
+    self.background2.size = self.frame.size;
+    self.background2.zPosition = 6;
+    
     
     
     //spawn items on sand:
     
-   
     
+    self.sandItemsTextureManager = [[SKgeneralTextureManager alloc] initWithPhotoName:@"beach" lowestIndex:0 highestIndex:13];
+    self.sandItems = [[NSMutableArray alloc] init];
     
-    //[self spawnSandItemsWithHowManySandTilesAdded:[[NSNumber numberWithInteger:self.sand.count] intValue] prevBorderSize:gridSize currentBorderSize:self.borderSize];
+    [self spawnSandItemsWithHowManySandTilesAdded:[[NSNumber numberWithInteger:self.sand.count] intValue] prevBorderSize:gridSize currentBorderSize:self.borderSize];
     
     
     //[self addChild: [self newHelloNode]];
@@ -263,7 +321,7 @@
         [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/fullplayerupdate" withData:@{@"gridID":self.gridID}];
 }
 
-/*
+
 - (void) spawnSandItemsWithHowManySandTilesAdded:(int)tilesAdded prevBorderSize:(int)prev currentBorderSize:(int)current
 {
     int numToSpawn = tilesAdded * 5 * 1;
@@ -302,11 +360,12 @@
         }
         
         item.hidden = self.background.hidden;
+        item.zPosition = 10;
         [self.sandItems addObject:item];
         
     }
 }
-*/
+
 - (void) extendSandToCoverWithCenterPoint:(CGPoint)center distanceFromCenter:(int)dist
 {
     float minSizeToExtendBy = 0;
@@ -331,22 +390,17 @@
     if(minSizeToExtendBy==0)return;
     int numberToAdd = ceilf(minSizeToExtendBy/self.sandTexture.size.height);
     
-    //int originalSandCount = [[NSNumber numberWithInteger:self.sand.count]intValue];
+    int originalSandCount = [[NSNumber numberWithInteger:self.sand.count]intValue];
     for(int i = 0; i < numberToAdd; i++)
     {
         [self addSandLayer];
     }
-    //int newSandCount =[[NSNumber numberWithInteger:self.sand.count]intValue];
+    int newSandCount =[[NSNumber numberWithInteger:self.sand.count]intValue];
     
-    //[self spawnSandItemsWithHowManySandTilesAdded:newSandCount - originalSandCount prevBorderSize:boundaryMax*2 currentBorderSize:self.borderSize];
+    [self spawnSandItemsWithHowManySandTilesAdded:newSandCount - originalSandCount prevBorderSize:boundaryMax*2 currentBorderSize:self.borderSize];
     
     
         
-}
-
-- (CGPoint)randomLocInRect:(CGRect)rect
-{
-    return CGPointMake([self randIntBetweenMin:rect.origin.x max:rect.origin.x+rect.size.width], [self randIntBetweenMin:rect.origin.y max:rect.origin.y+rect.size.height]);
 }
 
 - (void) addSandLayer
@@ -359,8 +413,6 @@
     int borderHeight = self.borderSize + textureSize.height*2;
     int borderWidth = self.borderSize + textureSize.width*2;
     
-    NSMutableArray* sand = [[NSMutableArray alloc] init];
-    
     for(int i = -borderWidth/2; i <= borderWidth/2 - 1*textureSize.width; i+=textureSize.width)
     {
         //top:
@@ -371,7 +423,7 @@
         SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
         node2.position = CGPointMake(i + textureSize.width/2, -borderHeight/2 + textureSize.height/2);
         
-        [sand addObject:node]; [sand addObject:node2];
+        [self.sand addObject:node]; [self.sand addObject:node2];
     }
     
     for(int j = - borderHeight/2; j <= borderHeight/2 - 1*textureSize.height; j+=textureSize.height)
@@ -384,33 +436,15 @@
         SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
         node2.position = CGPointMake(borderWidth/2 - textureSize.width/2, j + textureSize.height/2);
         
-        [sand addObject:node]; [sand addObject:node2];
+        [self.sand addObject:node]; [self.sand addObject:node2];
     }
     
-    for(SKSpriteNode* node in sand)
+    for(SKSpriteNode* node in self.sand)
     {
-        if(!node.parent)//throws errors otherwise
-        {
-            [self.sandBackground addChild:node];
-            node.hidden = self.background.hidden;
-            
-            self.sandTextureNodeHolder.texture = [self.sandBackground.scene.view textureFromNode:self.sandBackground];
-            
-            [node removeFromParent];
-            
-            //spawn items in the sand:
-            int numItemsToSpawn = [self randIntBetweenMin:4 max:8];
-            for(int i = 0; i < numItemsToSpawn; i++)
-            {
-                SKSpriteNode* randNode = [self.sandItemsTextureManager getRandomNode];
-                randNode.position = [self randomLocInRect:node.frame];
-                [self.sandBackground addChild:randNode];
-                self.sandBackground.texture = [self.sandBackground.scene.view textureFromNode:self.sandBackground];
-                [randNode removeFromParent];
-            }
-        }
-        
-        
+        if(!node.parent)
+            [self.world addChild:node];
+        node.hidden = self.background.hidden;
+        node.zPosition = 9;
     }
     
     self.borderSize = borderHeight;
@@ -518,6 +552,7 @@
     if(self.loginIsUp)return;
     
     login* popup = [[login alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width*.92, self.view.frame.size.height*.92)];
+    popup.vc = self.vc;
     popup.center = self.view.center;
     popup.transform = CGAffineTransformMakeScale(2, 2);
     [self.view addSubview:popup];
@@ -543,21 +578,11 @@
 
 - (void)createWorld
 {
-    SKNode *world = [[SKSpriteNode alloc] initWithColor:[SKColor blueColor] size:CGSizeMake(gridSize, gridSize)];
+    SKNode *world = [[SKSpriteNode alloc] initWithColor:[SKColor cyanColor] size:CGSizeMake(gridSize, gridSize)];
     world.name = @"world";
     world.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
     [self addChild:world];
     self.world = world;
-    
-    SKSpriteNode* node = [SKSpriteNode node];
-    node.name = @"sandBg";
-    node.position = CGPointMake(0, 0);
-    [self.world addChild:node];
-    self.sandBackground = node;
-    
-    self.sandTextureNodeHolder = [SKSpriteNode node];
-    self.sandTextureNodeHolder.position = CGPointMake(0, 0);
-    [self.sandBackground addChild:self.sandTextureNodeHolder];
 }
 
 
@@ -805,6 +830,11 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     //[self collisionDetection];
 }
 
+- (CGPoint)randomLocInRect:(CGRect)rect
+{
+    return CGPointMake([self randIntBetweenMin:rect.origin.x max:rect.origin.x+rect.size.width], [self randIntBetweenMin:rect.origin.y max:rect.origin.y+rect.size.height]);
+}
+
 - (void) didFinishUpdate
 {
     SKplayer* player = self.ourPlayer;
@@ -815,6 +845,18 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         [self centerOnPoint:center];
         if(!self.background.hidden)
             [self extendSandToCoverWithCenterPoint:center distanceFromCenter:(self.frame.size.height/self.world.yScale)/2];
+        
+        /*
+        //remove sand items not on screen:
+        for(SKNode* sandItem in self.sandItems)
+        {
+            CGPoint absPos = CGPointMake(fabs(sandItem.position.x), fabs(sandItem.position.y));
+            if(absPos.x>center.x+(self.frame.size.height/self.world.xScale)/2 ||
+               absPos.y>center.y+(self.frame.size.height/self.world.yScale)/2)
+               [sandItem removeFromParent];
+            else if (!sandItem.parent)
+                [self.world addChild:sandItem];
+        }*/
     }
 
 }
@@ -825,9 +867,9 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     CGPoint cameraPositionInScene = [self convertPoint:point fromNode:self.world];
     self.world.position = CGPointMake(self.world.position.x - cameraPositionInScene.x,self.world.position.y - cameraPositionInScene.y);
     
-    self.background.position = point;
+    self.background.position = self.background2.position =point;
     
-    self.background.size = CGSizeMake(self.view.frame.size.width/self.world.xScale, self.view.frame.size.height/self.world.yScale);
+    self.background.size = self.background2.size = CGSizeMake(self.view.frame.size.width/self.world.xScale, self.view.frame.size.height/self.world.yScale);
     //NSLog(NSStringFromCGPoint(node.parent.position));
 }
 

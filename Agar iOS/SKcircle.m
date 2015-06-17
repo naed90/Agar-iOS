@@ -26,7 +26,7 @@
         [self addChild:shapeNode];
         self.circle = shapeNode;
         
-        self.zPosition = 1;
+        self.zPosition = 8;//must be above background in plain view!F
         
        
     }

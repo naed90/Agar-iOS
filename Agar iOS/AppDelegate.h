@@ -19,6 +19,8 @@
 //Server:
 @property (strong, nonatomic)socketDealer* socketDealer;
 
+@property (nonatomic) BOOL forceHideBlueBar;
+
 
 @end
 

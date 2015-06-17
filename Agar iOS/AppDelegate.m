@@ -93,6 +93,19 @@
 -(void)setNoConnectionBannerOnOff:(BOOL)value
 {
     self.bar.alpha = value==1;
+    if(self.forceHideBlueBar)
+        self.bar.alpha = 0;
+}
+
+- (void) setForceHideBlueBar:(BOOL)forceHideBlueBar
+{
+    _forceHideBlueBar = forceHideBlueBar;
+    if(forceHideBlueBar)
+    {
+        self.bar.alpha = 0;
+    }
+    else
+        [self setNoConnectionBannerOnOff:!self.socketDealer.socketIO.isConnected];
 }
 
 

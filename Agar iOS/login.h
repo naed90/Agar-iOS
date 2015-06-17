@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GameScene.h"
+#import "ViewController.h"
 
 @interface login : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
-@property (strong, nonatomic) GameScene* delegate;
+@property (weak, nonatomic) GameScene* delegate;
+@property (weak, nonatomic) ViewController* vc;
 
 @end

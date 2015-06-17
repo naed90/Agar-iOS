@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface SKsandItemsTextureManager : NSObject
+@interface SKgeneralTextureManager: NSObject
 
-- (SKSpriteNode*)getRandomNode;
+- (SKTexture*) getRandomTexture;
+
+- (instancetype) initWithPhotoName:(NSString*)name lowestIndex:(int)lowest highestIndex:(int)highest;
 
 @end

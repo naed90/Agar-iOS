@@ -6,41 +6,41 @@
 //  Copyright (c) 2015 Dean Leitersdorf. All rights reserved.
 //
 
-#import "SKsandItemsTextureManager.h"
+#import "SKgeneralTextureManager.h"
 
-@interface SKsandItemsTextureManager()
+@interface SKgeneralTextureManager()
 
 @property (strong, nonatomic) NSArray* textures;
 
 @end
 
-@implementation SKsandItemsTextureManager
+@implementation SKgeneralTextureManager
 
-- (instancetype) init
+- (instancetype) initWithPhotoName:(NSString*)name lowestIndex:(int)lowest highestIndex:(int)highest
 {
     self = [super init];
     if(self)
     {
         
-        NSString* rootWord = @"beach";
-        int highestNumberPicture = 13;
-        int lowestNumberPicture = 0;
+        NSString* rootWord = name;
+        int highestNumberPicture = highest;
+        int lowestNumberPicture = lowest;
         
         NSMutableArray* textures = [[NSMutableArray alloc] init];
         for(int i = lowestNumberPicture; i<= highestNumberPicture; i++)
         {
-            SKSpriteNode* texture = [SKSpriteNode spriteNodeWithTexture: [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@%d", rootWord, i]]];
+            SKTexture* texture = [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@%d", rootWord, i]];
             if(texture)
-               [textures addObject:texture];
+                [textures addObject:texture];
         }
         
-       
+        
         self.textures = textures;
     }
     return self;
 }
 
-- (SKSpriteNode*)getRandomNode
+- (SKTexture*)getRandomTexture
 {
     return self.textures[arc4random()%self.textures.count];
 }

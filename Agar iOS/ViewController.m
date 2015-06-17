@@ -14,7 +14,7 @@
 
 #import <MediaPlayer/MediaPlayer.h>
 
-
+#import "AppDelegate.h"
 
 
 @implementation ViewController
@@ -24,13 +24,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
+    
     SKView *spriteView = (SKView *) self.view;
-    //spriteView.showsDrawCount = YES;
-    //spriteView.showsNodeCount = YES;
-    spriteView.showsFPS = YES;
+    /*spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;*/
     
     GameScene* gs = [[GameScene alloc] initWithSize:spriteView.frame.size];
     gs.sv = self.sv;
+    gs.vc = self;
     [spriteView presentScene:gs];
     //gs.backgroundColor = [UIColor clearColor];
     self.gs = gs;
@@ -76,6 +81,26 @@
     }
 }*/
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* shouldNotShowTut = [defaults valueForKey:@"didShowTut"];
+    
+    if(!shouldNotShowTut)
+    {
+        [self showTut];
+    }
+    
+    [defaults setObject:@"yesthisisrandomtext" forKey:@"didShowTut"];
+}
+
+- (void) showTut
+{
+    [self performSegueWithIdentifier:@"showTutorial" sender:self];
+    ((AppDelegate*)[UIApplication sharedApplication].delegate).forceHideBlueBar = YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -91,15 +116,20 @@
 {
     NSInteger selected = sender.selectedSegmentIndex ;
     self.gs.background.hidden = selected;
-    /*for(SKSpriteNode* node in self.gs.sand)
+    self.gs.background2.hidden = !selected;
+    for(SKSpriteNode* node in self.gs.sand)
     {
         node.hidden = selected;
     }
     for(SKSpriteNode* node in self.gs.sandItems)
     {
         node.hidden = selected;
-    }*/
-    self.gs.sandBackground.hidden = selected;
+    }
+    
+    for(SKSpriteNode* node in self.gs.purpleItems)
+    {
+        node.hidden = !selected;
+    }
 }
 
 - (IBAction)changeSource:(UISegmentedControl *)sender

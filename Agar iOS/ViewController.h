@@ -20,6 +20,7 @@
 @property (strong, nonatomic) GameScene* gs;
 @property (weak, nonatomic) IBOutlet UIScrollView *sv;
 
+- (void) showTut;
 
 @end
 
