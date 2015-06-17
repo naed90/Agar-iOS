@@ -84,7 +84,7 @@
 @property (nonatomic) int borderSize;
 
 @property (strong, nonatomic) SKTexture* sandTexture;
-@property (
+@property (strong, nonatomic) SKSpriteNode* sandTextureNodeHolder;
 
 @end
 
@@ -154,8 +154,10 @@
     self.background = background;
     
     self.sandTexture = [SKTexture textureWithImageNamed:@"sand2Cropped"];
+    self.sandItemsTextureManager = [[SKsandItemsTextureManager alloc] init];
     
-    self.sand = [[NSMutableArray alloc] init];
+    
+    
     
     self.borderSize = gridSize;
     
@@ -165,11 +167,10 @@
     
     //spawn items on sand:
     
-    self.sandItemsTextureManager = [[SKsandItemsTextureManager alloc] init];
-    self.sandItems = [[NSMutableArray alloc] init];
+   
     
     
-    [self spawnSandItemsWithHowManySandTilesAdded:[[NSNumber numberWithInteger:self.sand.count] intValue] prevBorderSize:gridSize currentBorderSize:self.borderSize];
+    //[self spawnSandItemsWithHowManySandTilesAdded:[[NSNumber numberWithInteger:self.sand.count] intValue] prevBorderSize:gridSize currentBorderSize:self.borderSize];
     
     
     //[self addChild: [self newHelloNode]];
@@ -262,7 +263,7 @@
         [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/fullplayerupdate" withData:@{@"gridID":self.gridID}];
 }
 
-
+/*
 - (void) spawnSandItemsWithHowManySandTilesAdded:(int)tilesAdded prevBorderSize:(int)prev currentBorderSize:(int)current
 {
     int numToSpawn = tilesAdded * 5 * 1;
@@ -305,7 +306,7 @@
         
     }
 }
-
+*/
 - (void) extendSandToCoverWithCenterPoint:(CGPoint)center distanceFromCenter:(int)dist
 {
     float minSizeToExtendBy = 0;
@@ -330,14 +331,14 @@
     if(minSizeToExtendBy==0)return;
     int numberToAdd = ceilf(minSizeToExtendBy/self.sandTexture.size.height);
     
-    int originalSandCount = [[NSNumber numberWithInteger:self.sand.count]intValue];
+    //int originalSandCount = [[NSNumber numberWithInteger:self.sand.count]intValue];
     for(int i = 0; i < numberToAdd; i++)
     {
         [self addSandLayer];
     }
-    int newSandCount =[[NSNumber numberWithInteger:self.sand.count]intValue];
+    //int newSandCount =[[NSNumber numberWithInteger:self.sand.count]intValue];
     
-    [self spawnSandItemsWithHowManySandTilesAdded:newSandCount - originalSandCount prevBorderSize:boundaryMax*2 currentBorderSize:self.borderSize];
+    //[self spawnSandItemsWithHowManySandTilesAdded:newSandCount - originalSandCount prevBorderSize:boundaryMax*2 currentBorderSize:self.borderSize];
     
     
         
@@ -358,6 +359,8 @@
     int borderHeight = self.borderSize + textureSize.height*2;
     int borderWidth = self.borderSize + textureSize.width*2;
     
+    NSMutableArray* sand = [[NSMutableArray alloc] init];
+    
     for(int i = -borderWidth/2; i <= borderWidth/2 - 1*textureSize.width; i+=textureSize.width)
     {
         //top:
@@ -368,7 +371,7 @@
         SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
         node2.position = CGPointMake(i + textureSize.width/2, -borderHeight/2 + textureSize.height/2);
         
-        [self.sand addObject:node]; [self.sand addObject:node2];
+        [sand addObject:node]; [sand addObject:node2];
     }
     
     for(int j = - borderHeight/2; j <= borderHeight/2 - 1*textureSize.height; j+=textureSize.height)
@@ -381,19 +384,30 @@
         SKSpriteNode* node2 = [[SKSpriteNode alloc]initWithTexture:texture];
         node2.position = CGPointMake(borderWidth/2 - textureSize.width/2, j + textureSize.height/2);
         
-        [self.sand addObject:node]; [self.sand addObject:node2];
+        [sand addObject:node]; [sand addObject:node2];
     }
     
-    for(SKSpriteNode* node in self.sand)
+    for(SKSpriteNode* node in sand)
     {
-        if(!node.parent)
+        if(!node.parent)//throws errors otherwise
         {
-            [self.world addChild:node];
+            [self.sandBackground addChild:node];
             node.hidden = self.background.hidden;
             
+            self.sandTextureNodeHolder.texture = [self.sandBackground.scene.view textureFromNode:self.sandBackground];
+            
+            [node removeFromParent];
             
             //spawn items in the sand:
-            
+            int numItemsToSpawn = [self randIntBetweenMin:4 max:8];
+            for(int i = 0; i < numItemsToSpawn; i++)
+            {
+                SKSpriteNode* randNode = [self.sandItemsTextureManager getRandomNode];
+                randNode.position = [self randomLocInRect:node.frame];
+                [self.sandBackground addChild:randNode];
+                self.sandBackground.texture = [self.sandBackground.scene.view textureFromNode:self.sandBackground];
+                [randNode removeFromParent];
+            }
         }
         
         
@@ -534,6 +548,16 @@
     world.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
     [self addChild:world];
     self.world = world;
+    
+    SKSpriteNode* node = [SKSpriteNode node];
+    node.name = @"sandBg";
+    node.position = CGPointMake(0, 0);
+    [self.world addChild:node];
+    self.sandBackground = node;
+    
+    self.sandTextureNodeHolder = [SKSpriteNode node];
+    self.sandTextureNodeHolder.position = CGPointMake(0, 0);
+    [self.sandBackground addChild:self.sandTextureNodeHolder];
 }
 
 
@@ -789,7 +813,8 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         CGPoint center = [player getCenterPoint];
         [self adjustScale];
         [self centerOnPoint:center];
-        [self extendSandToCoverWithCenterPoint:center distanceFromCenter:(self.frame.size.height/self.world.yScale)/2];
+        if(!self.background.hidden)
+            [self extendSandToCoverWithCenterPoint:center distanceFromCenter:(self.frame.size.height/self.world.yScale)/2];
     }
 
 }

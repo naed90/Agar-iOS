@@ -228,13 +228,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456259644.459157"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1735"
-            endingLineNumber = "1735"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1774"
+            endingLineNumber = "1774"
+            landmarkName = "-adjustScale"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -244,13 +244,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456259644.459157"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1719"
-            endingLineNumber = "1719"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1758"
+            endingLineNumber = "1758"
+            landmarkName = "-adjustScale"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -340,13 +340,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "885"
-            endingLineNumber = "885"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "924"
+            endingLineNumber = "924"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -372,13 +372,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "620"
-            endingLineNumber = "620"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "658"
+            endingLineNumber = "658"
+            landmarkName = "-newBallWithNumber:player:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -452,13 +452,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456256375.015414"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1601"
-            endingLineNumber = "1601"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1640"
+            endingLineNumber = "1640"
+            landmarkName = "-sendMessageToServer"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -468,13 +468,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456256375.015414"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1598"
-            endingLineNumber = "1598"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1637"
+            endingLineNumber = "1637"
+            landmarkName = "-sendMessageToServer"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -484,13 +484,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "881"
-            endingLineNumber = "881"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "920"
+            endingLineNumber = "920"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -500,13 +500,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "923"
-            endingLineNumber = "923"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "962"
+            endingLineNumber = "962"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -516,13 +516,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "898"
-            endingLineNumber = "898"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "937"
+            endingLineNumber = "937"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -532,13 +532,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "929"
-            endingLineNumber = "929"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "968"
+            endingLineNumber = "968"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -548,13 +548,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "973"
-            endingLineNumber = "973"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1012"
+            endingLineNumber = "1012"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -564,13 +564,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1034"
-            endingLineNumber = "1034"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1073"
+            endingLineNumber = "1073"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -580,13 +580,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1039"
-            endingLineNumber = "1039"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1078"
+            endingLineNumber = "1078"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -596,13 +596,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1079"
-            endingLineNumber = "1079"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1118"
+            endingLineNumber = "1118"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -612,13 +612,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1108"
-            endingLineNumber = "1108"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1147"
+            endingLineNumber = "1147"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -628,13 +628,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "849"
-            endingLineNumber = "849"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "888"
+            endingLineNumber = "888"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -644,13 +644,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "860"
-            endingLineNumber = "860"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "899"
+            endingLineNumber = "899"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -660,13 +660,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1015"
-            endingLineNumber = "1015"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1054"
+            endingLineNumber = "1054"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -676,13 +676,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "987"
-            endingLineNumber = "987"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1026"
+            endingLineNumber = "1026"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -692,13 +692,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "992"
-            endingLineNumber = "992"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1031"
+            endingLineNumber = "1031"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -708,13 +708,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456256375.015414"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1617"
-            endingLineNumber = "1617"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1656"
+            endingLineNumber = "1656"
+            landmarkName = "-sendMessageToServer"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -724,13 +724,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "972"
-            endingLineNumber = "972"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1011"
+            endingLineNumber = "1011"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -740,189 +740,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456256375.015414"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1575"
-            endingLineNumber = "1575"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "784"
-            endingLineNumber = "784"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "774"
-            endingLineNumber = "774"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456256375.015414"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1628"
-            endingLineNumber = "1628"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1141"
-            endingLineNumber = "1141"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "982"
-            endingLineNumber = "982"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "998"
-            endingLineNumber = "998"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1101"
-            endingLineNumber = "1101"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "934"
-            endingLineNumber = "934"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1083"
-            endingLineNumber = "1083"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1138"
-            endingLineNumber = "1138"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Agar iOS/GameScene.m"
-            timestampString = "456256375.015414"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1614"
             endingLineNumber = "1614"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            landmarkName = "-setOurPlayer:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -932,13 +756,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "900"
-            endingLineNumber = "900"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "823"
+            endingLineNumber = "823"
+            landmarkName = "-centerOnPoint:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -948,13 +772,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "915"
-            endingLineNumber = "915"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "812"
+            endingLineNumber = "812"
+            landmarkName = "-didFinishUpdate"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -964,13 +788,189 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456259644.459157"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1698"
-            endingLineNumber = "1698"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1667"
+            endingLineNumber = "1667"
+            landmarkName = "-sendMessageToServer"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1180"
+            endingLineNumber = "1180"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1021"
+            endingLineNumber = "1021"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1037"
+            endingLineNumber = "1037"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1140"
+            endingLineNumber = "1140"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "973"
+            endingLineNumber = "973"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1122"
+            endingLineNumber = "1122"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1177"
+            endingLineNumber = "1177"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1653"
+            endingLineNumber = "1653"
+            landmarkName = "-sendMessageToServer"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "939"
+            endingLineNumber = "939"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "954"
+            endingLineNumber = "954"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/GameScene.m"
+            timestampString = "456261436.05337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1737"
+            endingLineNumber = "1737"
+            landmarkName = "-velocityFromDirection:player:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1012,13 +1012,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "333"
+            endingLineNumber = "333"
+            landmarkName = "-extendSandToCoverWithCenterPoint:distanceFromCenter:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1028,13 +1028,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "-extendSandToCoverWithCenterPoint:distanceFromCenter:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1044,13 +1044,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "322"
+            endingLineNumber = "322"
+            landmarkName = "-extendSandToCoverWithCenterPoint:distanceFromCenter:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1060,13 +1060,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "-extendSandToCoverWithCenterPoint:distanceFromCenter:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1076,13 +1076,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "-extendSandToCoverWithCenterPoint:distanceFromCenter:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1092,13 +1092,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "802"
-            endingLineNumber = "802"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "841"
+            endingLineNumber = "841"
+            landmarkName = "-useCreationResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1108,13 +1108,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "856"
-            endingLineNumber = "856"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "895"
+            endingLineNumber = "895"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1124,13 +1124,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "855"
-            endingLineNumber = "855"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "894"
+            endingLineNumber = "894"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1140,13 +1140,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "401"
-            endingLineNumber = "401"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "-setDataSourceIsAccelerometer:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1156,13 +1156,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456251721.595168"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "693"
-            endingLineNumber = "693"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "731"
+            endingLineNumber = "731"
+            landmarkName = "-didSimulatePhysics"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1172,13 +1172,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "952"
-            endingLineNumber = "952"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "991"
+            endingLineNumber = "991"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1188,13 +1188,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252725.501236"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "955"
-            endingLineNumber = "955"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "994"
+            endingLineNumber = "994"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1204,13 +1204,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456252588.604823"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "970"
-            endingLineNumber = "970"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "1009"
+            endingLineNumber = "1009"
+            landmarkName = "-gotResponse:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1220,13 +1220,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Agar iOS/GameScene.m"
-            timestampString = "456258565.197763"
+            timestampString = "456261436.05337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "801"
-            endingLineNumber = "801"
-            landmarkName = "@interface GameScene()"
-            landmarkType = "2">
+            startingLineNumber = "840"
+            endingLineNumber = "840"
+            landmarkName = "-useCreationResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Agar iOS/SKsandItemsTextureManager.m"
+            timestampString = "456260871.915908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-init"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -91,14 +91,15 @@
 {
     NSInteger selected = sender.selectedSegmentIndex ;
     self.gs.background.hidden = selected;
-    for(SKSpriteNode* node in self.gs.sand)
+    /*for(SKSpriteNode* node in self.gs.sand)
     {
         node.hidden = selected;
     }
     for(SKSpriteNode* node in self.gs.sandItems)
     {
         node.hidden = selected;
-    }
+    }*/
+    self.gs.sandBackground.hidden = selected;
 }
 
 - (IBAction)changeSource:(UISegmentedControl *)sender
