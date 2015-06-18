@@ -55,6 +55,7 @@
 		3D30F3691B25492C00B06776 /* dataSentToServerCacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F3681B25492C00B06776 /* dataSentToServerCacher.m */; };
 		3D30F36B1B25562900B06776 /* dataSentToServerCacher.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */; };
 		3D30F36E1B25564100B06776 /* entryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F36D1B25564100B06776 /* entryObj.m */; };
+		3D37EEC11B32809900B44949 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEC01B32809900B44949 /* AppIcon.png */; };
 		3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE41B1B865E002C7BC1 /* main.m */; };
 		3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */; };
 		3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */; };
@@ -176,6 +177,7 @@
 		3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataSentToServerCacher.h; sourceTree = "<group>"; };
 		3D30F36C1B25564100B06776 /* entryObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entryObj.h; sourceTree = "<group>"; };
 		3D30F36D1B25564100B06776 /* entryObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = entryObj.m; sourceTree = "<group>"; };
+		3D37EEC01B32809900B44949 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		3D4DBEDF1B1B865E002C7BC1 /* Agar iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agar iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DBEE31B1B865E002C7BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4DBEE41B1B865E002C7BC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 				3DFEEE7A1B21306B00C68E9B /* login.xib */,
 				3DFEEE781B21306B00C68E9B /* login.h */,
 				3DFEEE791B21306B00C68E9B /* login.m */,
+				3D37EEC01B32809900B44949 /* AppIcon.png */,
 				3D1290261B321BFC004BD07A /* bannedWords.txt */,
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
 				3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */,
@@ -884,6 +887,7 @@
 				3D1290141B32162A004BD07A /* purpleItem13.png in Resources */,
 				3D8062C71B2CB5710038C7EA /* virus4.png in Resources */,
 				3D8062CA1B2CB5710038C7EA /* virus7.png in Resources */,
+				3D37EEC11B32809900B44949 /* AppIcon.png in Resources */,
 				3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */,
 				3D8062B41B2A68020038C7EA /* ShineMask.png in Resources */,
 				3D1290211B32162A004BD07A /* purpleItem7.png in Resources */,
@@ -1083,6 +1087,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agar iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1094,6 +1099,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agar iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

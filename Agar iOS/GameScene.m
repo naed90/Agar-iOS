@@ -551,7 +551,7 @@
 {
     if(self.loginIsUp)return;
     
-    login* popup = [[login alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width*.92, self.view.frame.size.height*.92)];
+    login* popup = [[login alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width*.96, self.view.frame.size.height*.96)];
     popup.vc = self.vc;
     popup.center = self.view.center;
     popup.transform = CGAffineTransformMakeScale(2, 2);
