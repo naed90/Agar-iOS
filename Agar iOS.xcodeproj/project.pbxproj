@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D02A2451B33E3A100ED50DB /* split2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D02A2441B33E3A100ED50DB /* split2.png */; };
+		3D02A2471B33E6C600ED50DB /* plainBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D02A2461B33E6C600ED50DB /* plainBG2.png */; };
+		3D02A24C1B3488C000ED50DB /* beach14.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D02A2481B3488C000ED50DB /* beach14.png */; };
+		3D02A24D1B3488C000ED50DB /* beach15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D02A2491B3488C000ED50DB /* beach15.png */; };
+		3D02A24E1B3488C000ED50DB /* beach16.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D02A24A1B3488C000ED50DB /* beach16.png */; };
+		3D02A24F1B3488C000ED50DB /* beach17.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D02A24B1B3488C000ED50DB /* beach17.png */; };
 		3D128FBE1B30D07A004BD07A /* beach0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB01B30D079004BD07A /* beach0.png */; };
 		3D128FBF1B30D07A004BD07A /* beach1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB11B30D079004BD07A /* beach1.png */; };
 		3D128FC01B30D07A004BD07A /* beach10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D128FB21B30D079004BD07A /* beach10.png */; };
@@ -55,7 +61,19 @@
 		3D30F3691B25492C00B06776 /* dataSentToServerCacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F3681B25492C00B06776 /* dataSentToServerCacher.m */; };
 		3D30F36B1B25562900B06776 /* dataSentToServerCacher.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */; };
 		3D30F36E1B25564100B06776 /* entryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F36D1B25564100B06776 /* entryObj.m */; };
-		3D37EEC11B32809900B44949 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEC01B32809900B44949 /* AppIcon.png */; };
+		3D37EEC31B32918800B44949 /* titleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEC21B32918800B44949 /* titleBar.png */; };
+		3D37EEC51B3292C300B44949 /* loginBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEC41B3292C200B44949 /* loginBG.png */; };
+		3D37EECB1B32986900B44949 /* tutorialPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EECA1B32986900B44949 /* tutorialPic.png */; };
+		3D37EED31B32A14600B44949 /* credits.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EED21B32A14600B44949 /* credits.png */; };
+		3D37EED51B33635400B44949 /* woodenSign.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EED41B33635400B44949 /* woodenSign.png */; };
+		3D37EED91B33AA1600B44949 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EED81B33AA1600B44949 /* Logo.png */; };
+		3D37EEDB1B33AC5700B44949 /* LogoNoEntities.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEDA1B33AC5700B44949 /* LogoNoEntities.png */; };
+		3D37EEDE1B33AD3200B44949 /* Logo_0007_Layer-3-copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEDC1B33AD3200B44949 /* Logo_0007_Layer-3-copy.png */; };
+		3D37EEDF1B33AD3200B44949 /* Logo_0008_Layer-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEDD1B33AD3200B44949 /* Logo_0008_Layer-3.png */; };
+		3D37EEE11B33B01E00B44949 /* sandPatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEE01B33B01E00B44949 /* sandPatch.png */; };
+		3D37EEE51B33C63100B44949 /* tutorialPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEE41B33C63100B44949 /* tutorialPic2.png */; };
+		3D37EEE81B33CA1C00B44949 /* woodSignBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEE61B33CA1C00B44949 /* woodSignBlock.png */; };
+		3D37EEE91B33CA1C00B44949 /* woodStick.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D37EEE71B33CA1C00B44949 /* woodStick.png */; };
 		3D4DBEE51B1B865E002C7BC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE41B1B865E002C7BC1 /* main.m */; };
 		3D4DBEE81B1B865E002C7BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEE71B1B865E002C7BC1 /* AppDelegate.m */; };
 		3D4DBEEB1B1B865E002C7BC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */; };
@@ -123,6 +141,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D02A2441B33E3A100ED50DB /* split2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = split2.png; sourceTree = "<group>"; };
+		3D02A2461B33E6C600ED50DB /* plainBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plainBG2.png; sourceTree = "<group>"; };
+		3D02A2481B3488C000ED50DB /* beach14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach14.png; sourceTree = "<group>"; };
+		3D02A2491B3488C000ED50DB /* beach15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach15.png; sourceTree = "<group>"; };
+		3D02A24A1B3488C000ED50DB /* beach16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach16.png; sourceTree = "<group>"; };
+		3D02A24B1B3488C000ED50DB /* beach17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach17.png; sourceTree = "<group>"; };
 		3D128FB01B30D079004BD07A /* beach0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach0.png; sourceTree = "<group>"; };
 		3D128FB11B30D079004BD07A /* beach1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach1.png; sourceTree = "<group>"; };
 		3D128FB21B30D079004BD07A /* beach10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach10.png; sourceTree = "<group>"; };
@@ -177,8 +201,20 @@
 		3D30F36A1B25548200B06776 /* dataSentToServerCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataSentToServerCacher.h; sourceTree = "<group>"; };
 		3D30F36C1B25564100B06776 /* entryObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entryObj.h; sourceTree = "<group>"; };
 		3D30F36D1B25564100B06776 /* entryObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = entryObj.m; sourceTree = "<group>"; };
-		3D37EEC01B32809900B44949 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
-		3D4DBEDF1B1B865E002C7BC1 /* Agar iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agar iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D37EEC21B32918800B44949 /* titleBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleBar.png; sourceTree = "<group>"; };
+		3D37EEC41B3292C200B44949 /* loginBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBG.png; sourceTree = "<group>"; };
+		3D37EECA1B32986900B44949 /* tutorialPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorialPic.png; sourceTree = "<group>"; };
+		3D37EED21B32A14600B44949 /* credits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credits.png; sourceTree = "<group>"; };
+		3D37EED41B33635400B44949 /* woodenSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodenSign.png; sourceTree = "<group>"; };
+		3D37EED81B33AA1600B44949 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		3D37EEDA1B33AC5700B44949 /* LogoNoEntities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoNoEntities.png; sourceTree = "<group>"; };
+		3D37EEDC1B33AD3200B44949 /* Logo_0007_Layer-3-copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo_0007_Layer-3-copy.png"; sourceTree = "<group>"; };
+		3D37EEDD1B33AD3200B44949 /* Logo_0008_Layer-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo_0008_Layer-3.png"; sourceTree = "<group>"; };
+		3D37EEE01B33B01E00B44949 /* sandPatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandPatch.png; sourceTree = "<group>"; };
+		3D37EEE41B33C63100B44949 /* tutorialPic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorialPic2.png; sourceTree = "<group>"; };
+		3D37EEE61B33CA1C00B44949 /* woodSignBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodSignBlock.png; sourceTree = "<group>"; };
+		3D37EEE71B33CA1C00B44949 /* woodStick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodStick.png; sourceTree = "<group>"; };
+		3D4DBEDF1B1B865E002C7BC1 /* Summer Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summer Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DBEE31B1B865E002C7BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4DBEE41B1B865E002C7BC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D4DBEE61B1B865E002C7BC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -300,6 +336,10 @@
 				3D128FBB1B30D07A004BD07A /* beach7.png */,
 				3D128FBC1B30D07A004BD07A /* beach8.png */,
 				3D128FBD1B30D07A004BD07A /* beach9.png */,
+				3D02A2481B3488C000ED50DB /* beach14.png */,
+				3D02A2491B3488C000ED50DB /* beach15.png */,
+				3D02A24A1B3488C000ED50DB /* beach16.png */,
+				3D02A24B1B3488C000ED50DB /* beach17.png */,
 			);
 			name = "beach pictures";
 			path = "virus photos/beach pictures";
@@ -351,7 +391,7 @@
 		3D4DBEE01B1B865E002C7BC1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D4DBEDF1B1B865E002C7BC1 /* Agar iOS.app */,
+				3D4DBEDF1B1B865E002C7BC1 /* Summer Time.app */,
 				3D4DBEF81B1B865E002C7BC1 /* Agar iOSTests.xctest */,
 			);
 			name = Products;
@@ -403,11 +443,25 @@
 				3DFEEE7A1B21306B00C68E9B /* login.xib */,
 				3DFEEE781B21306B00C68E9B /* login.h */,
 				3DFEEE791B21306B00C68E9B /* login.m */,
-				3D37EEC01B32809900B44949 /* AppIcon.png */,
+				3D37EEE61B33CA1C00B44949 /* woodSignBlock.png */,
+				3D37EEE71B33CA1C00B44949 /* woodStick.png */,
+				3D37EEE41B33C63100B44949 /* tutorialPic2.png */,
+				3D37EEDC1B33AD3200B44949 /* Logo_0007_Layer-3-copy.png */,
+				3D37EEDD1B33AD3200B44949 /* Logo_0008_Layer-3.png */,
+				3D37EEE01B33B01E00B44949 /* sandPatch.png */,
+				3D37EED81B33AA1600B44949 /* Logo.png */,
+				3D37EEDA1B33AC5700B44949 /* LogoNoEntities.png */,
+				3D37EED41B33635400B44949 /* woodenSign.png */,
+				3D37EED21B32A14600B44949 /* credits.png */,
+				3D37EECA1B32986900B44949 /* tutorialPic.png */,
+				3D37EEC21B32918800B44949 /* titleBar.png */,
+				3D37EEC41B3292C200B44949 /* loginBG.png */,
 				3D1290261B321BFC004BD07A /* bannedWords.txt */,
 				3D4DBEE91B1B865E002C7BC1 /* ViewController.h */,
 				3D4DBEEA1B1B865E002C7BC1 /* ViewController.m */,
 				3D4DBEEC1B1B865E002C7BC1 /* Main.storyboard */,
+				3D02A2461B33E6C600ED50DB /* plainBG2.png */,
+				3D02A2441B33E3A100ED50DB /* split2.png */,
 				3D12902C1B32271A004BD07A /* tutorialViewController.h */,
 				3D12902D1B32271A004BD07A /* tutorialViewController.m */,
 				3D8062D11B2EA9C70038C7EA /* splitButton.png */,
@@ -784,7 +838,7 @@
 			);
 			name = "Agar iOS";
 			productName = "Agar iOS";
-			productReference = 3D4DBEDF1B1B865E002C7BC1 /* Agar iOS.app */;
+			productReference = 3D4DBEDF1B1B865E002C7BC1 /* Summer Time.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3D4DBEF71B1B865E002C7BC1 /* Agar iOSTests */ = {
@@ -819,6 +873,7 @@
 					};
 					3D4DBEF71B1B865E002C7BC1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CUV9Y7J47P;
 						TestTargetID = 3D4DBEDE1B1B865E002C7BC1;
 					};
 				};
@@ -847,15 +902,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D37EED31B32A14600B44949 /* credits.png in Resources */,
 				3D4DBF4E1B1E9300002C7BC1 /* LICENSE in Resources */,
 				3D8062981B268EE30038C7EA /* IMG_1182 (online-video-cutter.com).mp4 in Resources */,
 				3D128FC41B30D07A004BD07A /* beach2.png in Resources */,
+				3D02A2471B33E6C600ED50DB /* plainBG2.png in Resources */,
 				3D128FC01B30D07A004BD07A /* beach10.png in Resources */,
 				3D128FCB1B30D07A004BD07A /* beach9.png in Resources */,
 				3D128FC51B30D07A004BD07A /* beach3.png in Resources */,
 				3D8062CB1B2CB5710038C7EA /* virus8.png in Resources */,
 				3D1290131B32162A004BD07A /* purpleItem12.png in Resources */,
+				3D37EEE11B33B01E00B44949 /* sandPatch.png in Resources */,
 				3D4DBF551B1E9300002C7BC1 /* .gitignore in Resources */,
+				3D37EEDB1B33AC5700B44949 /* LogoNoEntities.png in Resources */,
 				3D8062D21B2EA9C70038C7EA /* splitButton.png in Resources */,
 				3D1290171B32162A004BD07A /* purpleItem16.png in Resources */,
 				3D8062C91B2CB5710038C7EA /* virus6.png in Resources */,
@@ -864,34 +923,43 @@
 				3D128FC21B30D07A004BD07A /* beach12.png in Resources */,
 				3D4DBF4A1B1E9300002C7BC1 /* .gitignore in Resources */,
 				3D12901A1B32162A004BD07A /* purpleItem19.png in Resources */,
+				3D02A24F1B3488C000ED50DB /* beach17.png in Resources */,
 				3D1290231B32162A004BD07A /* purpleItem9.png in Resources */,
 				3DFEEE801B2130B200C68E9B /* Administrator2-50.png in Resources */,
 				3D128FBF1B30D07A004BD07A /* beach1.png in Resources */,
 				3D1290181B32162A004BD07A /* purpleItem17.png in Resources */,
 				3D30F3631B251D8800B06776 /* GSTouchImage@2x.png in Resources */,
+				3D02A24E1B3488C000ED50DB /* beach16.png in Resources */,
 				3D1290301B323030004BD07A /* launchPhoto.png in Resources */,
 				3D1290161B32162A004BD07A /* purpleItem15.png in Resources */,
 				3DFEEE7C1B21306B00C68E9B /* login.xib in Resources */,
 				3D4DBEEE1B1B865E002C7BC1 /* Main.storyboard in Resources */,
 				3D1290111B32162A004BD07A /* purpleItem10.png in Resources */,
+				3D37EECB1B32986900B44949 /* tutorialPic.png in Resources */,
 				3D12901F1B32162A004BD07A /* purpleItem5.png in Resources */,
 				3D1290151B32162A004BD07A /* purpleItem14.png in Resources */,
 				3D128FC61B30D07A004BD07A /* beach4.png in Resources */,
 				3D12901E1B32162A004BD07A /* purpleItem4.png in Resources */,
 				3D128FC71B30D07A004BD07A /* beach5.png in Resources */,
+				3D37EED51B33635400B44949 /* woodenSign.png in Resources */,
 				3D8062A31B2920570038C7EA /* coveredRect.xib in Resources */,
 				3D1290201B32162A004BD07A /* purpleItem6.png in Resources */,
+				3D37EEC31B32918800B44949 /* titleBar.png in Resources */,
 				3D4DBF4B1B1E9300002C7BC1 /* .gitmodules in Resources */,
+				3D37EEDE1B33AD3200B44949 /* Logo_0007_Layer-3-copy.png in Resources */,
 				3D1290121B32162A004BD07A /* purpleItem11.png in Resources */,
 				3D12902B1B32255C004BD07A /* tutorial.png in Resources */,
 				3D1290141B32162A004BD07A /* purpleItem13.png in Resources */,
+				3D37EEDF1B33AD3200B44949 /* Logo_0008_Layer-3.png in Resources */,
 				3D8062C71B2CB5710038C7EA /* virus4.png in Resources */,
 				3D8062CA1B2CB5710038C7EA /* virus7.png in Resources */,
-				3D37EEC11B32809900B44949 /* AppIcon.png in Resources */,
 				3D4DBEF31B1B865E002C7BC1 /* LaunchScreen.xib in Resources */,
+				3D37EEE51B33C63100B44949 /* tutorialPic2.png in Resources */,
 				3D8062B41B2A68020038C7EA /* ShineMask.png in Resources */,
+				3D37EEE81B33CA1C00B44949 /* woodSignBlock.png in Resources */,
 				3D1290211B32162A004BD07A /* purpleItem7.png in Resources */,
 				3D12901B1B32162A004BD07A /* purpleItem2.png in Resources */,
+				3D02A24D1B3488C000ED50DB /* beach15.png in Resources */,
 				3D30F3621B251D8800B06776 /* GSTouchImage.png in Resources */,
 				3D1290271B321BFC004BD07A /* bannedWords.txt in Resources */,
 				3D8062C41B2CB5710038C7EA /* virus1.png in Resources */,
@@ -900,15 +968,20 @@
 				3D12901C1B32162A004BD07A /* purpleItem20.png in Resources */,
 				3D1290191B32162A004BD07A /* purpleItem18.png in Resources */,
 				3D8062A81B2941E60038C7EA /* SuperSpeedButton.xib in Resources */,
+				3D02A24C1B3488C000ED50DB /* beach14.png in Resources */,
 				3D128FCA1B30D07A004BD07A /* beach8.png in Resources */,
 				3D4DBEF01B1B865E002C7BC1 /* Images.xcassets in Resources */,
 				3D128FC11B30D07A004BD07A /* beach11.png in Resources */,
 				3D1290251B321837004BD07A /* background2.png in Resources */,
+				3D37EEC51B3292C300B44949 /* loginBG.png in Resources */,
 				3D1290101B32162A004BD07A /* purpleItem1.png in Resources */,
+				3D02A2451B33E3A100ED50DB /* split2.png in Resources */,
 				3D8062C61B2CB5710038C7EA /* virus3.png in Resources */,
 				3D1290221B32162A004BD07A /* purpleItem8.png in Resources */,
 				3DFEEE7E1B2130A400C68E9B /* Advance-50.png in Resources */,
+				3D37EEE91B33CA1C00B44949 /* woodStick.png in Resources */,
 				3D128FC81B30D07A004BD07A /* beach6.png in Resources */,
+				3D37EED91B33AA1600B44949 /* Logo.png in Resources */,
 				3D128FC91B30D07A004BD07A /* beach7.png in Resources */,
 				3D8062C51B2CB5710038C7EA /* virus2.png in Resources */,
 			);
@@ -1036,9 +1109,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1074,8 +1148,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -1087,9 +1162,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agar iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Summer Time";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1099,9 +1175,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Agar iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Summer Time";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1110,6 +1187,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1121,6 +1200,7 @@
 				INFOPLIST_FILE = "Agar iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agar iOS.app/Agar iOS";
 			};
 			name = Debug;
@@ -1129,6 +1209,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1136,6 +1218,7 @@
 				INFOPLIST_FILE = "Agar iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agar iOS.app/Agar iOS";
 			};
 			name = Release;

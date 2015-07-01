@@ -49,7 +49,7 @@ typedef void (^Block)(void);
 -(void)connectSocketIOWithCompletion:(Block)block
 {
     
-    BOOL localTesting = NO;
+    BOOL localTesting = YES;
     self.socketIO.useSecure = !localTesting;//https -- avoid wireshark
     [self.socketIO connectToHost:localTesting ? @"67.180.17.151" : @"dean-leitersdorf.herokuapp.com" onPort:localTesting?5000:443];
    if(block)

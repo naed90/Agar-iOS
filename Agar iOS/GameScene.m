@@ -62,6 +62,7 @@
 
 @property (nonatomic) float lastTimeRequestedFoods;//wait at least 2 sec before requesting again
 @property (nonatomic) float lastTimeRequestedViruses;
+@property (nonatomic) float lastRequestedPlayers;
 
 #define kUpdateInterval (1.0f / 60.0f)
 @property (assign, nonatomic) CMAcceleration acceleration;
@@ -129,7 +130,7 @@
     [self.world addChild:node];
     node.zPosition = 7;
     node.position = CGPointMake(CGRectGetMidX(self.world.frame), CGRectGetMidY(self.world.frame));
-    node.fillColor = [SKColor colorWithRed:217/255.0 green:148/255.0 blue:22/255.0 alpha:1];
+    node.fillColor = [SKColor colorWithRed:241/255.0 green:204/255.0 blue:151/255.0 alpha:1];
     //node.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:node.path];
     //node.physicsBody.dynamic = NO;
     //[[UIColor orangeColor] setFill];
@@ -140,7 +141,7 @@
     self.purpleItemsTextureManager = [[SKgeneralTextureManager alloc]initWithPhotoName:@"purpleItem" lowestIndex:1 highestIndex:20];
     self.purpleItems = [[NSMutableArray alloc]init];
     
-    int numPurpleItemsToSpawn = 1000;//don't spawn too many
+    int numPurpleItemsToSpawn = 0;//1000;//don't spawn too many
     
     
     int prev = gridSize;
@@ -214,7 +215,7 @@
     
     [self addSandLayer];
     
-    self.background2 = [SKSpriteNode spriteNodeWithImageNamed:@"background2"];
+    self.background2 = [SKSpriteNode spriteNodeWithImageNamed:@"plainBG2"];
     [self.world addChild:self.background2];
     self.background2.hidden = YES;
     self.background2.size = self.frame.size;
@@ -225,7 +226,7 @@
     //spawn items on sand:
     
     
-    self.sandItemsTextureManager = [[SKgeneralTextureManager alloc] initWithPhotoName:@"beach" lowestIndex:0 highestIndex:13];
+    self.sandItemsTextureManager = [[SKgeneralTextureManager alloc] initWithPhotoName:@"beach" lowestIndex:0 highestIndex:17];
     self.sandItems = [[NSMutableArray alloc] init];
     
     [self spawnSandItemsWithHowManySandTilesAdded:[[NSNumber numberWithInteger:self.sand.count] intValue] prevBorderSize:gridSize currentBorderSize:self.borderSize];
@@ -269,7 +270,7 @@
     const int centerPieceWidth = 80;
     
     //we need to fit 10 recs, 5 on each side of middle circle
-    const float numRects = 24;//define as float so that when we do devision with it, we do float devision; make sure it's div by 4
+    float numRects = self.view.frame.size.width/13; numRects -= fmodf(numRects, 4);// 24;//define as float so that when we do devision with it, we do float devision; make sure it's div by 4
     float spacing = (self.frame.size.width - numRects*superSpeedRectWidth - centerPieceWidth)/(numRects+3);//+2 b/c 1 more on side and 1 more in the center
     
     self.superSpeedRects = [[NSMutableArray alloc] init];
@@ -315,16 +316,23 @@
 
 - (void) connectedToServer
 {
-    NSLog(@"Requesting players!!!");
+    
     
     if(self.gridID)
+    {
+        NSLog(@"Requesting players!!!");
         [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/fullplayerupdate" withData:@{@"gridID":self.gridID}];
+        
+        self.lastRequestedPlayers = getUptimeInMilliseconds2();
+    }
+    
 }
 
 
 - (void) spawnSandItemsWithHowManySandTilesAdded:(int)tilesAdded prevBorderSize:(int)prev currentBorderSize:(int)current
 {
-    int numToSpawn = tilesAdded * 5 * 1;
+    if(((current-gridSize)/self.sandTexture.size.width)<1)return;
+    int numToSpawn = tilesAdded * 5 * 1 * ((2/(2*((current-gridSize)/(2*self.sandTexture.size.width)))));//for every 2 tiles out, reduce spawn rate by 50%
     for(int i = 0; i < numToSpawn; i++)
     {
         //get random texture:
@@ -551,7 +559,7 @@
 {
     if(self.loginIsUp)return;
     
-    login* popup = [[login alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width*.96, self.view.frame.size.height*.96)];
+    login* popup = [[login alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/**.96*/, self.view.frame.size.height/**.96*/)];
     popup.vc = self.vc;
     popup.center = self.view.center;
     popup.transform = CGAffineTransformMakeScale(2, 2);
@@ -759,8 +767,9 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     
     //ensure no collisions between same player's balls:
     
-    for(SKplayer* player in players)
+    for(int m = 0; m < players.count; m++)
     {
+        SKplayer* player = players[m];
         for(int i = 0; i < player.balls.count - 1; i++)
         {
             SKplayerBall* ball = player.balls[i];
@@ -800,10 +809,12 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     //ensure in bounds:
     
     
-    for(SKplayer* player in players)
+    for(int v = 0 ; v < players.count; v++)
     {
-        for(SKplayerBall* ball in player.balls)
+        SKplayer* player = players[v];
+        for(int f = 0; f < player.balls.count;f++)
         {
+            SKplayerBall* ball = player.balls[f];
             CGPoint position = ball.position;
             /*if(player==self.ourPlayer)
              NSLog([NSString stringWithFormat:@"Log: %f %f %f %f",player.position.x, player.position.y, getUptimeInMilliseconds2(), player.physicsBody.velocity.dy
@@ -981,8 +992,9 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
                 if(parentSplit)
                 {
                     SKplayerBall* parentBall;
-                    for(SKplayerBall* ballP in player2.balls)
+                    for(int p = 0; p < player2.balls.count; p++)
                     {
+                        SKplayerBall* ballP = player2.balls[p];
                         if(ballP.ballNumber==parentSplit)
                         {
                             parentBall = ballP;
@@ -1121,7 +1133,7 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         //Update ss bar on top
         if(player2==self.ourPlayer)
         {
-            float timeDif = [[player valueForKey:@"su"] floatValue] - player2.lastTimeSpeedUsed - superSpeedLastTime;//ignore last time when doing this
+            float timeDif = player2.lastServerUpdate - player2.lastTimeSpeedUsed - superSpeedLastTime;//ignore last time when doing this
             float chargePercent = MAX(MIN(1, timeDif/superSpeedCooldown),0);
             
             float halfRects = self.superSpeedRects.count/2;
@@ -1256,7 +1268,7 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         }
     }
     
-    //ensure food count correct:
+    //ensure virus count correct:
     NSNumber* virusesFromServer = [desc valueForKey:@"aVC"];
     if(virusesFromServer){
     float currentTime2 = getUptimeInMilliseconds2();
@@ -1267,6 +1279,18 @@ const int superSpeedCooldown = 30000 + superSpeedLastTime;//33 sec -- 30 sec + 3
         [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/requestviruses" withData:@{@"gridID":self.gridID}];
         self.lastTimeRequestedViruses = currentTime2;
     }
+    }
+    
+    
+    //ensure player count correct:
+    NSNumber* playersFromServer = [desc valueForKey:@"nP"];
+    if(playersFromServer){
+        float currentTime3 = getUptimeInMilliseconds2();
+        if(![playersFromServer isEqualToNumber:[NSNumber numberWithInteger:self.players.count]] && currentTime3 - self.lastRequestedPlayers > 2000)
+        {
+            
+            [self connectedToServer];
+        }
     }
     
 }

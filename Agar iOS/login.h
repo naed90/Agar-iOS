@@ -15,6 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIView *proceedView;
 @property (weak, nonatomic) IBOutlet UITextField *textView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIImageView *arrow;
+@property (weak, nonatomic) IBOutlet UIView *bounceAbleView;
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UIView *enterView;
 
 @property (weak, nonatomic) GameScene* delegate;
 @property (weak, nonatomic) ViewController* vc;

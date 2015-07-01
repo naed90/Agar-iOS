@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D4DBEDE1B1B865E002C7BC1"
-               BuildableName = "Agar iOS.app"
+               BuildableName = "Summer Time.app"
                BlueprintName = "Agar iOS"
                ReferencedContainer = "container:Agar iOS.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D4DBEDE1B1B865E002C7BC1"
-            BuildableName = "Agar iOS.app"
+            BuildableName = "Summer Time.app"
             BlueprintName = "Agar iOS"
             ReferencedContainer = "container:Agar iOS.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D4DBEDE1B1B865E002C7BC1"
-            BuildableName = "Agar iOS.app"
+            BuildableName = "Summer Time.app"
             BlueprintName = "Agar iOS"
             ReferencedContainer = "container:Agar iOS.xcodeproj">
          </BuildableReference>
@@ -102,7 +102,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D4DBEDE1B1B865E002C7BC1"
-            BuildableName = "Agar iOS.app"
+            BuildableName = "Summer Time.app"
             BlueprintName = "Agar iOS"
             ReferencedContainer = "container:Agar iOS.xcodeproj">
          </BuildableReference>

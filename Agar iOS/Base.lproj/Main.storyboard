@@ -24,8 +24,8 @@
                                     <constraint firstAttribute="height" constant="28" id="N8Q-mX-ESe"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Summer View"/>
-                                    <segment title="Plain View"/>
+                                    <segment title="Animated"/>
+                                    <segment title="Basic"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="height" constant="70" id="XGT-AE-71l"/>
                                     <constraint firstAttribute="width" constant="70" id="pvb-i6-xow"/>
                                 </constraints>
-                                <state key="normal" image="splitButton.png">
+                                <state key="normal" image="split2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -146,7 +146,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.png" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-5a-r6e">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUA-aO-2d8">
+                            <navigationBar alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUA-aO-2d8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ywW-hr-Lfy"/>
@@ -183,7 +183,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splitButton.png" width="140" height="139"/>
+        <image name="split2.png" width="200" height="200"/>
         <image name="tutorial.png" width="640" height="1136"/>
     </resources>
 </document>

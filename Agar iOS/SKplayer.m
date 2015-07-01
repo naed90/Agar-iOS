@@ -101,8 +101,9 @@
 
 - (void) setDirectionOfAllBalls:(CGPoint)dir
 {
-    for(SKplayerBall* ball in self.balls)
+    for(int i = 0; i < self.balls.count; i++)
     {
+        SKplayerBall* ball = self.balls[i];
         ball.direction = dir;
     }
 }

@@ -14,6 +14,9 @@
 
 @property (nonatomic) BOOL proceedDisabled;//after sending to server, disable button to not allow continous resends
 
+@property (nonatomic, strong) UIDynamicAnimator* animator;
+
+
 @end
 
 
@@ -40,13 +43,90 @@
 		
         self.activityIndicator.alpha = 0;
         self.proceedDisabled = YES;
-        self.proceedView.alpha = .5;
+        self.proceedView.alpha = .3;
+        
+        self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your Nickname" attributes:@{NSForegroundColorAttributeName: self.textView.textColor}];
+        
+        [[UITextField appearance] setTintColor:self.textView.textColor];
+        
+        [self.activityIndicator setColor:self.textView.textColor];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString* lastName = [defaults valueForKey:@"lastName"];
+        
+        if(lastName)
+        {
+            //calls our method below, for checking
+            if([self textField:self.textView shouldChangeCharactersInRange:NSRangeFromString(self.textView.text) replacementString:lastName])
+                self.textView.text = lastName;
+        }
         
         
         [[UIApplication sharedApplication] setIdleTimerDisabled:NO];//if login is up, the app can sleep if user doesn't touch it
+        
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createAnime) userInfo:nil repeats:YES];
+        
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createSignAnime) userInfo:nil repeats:YES];
+       
+        //[self createSignAnime];
+        
+        /*
+        CABasicAnimation *animation =
+        [CABasicAnimation animationWithKeyPath:@"position"];
+        [animation setDuration:0.3];
+        //[animation setRepeatCount:2];
+        [animation setAutoreverses:YES];
+        for(int i = 0; i < 2; i++)
+        {
+            [animation setFromValue:[NSValue valueWithCGPoint:
+                                     CGPointMake([self.bounceAbleView center].x - 20.0f, [self.bounceAbleView center].y)]];
+            [animation setToValue:[NSValue valueWithCGPoint:
+                                   CGPointMake([self.bounceAbleView center].x + 20.0f, [self.bounceAbleView center].y)]];
+        }
+        [animation setToValue:[NSValue valueWithCGPoint:
+                               CGPointMake([self.bounceAbleView center].x -20.0f, [self.bounceAbleView center].y)]];
+        [[self.bounceAbleView layer] addAnimation:animation forKey:@"position"];*/
 		
 	}
 	return self;
+}
+
+- (void) createAnime
+{
+    [self.bounceAbleView.layer removeAllAnimations];
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = 1.5f;
+    animation.values = @[ @(0), @(-20), @(20), @(-20), @(20), @(0) ];
+    [self.bounceAbleView.layer addAnimation:animation forKey:@"shake"];
+}
+
+
+- (void) createSignAnime
+{
+    [self.enterView.layer removeAllAnimations];
+    
+    if(self.textView.isEditing)return;
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = 1.5;
+    animation.values = @[ @(0), @(-.34), @(.34), @(-.34), @(.34), @(0) ];
+    //animation.values = @[ @(0), @(-50), @(0), @(-30), @(0), @(-10), @(0) ];
+    
+    [self.enterView.layer addAnimation:animation forKey:@"rotation"];
+    /*
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = 1.0 / 500.0;
+    self.enterView.layer.transform = transform;*/
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self proceedTapped];
+    return NO;
 }
 
 
@@ -58,7 +138,7 @@
 	if(locInView.x > 0 && locInView.y
 	   >0 && locInView.x < self.proceedView.frame.size.width && locInView.y < self.proceedView.frame.size.height)
 	{
-		self.proceedView.alpha = .5;
+        self.proceedView.alpha = .3;
 	}
 	
 }
@@ -100,11 +180,20 @@
         if(newLength>0)
             {self.proceedDisabled = NO; self.proceedView.alpha = 1;}
         else
-            {self.proceedDisabled = YES; self.proceedView.alpha = .5;}
+        {self.proceedDisabled = YES; self.proceedView.alpha = .3;}
     }
     
 	
     return retval;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.placeholder = nil;
+    
+    [self.enterView.layer removeAllAnimations];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your Nickname" attributes:@{NSForegroundColorAttributeName: self.textView.textColor}];
 }
 
 - (void) proceedTapped
@@ -135,16 +224,21 @@
     
     if(containsBannedWord)
     {
-        [[[UIAlertView alloc] initWithTitle:@"Word Usage" message:@"Please refrain from using obscene words in your name." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Word Usage" message:@"Please refrain from using obscene language in your nickname." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
         return;
     }
     
     [((AppDelegate*)[[UIApplication sharedApplication] delegate]).socketDealer sendEvent:@"/agarios/startgamewithname" withData:@{@"name":self.textView.text}];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.textView.text forKey:@"lastName"];
+    
 	self.activityIndicator.alpha = 1;
 	[self.activityIndicator startAnimating];
 	self.proceedDisabled = YES;
 	self.textView.enabled = NO;
-	self.proceedView.alpha = .5;//disabled
+    self.proceedView.alpha = 1;//.3;//disabled
+    self.arrow.alpha = 0;
 }
 
 - (void) gotResponse:(NSNotification*)notification
@@ -158,9 +252,10 @@
 	self.proceedView.alpha = 1;//enabled
     
     [self.delegate useCreationResponse:desc];
-    [UIView animateWithDuration:.1
+    [UIView animateWithDuration:.3
                      animations:^{
                          //self.frame = CGRectMake(self.center.x - 350, self.center.y - 350, 700,700);
+                         self.transform = CGAffineTransformMakeScale(3, 3);
                          self.alpha = 0;
                      } ];
     [self unregisterUsernameEntered];

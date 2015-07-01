@@ -60,6 +60,11 @@
     //set name labels:
     _playerName = playerName;
     
+    if(self.nameLabel)
+    {
+        self.nameLabel.text = playerName;
+        return;
+    }
     self.nameLabel = [[SKLabelNode alloc] initWithFontNamed:@"Chalkduster"];
     float width = self.frame.size.width*.8;
     
@@ -75,6 +80,8 @@
     self.nameLabel.fontColor = [self.circle.fillColor inverseColor];
     
     [self addChild:self.nameLabel];
+    
+    self.nameLabel.zPosition = 9;
     
     [self updateMassLabel];
 }
@@ -103,6 +110,8 @@
         _massLabel.fontSize = largestFontSize;
         _massLabel.position = CGPointMake(self.nameLabel.position.x, -self.frame.size.height/2+8);//self.nameLabel.position.y - self.nameLabel.frame.size.height - (8+self.massLabel.frame.size.height)/2);
         _massLabel.fontColor = [self.circle.fillColor inverseColor];
+        
+        _massLabel.zPosition = 9;
     }
     return _massLabel;
 }

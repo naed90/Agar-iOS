@@ -33,6 +33,13 @@
     spriteView.showsNodeCount = YES;
     spriteView.showsFPS = YES;*/
     
+    /*
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *bluredEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    [bluredEffectView setFrame:self.view.bounds];
+    [self.view addSubview:bluredEffectView];
+    bluredEffectView.layer.zPosition = 999999;*/
+    
     GameScene* gs = [[GameScene alloc] initWithSize:spriteView.frame.size];
     gs.sv = self.sv;
     gs.vc = self;
@@ -50,6 +57,8 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&sessionError];
     [[AVAudioSession sharedInstance] setActive:YES error:&sessionError];
     [[AVAudioSession sharedInstance] setDelegate:self];
+    
+    
     
     /*
     NSString* str = [[NSBundle mainBundle] pathForResource:@"IMG_1182 (online-video-cutter.com)" ofType:@"mp4"];
